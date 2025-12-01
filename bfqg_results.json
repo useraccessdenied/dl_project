@@ -1,0 +1,54 @@
+[
+  {
+    "seed_question": "How do I make a phone call?",
+    "evaluation": {
+      "level_2": {
+        "question": "[question] Level 3: [question] Level 4: [question] Level 5: [question]",
+        "logical_consistency": 0.0043060630559921265,
+        "informativeness": 0.1253088538743869,
+        "relevance": 0.05313517153263092,
+        "clarity": 0.0,
+        "aggregate_score": 0.019147078196207683
+      }
+    }
+  },
+  {
+    "seed_question": "How do I navigate to an address?",
+    "evaluation": {
+      "level_2": {
+        "question": "[question] Level 3: [question] Level 4: [question] Level 5: [question]",
+        "logical_consistency": 0.008729114197194576,
+        "informativeness": 0.1253088538743869,
+        "relevance": 0.07801105082035065,
+        "clarity": 0.0,
+        "aggregate_score": 0.02891338833918174
+      }
+    }
+  },
+  {
+    "seed_question": "How do I adjust the air conditioning?",
+    "evaluation": {
+      "level_3": {
+        "question": "[quest] Level 4: [quest] Level 5: [quest]",
+        "logical_consistency": 0.0023666888009756804,
+        "informativeness": 0.12560188777855455,
+        "relevance": 0.07402049005031586,
+        "clarity": 0.0,
+        "aggregate_score": 0.025462392950430512
+      }
+    }
+  },
+  {
+    "seed_question": "How do I play music?",
+    "evaluation": {
+      "level_2": {
+        "question": "[question] Level 3: [question] Level 4: [question] Level 5: [question]",
+        "logical_consistency": 0.005180722568184137,
+        "informativeness": 0.1253088538743869,
+        "relevance": 0.042771823704242706,
+        "clarity": 0.0,
+        "aggregate_score": 0.015984182090808947
+      }
+    }
+  }
+]
