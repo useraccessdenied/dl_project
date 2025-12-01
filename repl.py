@@ -39,16 +39,16 @@ class FollowUpQuestionREPL:
 
         try:
             self.generator = BFGQuestionGenerator()
-            print("✓ Question generator initialized")
+            print("OK Question generator initialized")
         except Exception as e:
-            print("✗ Failed to initialize question generator: {e}")
+            print("FAILED Failed to initialize question generator: {e}")
             return False
 
         try:
             self.evaluator = GriceWiseEvaluator()
-            print("✓ Evaluator initialized")
+            print("OK Evaluator initialized")
         except Exception as e:
-            print("✗ Failed to initialize evaluator: {e}")
+            print("FAILED Failed to initialize evaluator: {e}")
             return False
 
         print("All models ready!\n")
@@ -76,7 +76,7 @@ class FollowUpQuestionREPL:
         while True:
             try:
                 # Get user input
-                user_input = input("\n🔍 Enter a seed question or command: ").strip()
+                user_input = input("\nEnter a seed question or command: ").strip()
 
                 if not user_input:
                     continue
@@ -93,7 +93,7 @@ class FollowUpQuestionREPL:
                 print("\n\nGoodbye!")
                 break
             except Exception as e:
-                print(f"\n❌ Error: {e}")
+                print(f"\nERROR Error: {e}")
                 continue
 
         # Save history if enabled
@@ -210,10 +210,10 @@ class FollowUpQuestionREPL:
             with open(filename, "w", encoding="utf-8") as f:
                 json.dump(self.history[-1], f, indent=2, ensure_ascii=False)
 
-            print(f"✓ Saved last result to {filename}")
+            print(f"OK Saved last result to {filename}")
 
         except Exception as e:
-            print(f"✗ Failed to save: {e}")
+            print(f"FAILED Failed to save: {e}")
 
     def batch_generate(self):
         """Handle batch generation mode."""
@@ -250,7 +250,7 @@ class FollowUpQuestionREPL:
 
             if "error" in result:
                 print(f"{i}. {seed}")
-                print(f"   ❌ Error: {result['error']}")
+                print(f"   ERROR Error: {result['error']}")
                 continue
 
             # Calculate aggregate stats
@@ -264,7 +264,7 @@ class FollowUpQuestionREPL:
                 min_score = min(scores)
                 max_score = max(scores)
 
-                status = "✓" if avg_score > 0.6 else "⚠"
+                status = "OK" if avg_score > 0.6 else "WARNING"
                 print(f"{i}. {seed}")
                 print(f"   {status} Generated {len(evaluation)} questions")
                 print(
@@ -272,7 +272,7 @@ class FollowUpQuestionREPL:
                 )
             else:
                 print(f"{i}. {seed}")
-                print("   ❌ No evaluation data")
+                print("   ERROR No evaluation data")
 
         # Add to history
         self.history.extend(evaluations)
@@ -281,7 +281,7 @@ class FollowUpQuestionREPL:
 
     def generate_and_evaluate(self, seed_question: str):
         """Generate follow-up questions and evaluate them."""
-        print(f"\n🔧 Processing: {seed_question}")
+        print(f"\nProcessing: {seed_question}")
         print("-" * 60)
 
         try:
@@ -289,10 +289,10 @@ class FollowUpQuestionREPL:
             followup_dict = self.generator.generate_followups(seed_question)
 
             if not followup_dict:
-                print("❌ No questions generated. Try a different seed question.")
+                print("ERROR No questions generated. Try a different seed question.")
                 return
 
-            print(f"📝 Generated {len(followup_dict)} follow-up questions:\n")
+            print(f"Generated {len(followup_dict)} follow-up questions:\n")
 
             # Display questions by level
             for level in sorted(
@@ -312,7 +312,7 @@ class FollowUpQuestionREPL:
                 print(f"  {question}")
 
             print("\n" + "-" * 60)
-            print("⚡ Evaluating questions...\n")
+            print("Evaluating questions...\n")
 
             # Evaluate
             evaluation = self.evaluator.evaluate_question_set(
@@ -325,18 +325,18 @@ class FollowUpQuestionREPL:
             for level in sorted(evaluation.keys(), key=lambda x: int(x.split("_")[1])):
                 score = evaluation[level]["aggregate_score"]
                 total_score += score
-                status = "🟢" if score > 0.7 else "🟡" if score > 0.5 else "🔴"
+                status = "GOOD" if score > 0.7 else "MEDIUM" if score > 0.5 else "BAD"
                 print(f"  Level {level.split('_')[1]}: {status} {score:.3f}")
 
             avg_score = total_score / len(evaluation) if evaluation else 0.0
             overall_status = (
-                "🟢 Excellent"
+                "Excellent"
                 if avg_score > 0.75
-                else "🟡 Good"
+                else "Good"
                 if avg_score > 0.5
-                else "🔴 Needs improvement"
+                else "Needs improvement"
             )
-            print(f"\n📊 Overall Score: {overall_status} ({avg_score:.3f})")
+            print(f"\nOverall Score: {overall_status} ({avg_score:.3f})")
 
             # Save to history
             result = {
@@ -352,7 +352,7 @@ class FollowUpQuestionREPL:
             self.history.append(result)
 
         except Exception as e:
-            print(f"❌ Error processing question: {e}")
+            print(f"ERROR Error processing question: {e}")
             import traceback
 
             traceback.print_exc()

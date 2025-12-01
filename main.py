@@ -26,7 +26,7 @@ def main():
     print("Loading models...")
     generator = BFGQuestionGenerator()
     evaluator = GriceWiseEvaluator()
-    print("✓ Models loaded successfully\n")
+    print("OK Models loaded successfully\n")
 
     # Load sample seed questions
     sample_seeds_file = Path("data/sample_seeds.json")
@@ -74,7 +74,7 @@ def main():
         print("-" * (len(seed) + 8))
 
         if "error" in result:
-            print(f"❌ Error: {result['error']}")
+            print(f"ERROR Error: {result['error']}")
             continue
 
         # Display generated questions
@@ -97,7 +97,7 @@ def main():
             for level_key, eval_data in evaluation.items():
                 score = eval_data.get("aggregate_score", 0.0)
                 level_num = level_key.split("_")[1]
-                status = "✓" if score > 0.6 else "⚠" if score > 0.4 else "✗"
+                status = "OK" if score > 0.6 else "WARNING" if score > 0.4 else "FAILED"
                 print(f"  L{level_num}: {status} {score:.3f}")
 
             # Aggregate stats
@@ -106,11 +106,7 @@ def main():
                 avg_score = sum(scores) / len(scores)
                 summary_stats.append(avg_score)
                 overall = (
-                    "🟢 Good"
-                    if avg_score > 0.6
-                    else "🟡 Fair"
-                    if avg_score > 0.4
-                    else "🔴 Poor"
+                    "Good" if avg_score > 0.6 else "Fair" if avg_score > 0.4 else "Poor"
                 )
                 print(f"Overall Score: {overall} ({avg_score:.3f})")
 
@@ -136,9 +132,9 @@ def main():
     try:
         with open(output_file, "w", encoding="utf-8") as f:
             json.dump(evaluations, f, indent=2, ensure_ascii=False)
-        print(f"\n✓ Results saved to {output_file}")
+        print(f"\nOK Results saved to {output_file}")
     except Exception as e:
-        print(f"\n✗ Failed to save results: {e}")
+        print(f"\nFAILED Failed to save results: {e}")
 
     print("\nTo use the interactive REPL, run: uv run python repl.py")
     print("This allows you to generate and evaluate questions interactively.")
