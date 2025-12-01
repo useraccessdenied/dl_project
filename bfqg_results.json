@@ -3,12 +3,44 @@
     "seed_question": "How do I make a phone call?",
     "evaluation": {
       "level_2": {
-        "question": "[question] Level 3: [question] Level 4: [question] Level 5: [question]",
-        "logical_consistency": 0.0043060630559921265,
-        "informativeness": 0.1253088538743869,
-        "relevance": 0.05313517153263092,
-        "clarity": 0.0,
-        "aggregate_score": 0.019147078196207683
+        "question": "What are the different ways I can make a phone call?",
+        "logical_consistency": 0.9745950698852539,
+        "informativeness": 0.18003276348009728,
+        "relevance": 0.8645220994949341,
+        "clarity": 0.44363636363636366,
+        "aggregate_score": 0.7609178443388506
+      },
+      "level_3": {
+        "question": "How would I make a phone call in a different situation?",
+        "logical_consistency": 0.8285765647888184,
+        "informativeness": 0.15554085566282555,
+        "relevance": 0.7424559593200684,
+        "clarity": 0.48000000000000004,
+        "aggregate_score": 0.6836775080362956
+      },
+      "level_4": {
+        "question": "What components are involved in make a phone call?",
+        "logical_consistency": 0.07605087012052536,
+        "informativeness": 0.1433183051532022,
+        "relevance": 0.6864618062973022,
+        "clarity": 0.7140740740740741,
+        "aggregate_score": 0.4921955834973006
+      },
+      "level_5": {
+        "question": "Which method of make a phone call is most effective?",
+        "logical_consistency": 0.365868479013443,
+        "informativeness": 0.12791127565387017,
+        "relevance": 0.6696689128875732,
+        "clarity": 0.5866666666666668,
+        "aggregate_score": 0.5407346861892277
+      },
+      "level_6": {
+        "question": "How could I design a new approach to make a phone call?",
+        "logical_consistency": 0.18357881903648376,
+        "informativeness": 0.13527516258214176,
+        "relevance": 0.7516520023345947,
+        "clarity": 0.34444444444444455,
+        "aggregate_score": 0.4265584219385077
       }
     }
   },
@@ -16,25 +48,44 @@
     "seed_question": "How do I navigate to an address?",
     "evaluation": {
       "level_2": {
-        "question": "[question] Level 3: [question] Level 4: [question] Level 5: [question]",
-        "logical_consistency": 0.008729114197194576,
-        "informativeness": 0.1253088538743869,
-        "relevance": 0.07801105082035065,
-        "clarity": 0.0,
-        "aggregate_score": 0.02891338833918174
-      }
-    }
-  },
-  {
-    "seed_question": "How do I adjust the air conditioning?",
-    "evaluation": {
+        "question": "What are the different ways I can navigate to an address?",
+        "logical_consistency": 0.986851155757904,
+        "informativeness": 0.137479840572938,
+        "relevance": 0.9028912782669067,
+        "clarity": 0.5042424242424244,
+        "aggregate_score": 0.7979949527557451
+      },
       "level_3": {
-        "question": "[quest] Level 4: [quest] Level 5: [quest]",
-        "logical_consistency": 0.0023666888009756804,
-        "informativeness": 0.12560188777855455,
-        "relevance": 0.07402049005031586,
-        "clarity": 0.0,
-        "aggregate_score": 0.025462392950430512
+        "question": "How would I navigate to an address in a different situation?",
+        "logical_consistency": 0.9063397645950317,
+        "informativeness": 0.1201701827249431,
+        "relevance": 0.8675371408462524,
+        "clarity": 0.5406060606060605,
+        "aggregate_score": 0.7714943220157816
+      },
+      "level_4": {
+        "question": "What components are involved in navigate to an address?",
+        "logical_consistency": 0.1306564211845398,
+        "informativeness": 0.13345210479412783,
+        "relevance": 0.8134083151817322,
+        "clarity": 0.7585185185185186,
+        "aggregate_score": 0.5675277516282635
+      },
+      "level_5": {
+        "question": "Which method of navigate to an address is most effective?",
+        "logical_consistency": 0.5503063201904297,
+        "informativeness": 0.09350090848950132,
+        "relevance": 0.8125171661376953,
+        "clarity": 0.6533333333333333,
+        "aggregate_score": 0.6720522732204861
+      },
+      "level_6": {
+        "question": "How could I design a new approach to navigate to an address?",
+        "logical_consistency": 0.24072538316249847,
+        "informativeness": 0.11809630789391512,
+        "relevance": 0.8272361755371094,
+        "clarity": 0.4000000000000001,
+        "aggregate_score": 0.489320519566536
       }
     }
   },
@@ -42,12 +93,359 @@
     "seed_question": "How do I play music?",
     "evaluation": {
       "level_2": {
-        "question": "[question] Level 3: [question] Level 4: [question] Level 5: [question]",
-        "logical_consistency": 0.005180722568184137,
-        "informativeness": 0.1253088538743869,
-        "relevance": 0.042771823704242706,
-        "clarity": 0.0,
-        "aggregate_score": 0.015984182090808947
+        "question": "What are the different ways I can play music?",
+        "logical_consistency": 0.9749988317489624,
+        "informativeness": 0.15933289567663864,
+        "relevance": 0.8537173271179199,
+        "clarity": 0.6400000000000001,
+        "aggregate_score": 0.8229053862889608
+      },
+      "level_3": {
+        "question": "How would I play music in a different situation?",
+        "logical_consistency": 0.8443122506141663,
+        "informativeness": 0.12984782622345697,
+        "relevance": 0.7484354972839355,
+        "clarity": 0.6844444444444444,
+        "aggregate_score": 0.759064064114182
+      },
+      "level_4": {
+        "question": "What components are involved in play music?",
+        "logical_consistency": 0.11753106862306595,
+        "informativeness": 0.15406869479113494,
+        "relevance": 0.651685357093811,
+        "clarity": 0.9142857142857144,
+        "aggregate_score": 0.5611673800008637
+      },
+      "level_5": {
+        "question": "Which method of play music is most effective?",
+        "logical_consistency": 0.2834606468677521,
+        "informativeness": 0.1014226056747613,
+        "relevance": 0.610748291015625,
+        "clarity": 0.8033333333333335,
+        "aggregate_score": 0.5658474237389035
+      },
+      "level_6": {
+        "question": "How could I design a new approach to play music?",
+        "logical_consistency": 0.08550569415092468,
+        "informativeness": 0.13398874373453223,
+        "relevance": 0.6741124391555786,
+        "clarity": 0.5333333333333334,
+        "aggregate_score": 0.4309838222132789
+      }
+    }
+  },
+  {
+    "seed_question": "How do I adjust the air conditioning?",
+    "evaluation": {
+      "level_2": {
+        "question": "What are the different ways I can adjust the air conditioning?",
+        "logical_consistency": 0.9855073690414429,
+        "informativeness": 0.15496506863618822,
+        "relevance": 0.9010738134384155,
+        "clarity": 0.5648484848484849,
+        "aggregate_score": 0.8171432224427811
+      },
+      "level_3": {
+        "question": "How would I adjust the air conditioning in a different situation?",
+        "logical_consistency": 0.8359543681144714,
+        "informativeness": 0.14011510899241655,
+        "relevance": 0.8680386543273926,
+        "clarity": 0.6012121212121213,
+        "aggregate_score": 0.7684017145513286
+      },
+      "level_4": {
+        "question": "What components are involved in adjust the air conditioning?",
+        "logical_consistency": 0.10861925035715103,
+        "informativeness": 0.13438462269775822,
+        "relevance": 0.7738997936248779,
+        "clarity": 0.6844444444444444,
+        "aggregate_score": 0.5223211628088245
+      },
+      "level_5": {
+        "question": "Which method of adjust the air conditioning is most effective?",
+        "logical_consistency": 0.17693468928337097,
+        "informativeness": 0.105007185940892,
+        "relevance": 0.7604941725730896,
+        "clarity": 0.6666666666666667,
+        "aggregate_score": 0.5346985095077091
+      },
+      "level_6": {
+        "question": "How could I design a new approach to adjust the air conditioning?",
+        "logical_consistency": 0.11842580139636993,
+        "informativeness": 0.13784651628951278,
+        "relevance": 0.7838745713233948,
+        "clarity": 0.45555555555555566,
+        "aggregate_score": 0.45261864275844016
+      }
+    }
+  },
+  {
+    "seed_question": "What is the fuel efficiency of this car?",
+    "evaluation": {
+      "level_2": {
+        "question": "What are the different ways I can the fuel efficiency of this car?",
+        "logical_consistency": 0.9713441729545593,
+        "informativeness": 0.16640224779891705,
+        "relevance": 0.8220807313919067,
+        "clarity": 0.4102564102564103,
+        "aggregate_score": 0.7345604382009587
+      },
+      "level_3": {
+        "question": "How would I the fuel efficiency of this car in a different situation?",
+        "logical_consistency": 0.928065836429596,
+        "informativeness": 0.14100770686916406,
+        "relevance": 0.8570935726165771,
+        "clarity": 0.44102564102564107,
+        "aggregate_score": 0.7420616833572714
+      },
+      "level_4": {
+        "question": "What components are involved in the fuel efficiency of this car?",
+        "logical_consistency": 0.16494840383529663,
+        "informativeness": 0.1808241827455388,
+        "relevance": 0.7931444644927979,
+        "clarity": 0.5890909090909091,
+        "aggregate_score": 0.5157279258063345
+      },
+      "level_5": {
+        "question": "Which method of the fuel efficiency of this car is most effective?",
+        "logical_consistency": 0.44353488087654114,
+        "informativeness": 0.09528755213263336,
+        "relevance": 0.7938436269760132,
+        "clarity": 0.46666666666666673,
+        "aggregate_score": 0.5680150581730737
+      },
+      "level_6": {
+        "question": "How could I design a new approach to the fuel efficiency of this car?",
+        "logical_consistency": 0.13367748260498047,
+        "informativeness": 0.1632547533547973,
+        "relevance": 0.785211443901062,
+        "clarity": 0.3904761904761905,
+        "aggregate_score": 0.4364550389940776
+      }
+    }
+  },
+  {
+    "seed_question": "How do I activate the parking sensors?",
+    "evaluation": {
+      "level_2": {
+        "question": "What are the different ways I can activate the parking sensors?",
+        "logical_consistency": 0.985018789768219,
+        "informativeness": 0.1577646558986171,
+        "relevance": 0.927377462387085,
+        "clarity": 0.5769696969696971,
+        "aggregate_score": 0.8297886497083337
+      },
+      "level_3": {
+        "question": "How would I activate the parking sensors in a different situation?",
+        "logical_consistency": 0.901465117931366,
+        "informativeness": 0.11751464241560887,
+        "relevance": 0.9193735122680664,
+        "clarity": 0.6133333333333333,
+        "aggregate_score": 0.8113906545109218
+      },
+      "level_4": {
+        "question": "What components are involved in activate the parking sensors?",
+        "logical_consistency": 0.17216727137565613,
+        "informativeness": 0.13574487654371323,
+        "relevance": 0.8087868690490723,
+        "clarity": 0.6696296296296296,
+        "aggregate_score": 0.5501945900181193
+      },
+      "level_5": {
+        "question": "Which method of activate the parking sensors is most effective?",
+        "logical_consistency": 0.08291555941104889,
+        "informativeness": 0.09993435375348088,
+        "relevance": 0.822921633720398,
+        "clarity": 0.6533333333333333,
+        "aggregate_score": 0.5197235088215933
+      },
+      "level_6": {
+        "question": "How could I design a new approach to activate the parking sensors?",
+        "logical_consistency": 0.0731329694390297,
+        "informativeness": 0.13795831872549127,
+        "relevance": 0.8433545827865601,
+        "clarity": 0.46666666666666673,
+        "aggregate_score": 0.46105140629741886
+      }
+    }
+  },
+  {
+    "seed_question": "When should I check the tire pressure?",
+    "evaluation": {
+      "level_2": {
+        "question": "What are the different ways I can when should i check the tire pressure?",
+        "logical_consistency": 0.9926244616508484,
+        "informativeness": 0.13141562447878175,
+        "relevance": 0.9243208169937134,
+        "clarity": 0.4190476190476191,
+        "aggregate_score": 0.778664299230727
+      },
+      "level_3": {
+        "question": "How would I when should i check the tire pressure in a different situation?",
+        "logical_consistency": 0.6508151888847351,
+        "informativeness": 0.10466162476054638,
+        "relevance": 0.9460764527320862,
+        "clarity": 0.44761904761904764,
+        "aggregate_score": 0.681503563078623
+      },
+      "level_4": {
+        "question": "What components are involved in when should i check the tire pressure?",
+        "logical_consistency": 0.07092143595218658,
+        "informativeness": 0.13252733288123408,
+        "relevance": 0.8431475162506104,
+        "clarity": 0.5111111111111111,
+        "aggregate_score": 0.475060021104636
+      },
+      "level_5": {
+        "question": "Which method of when should i check the tire pressure is most effective?",
+        "logical_consistency": 0.2070092260837555,
+        "informativeness": 0.09066093138433177,
+        "relevance": 0.843031644821167,
+        "clarity": 0.47179487179487184,
+        "aggregate_score": 0.5072785808999315
+      },
+      "level_6": {
+        "question": "How could I design a new approach to when should i check the tire pressure?",
+        "logical_consistency": 0.04727121442556381,
+        "informativeness": 0.1254670645333108,
+        "relevance": 0.8740496635437012,
+        "clarity": 0.4000000000000001,
+        "aggregate_score": 0.4404402926564217
+      }
+    }
+  },
+  {
+    "seed_question": "How do I answer an incoming call?",
+    "evaluation": {
+      "level_2": {
+        "question": "What are the different ways I can answer an incoming call?",
+        "logical_consistency": 0.9877959489822388,
+        "informativeness": 0.15558700143814522,
+        "relevance": 0.9179485440254211,
+        "clarity": 0.5163636363636364,
+        "aggregate_score": 0.8073693764570988
+      },
+      "level_3": {
+        "question": "How would I answer an incoming call in a different situation?",
+        "logical_consistency": 0.9428184032440186,
+        "informativeness": 0.1216821734409701,
+        "relevance": 0.8232880234718323,
+        "clarity": 0.5527272727272727,
+        "aggregate_score": 0.7729445664810412
+      },
+      "level_4": {
+        "question": "What components are involved in answer an incoming call?",
+        "logical_consistency": 0.13803809881210327,
+        "informativeness": 0.15294726835217234,
+        "relevance": 0.7291802167892456,
+        "clarity": 0.7437037037037038,
+        "aggregate_score": 0.5369740064350176
+      },
+      "level_5": {
+        "question": "Which method of answer an incoming call is most effective?",
+        "logical_consistency": 0.4080711305141449,
+        "informativeness": 0.10472803351937025,
+        "relevance": 0.7331080436706543,
+        "clarity": 0.6666666666666667,
+        "aggregate_score": 0.6026152802838219
+      },
+      "level_6": {
+        "question": "How could I design a new approach to answer an incoming call?",
+        "logical_consistency": 0.07953305542469025,
+        "informativeness": 0.13798815467630365,
+        "relevance": 0.8347101211547852,
+        "clarity": 0.41111111111111115,
+        "aggregate_score": 0.4417847625635289
+      }
+    }
+  },
+  {
+    "seed_question": "Where is the emergency brake?",
+    "evaluation": {
+      "level_2": {
+        "question": "What are the different ways I can where is the emergency brake?",
+        "logical_consistency": 0.9854878783226013,
+        "informativeness": 0.12233206784346841,
+        "relevance": 0.8878709673881531,
+        "clarity": 0.4333333333333334,
+        "aggregate_score": 0.768897393014696
+      },
+      "level_3": {
+        "question": "How would I where is the emergency brake in a different situation?",
+        "logical_consistency": 0.8241744041442871,
+        "informativeness": 0.09890220988025934,
+        "relevance": 0.9189529418945312,
+        "clarity": 0.46666666666666673,
+        "aggregate_score": 0.7365980042351618
+      },
+      "level_4": {
+        "question": "What components are involved in where is the emergency brake?",
+        "logical_consistency": 0.13890540599822998,
+        "informativeness": 0.12360356770427683,
+        "relevance": 0.7685442566871643,
+        "clarity": 0.6800000000000002,
+        "aggregate_score": 0.5291498875617981
+      },
+      "level_5": {
+        "question": "Which method of where is the emergency brake is most effective?",
+        "logical_consistency": 0.07699696719646454,
+        "informativeness": 0.09902375752350245,
+        "relevance": 0.7566647529602051,
+        "clarity": 0.5769696969696971,
+        "aggregate_score": 0.4702104723754556
+      },
+      "level_6": {
+        "question": "How could I design a new approach to where is the emergency brake?",
+        "logical_consistency": 0.04811006784439087,
+        "informativeness": 0.11873373320136468,
+        "relevance": 0.7864871025085449,
+        "clarity": 0.4102564102564103,
+        "aggregate_score": 0.4149511935364487
+      }
+    }
+  },
+  {
+    "seed_question": "Can I use voice commands while driving?",
+    "evaluation": {
+      "level_2": {
+        "question": "What are the different ways I can can i use voice commands while driving?",
+        "logical_consistency": 0.9922863245010376,
+        "informativeness": 0.13331986194429601,
+        "relevance": 0.8967678546905518,
+        "clarity": 0.4285714285714286,
+        "aggregate_score": 0.7725418692543394
+      },
+      "level_3": {
+        "question": "How would I can i use voice commands while driving in a different situation?",
+        "logical_consistency": 0.9848288893699646,
+        "informativeness": 0.11279027999540694,
+        "relevance": 0.9253427982330322,
+        "clarity": 0.45714285714285724,
+        "aggregate_score": 0.789104848248618
+      },
+      "level_4": {
+        "question": "What components are involved in can i use voice commands while driving?",
+        "logical_consistency": 0.08836803585290909,
+        "informativeness": 0.1392734958627378,
+        "relevance": 0.8798974752426147,
+        "clarity": 0.5222222222222224,
+        "aggregate_score": 0.49682924443924875
+      },
+      "level_5": {
+        "question": "Which method of can i use voice commands while driving is most effective?",
+        "logical_consistency": 0.41402605175971985,
+        "informativeness": 0.08164877463181487,
+        "relevance": 0.8631042242050171,
+        "clarity": 0.48205128205128206,
+        "aggregate_score": 0.5863938526720064
+      },
+      "level_6": {
+        "question": "How could I design a new approach to can i use voice commands while driving?",
+        "logical_consistency": 0.10310962796211243,
+        "informativeness": 0.12726060586416585,
+        "relevance": 0.8746830821037292,
+        "clarity": 0.4088888888888889,
+        "aggregate_score": 0.4622271996515768
       }
     }
   }
