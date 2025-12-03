@@ -3,7 +3,7 @@ name = "dl-project"
 version = "0.1.0"
 description = "Bloom's Taxonomy-based Follow-up Question Generation using B-FQG and GriceWise Evaluation"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.12"
 dependencies = [
     "torch",
     "transformers",
