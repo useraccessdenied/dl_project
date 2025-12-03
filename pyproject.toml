@@ -13,4 +13,10 @@ dependencies = [
     "nltk",
     "datasets",
     "tqdm",
+    "spacy>=3.8.11",
+    "scikit-learn>=1.7.2",
+    "pip>=25.3",
 ]
+
+[tool.ruff]
+line-length = 150
