@@ -60,9 +60,7 @@ class FollowUpQuestionREPL:
         print("B-FQG Follow-up Question Generator REPL")
         print("=" * 60)
         print("Welcome to the interactive follow-up question generator!")
-        print(
-            "This tool generates cognitively scaffolded questions using Bloom's Taxonomy"
-        )
+        print("This tool generates cognitively scaffolded questions using Bloom's Taxonomy")
         print("and evaluates them using Gricean-inspired metrics.\n")
 
         # Initialize models
@@ -186,17 +184,10 @@ class FollowUpQuestionREPL:
         for i, entry in enumerate(self.history, 1):
             seed = entry["seed_question"]
             num_questions = len(entry["followups"])
-            avg_score = (
-                sum(q["aggregate_score"] for q in entry["evaluation"].values())
-                / len(entry["evaluation"])
-                if entry.get("evaluation")
-                else 0.0
-            )
+            avg_score = sum(q["aggregate_score"] for q in entry["evaluation"].values()) / len(entry["evaluation"]) if entry.get("evaluation") else 0.0
 
             print(f"  {i}. {seed[:50]}{'...' if len(seed) > 50 else ''}")
-            print(
-                f"     Generated: {num_questions} questions, Avg score: {avg_score:.3f}"
-            )
+            print(f"     Generated: {num_questions} questions, Avg score: {avg_score:.3f}")
         print("\nUse '/save' to save the last result to a file.")
 
     def save_last_result(self):
@@ -267,9 +258,7 @@ class FollowUpQuestionREPL:
                 status = "OK" if avg_score > 0.6 else "WARNING"
                 print(f"{i}. {seed}")
                 print(f"   {status} Generated {len(evaluation)} questions")
-                print(
-                    f"   Avg: {avg_score:.3f}, Min: {min_score:.3f}, Max: {max_score:.3f}"
-                )
+                print(f"   Avg: {avg_score:.3f}, Min: {min_score:.3f}, Max: {max_score:.3f}")
             else:
                 print(f"{i}. {seed}")
                 print("   ERROR No evaluation data")
@@ -295,9 +284,7 @@ class FollowUpQuestionREPL:
             print(f"Generated {len(followup_dict)} follow-up questions:\n")
 
             # Display questions by level
-            for level in sorted(
-                followup_dict.keys(), key=lambda x: int(x.split("_")[1])
-            ):
+            for level in sorted(followup_dict.keys(), key=lambda x: int(x.split("_")[1])):
                 level_num = level.split("_")[1]
                 question = followup_dict[level]
                 level_name = {
@@ -315,9 +302,7 @@ class FollowUpQuestionREPL:
             print("Evaluating questions...\n")
 
             # Evaluate
-            evaluation = self.evaluator.evaluate_question_set(
-                seed_question, followup_dict, verbose=True
-            )
+            evaluation = self.evaluator.evaluate_question_set(seed_question, followup_dict, verbose=True)
 
             # Show summary
             print("SUMMARY:")
@@ -329,13 +314,7 @@ class FollowUpQuestionREPL:
                 print(f"  Level {level.split('_')[1]}: {status} {score:.3f}")
 
             avg_score = total_score / len(evaluation) if evaluation else 0.0
-            overall_status = (
-                "Excellent"
-                if avg_score > 0.75
-                else "Good"
-                if avg_score > 0.5
-                else "Needs improvement"
-            )
+            overall_status = "Excellent" if avg_score > 0.75 else "Good" if avg_score > 0.5 else "Needs improvement"
             print(f"\nOverall Score: {overall_status} ({avg_score:.3f})")
 
             # Save to history
