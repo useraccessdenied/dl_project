@@ -355,6 +355,7 @@ class GriceWiseEvaluator:
                 evaluation = self.evaluate_question_set(seed, followups)
                 result = {
                     "seed_question": seed,
+                    "followups": followups,
                     "evaluation": evaluation,
                 }
                 results.append(result)
