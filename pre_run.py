@@ -107,9 +107,7 @@ class SetupManager:
                 elif "MNLI" in model_name or "roberta" in model_name:
                     # NLI models (sequence classification)
                     tokenizer = AutoTokenizer.from_pretrained(model_name)
-                    model = AutoModelForSequenceClassification.from_pretrained(
-                        model_name
-                    )
+                    model = AutoModelForSequenceClassification.from_pretrained(model_name)
                 else:
                     # Regular transformer (fallback)
                     tokenizer = AutoTokenizer.from_pretrained(model_name)

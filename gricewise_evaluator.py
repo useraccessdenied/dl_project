@@ -7,7 +7,7 @@ based on Grice's Maxims through reference-free metrics:
 1. Logical Consistency (Quality): NLI model to check entailment
 2. Informativeness (Quantity): Conditional entropy using language model
 3. Relevance (Relation): Cosine similarity of sentence embeddings
-4. Clarity (Manner): Average Dependency Distance using NLTK
+4. Clarity (Manner): Average Dependency Distance using SpaCy
 """
 
 from typing import Dict, List, Union, Tuple, Any
@@ -21,10 +21,8 @@ from transformers import (
     GPT2Tokenizer,
 )
 from sentence_transformers import SentenceTransformer, util
-import nltk
-from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
+import spacy
+import numpy as np
 
 
 class GriceWiseEvaluator:
@@ -43,6 +41,7 @@ class GriceWiseEvaluator:
         nli_model: str = "textattack/roberta-base-MNLI",
         lm_model: str = "gpt2",
         embedding_model: str = "all-MiniLM-L6-v2",
+        spacy_model: str = "en_core_web_sm",
         device: str = None,
     ):
         """
@@ -52,15 +51,18 @@ class GriceWiseEvaluator:
             nli_model: Hugging Face model for NLI (logical consistency)
             lm_model: Language model for entropy calculation
             embedding_model: Sentence transformer for embeddings
+            spacy_model: SpaCy model for dependency parsing
             device: Device to run on
         """
         if device is None:
-            device = "cuda" if torch.cuda.is_available() else "cpu"
+            if torch.cuda.is_available():
+                device = "cuda"
+            elif torch.backends.mps.is_available():
+                device = "mps"
+            else:
+                device = "cpu"
 
         self.device = device
-
-        # Download NLTK resources
-        self._download_nltk_resources()
 
         # Initialize NLI model for logical consistency
         print(f"Loading NLI model: {nli_model}")
@@ -84,33 +86,18 @@ class GriceWiseEvaluator:
         print(f"Loading embedding model: {embedding_model}")
         self.embedder = SentenceTransformer(embedding_model, device=self.device)
 
+        # Initialize SpaCy model for Clarity (ADD)
+        print(f"Loading SpaCy model: {spacy_model}")
+        try:
+            self.nlp = spacy.load(spacy_model)
+        except OSError:
+            print(f"Model '{spacy_model}' not found. Downloading...")
+            spacy.cli.download(spacy_model)
+            self.nlp = spacy.load(spacy_model)
+
         print("All evaluation models loaded successfully!")
 
-    def _download_nltk_resources(self):
-        """Download required NLTK resources for text processing."""
-        try:
-            nltk.data.find("tokenizers/punkt")
-        except LookupError:
-            nltk.download("punkt")
-
-        try:
-            nltk.data.find("corpora/stopwords")
-        except LookupError:
-            nltk.download("stopwords")
-
-        try:
-            nltk.data.find("corpora/wordnet")
-        except LookupError:
-            nltk.download("wordnet")
-
-        try:
-            nltk.data.find("taggers/averaged_perceptron_tagger")
-        except LookupError:
-            nltk.download("averaged_perceptron_tagger")
-
-    def evaluate_logical_consistency(
-        self, question: str, context: str, threshold: float = 0.5
-    ) -> float:
+    def evaluate_logical_consistency(self, question: str, context: str, threshold: float = 0.5) -> float:
         """
         Evaluate logical consistency using NLI entailment probability.
 
@@ -127,8 +114,8 @@ class GriceWiseEvaluator:
 
         # Prepare input for NLI
         inputs = self.nli_tokenizer(
-            question,
             context,
+            question,  # Context is premise, Question is hypothesis
             return_tensors="pt",
             truncation=True,
             max_length=512,
@@ -141,6 +128,8 @@ class GriceWiseEvaluator:
             probs = torch.softmax(logits, dim=-1)
 
         # Get entailment probability (index 2 for roberta-large-mnli)
+        # Verify label mapping for the specific model if needed
+        # textattack/roberta-base-MNLI labels: 0: contradiction, 1: neutral, 2: entailment
         entailment_prob = probs[0][2].item()
 
         return entailment_prob
@@ -221,12 +210,10 @@ class GriceWiseEvaluator:
 
     def evaluate_clarity(self, question: str) -> float:
         """
-        Evaluate clarity using a simple approximation of syntactic complexity.
+        Evaluate clarity using Average Dependency Distance (ADD).
 
-        Since spaCy has compatibility issues, we use a heuristic based on:
-        - Sentence length
-        - Word complexity (long words)
-        - Punctuation complexity
+        ADD = (1 / n) * Sum(|i - head(i)|)
+        Clarity = 1 / (1 + ADD)
 
         Args:
             question: The follow-up question to evaluate
@@ -238,33 +225,30 @@ class GriceWiseEvaluator:
             return 0.0
 
         try:
-            # Tokenize and analyze basic properties
-            words = word_tokenize(question.lower())
-            words = [w for w in words if w.isalnum()]  # Remove punctuation
+            doc = self.nlp(question)
 
-            if not words:
+            total_distance = 0
+            n_tokens = 0
+
+            for token in doc:
+                # Skip punctuation for dependency distance calculation?
+                # The paper doesn't strictly say, but usually punctuation is excluded in such metrics.
+                # However, for robustness we'll include everything or exclude punct.
+                # Let's include everything as "syntactic complexity" usually considers whole structure.
+                if not token.is_punct:
+                    distance = abs(token.i - token.head.i)
+                    total_distance += distance
+                    n_tokens += 1
+
+            if n_tokens == 0:
                 return 0.0
 
-            # Average word length (penalize very long/short words)
-            avg_word_len = sum(len(word) for word in words) / len(words)
+            add = total_distance / n_tokens
 
-            # Penalize very short questions (likely incomplete)
-            word_count = len(words)
-
-            # Count punctuation complexity
-            punctuation_count = len(re.findall(r'[!?.,;:()""\[\]]', question))
-
-            # Ideal avg word length is around 4-6 characters
-            word_len_score = 1.0 - min(1.0, abs(avg_word_len - 5.0) / 3.0)
-
-            # Penalize very short or very long questions
-            length_score = 1.0 - min(1.0, abs(word_count - 7.0) / 5.0)
-
-            # Penalize excessive punctuation
-            punct_score = max(0.0, 1.0 - punctuation_count / 3.0)
-
-            # Combine scores (weighted)
-            clarity = 0.4 * word_len_score + 0.4 * length_score + 0.2 * punct_score
+            # Clarity score: inverse of ADD (plus 1 to avoid div by zero and normalize)
+            # A completely linear sentence "I go home" might have low ADD.
+            # Complex nested sentences have high ADD.
+            clarity = 1.0 / (1.0 + add)
 
             return clarity
 
@@ -294,9 +278,7 @@ class GriceWiseEvaluator:
         # Build cumulative context for each follow-up
         previous_questions = [seed_question]
 
-        sorted_levels = sorted(
-            followups.keys(), key=lambda x: int(re.search(r"\d+", x).group())
-        )
+        sorted_levels = sorted(followups.keys(), key=lambda x: int(re.search(r"\d+", x).group()))
 
         for level in sorted_levels:
             if level not in followups:
@@ -318,8 +300,15 @@ class GriceWiseEvaluator:
                 "informativeness": informativeness,
                 "relevance": relevance,
                 "clarity": clarity,
-                "aggregate_score": (logical_consistency + relevance + clarity)
-                / 3.0,  # Exclude informativeness for now (lower better)
+                # Simple aggregate: Average of "good" metrics
+                # Note: Informativeness (Entropy) - is lower better or higher better?
+                # Paper: "Lower indicates redundancy; optimization targets a balance"
+                # But usually higher entropy = more information.
+                # The previous code had comment: "Exclude informativeness for now (lower better)"
+                # Actually, in text generation, very low entropy = repetition. High entropy = randomness.
+                # Paper says "optimization targets a balance".
+                # For this implementation, we'll treat Logical Consistency, Relevance, and Clarity as the key quality drivers.
+                "aggregate_score": (logical_consistency + relevance + clarity) / 3.0,
             }
 
             results[level] = question_results
@@ -330,9 +319,7 @@ class GriceWiseEvaluator:
                 print(f"  Informativeness:     {informativeness:.3f}")
                 print(f"  Relevance:          {relevance:.3f}")
                 print(f"  Clarity:            {clarity:.3f}")
-                print(
-                    f"  Aggregate:          {question_results['aggregate_score']:.3f}"
-                )
+                print(f"  Aggregate:          {question_results['aggregate_score']:.3f}")
                 print()
 
             # Add to context for next question
@@ -358,11 +345,7 @@ class GriceWiseEvaluator:
         results = []
         from tqdm import tqdm
 
-        iterator = (
-            tqdm(question_sets, desc="Evaluating questions")
-            if show_progress
-            else question_sets
-        )
+        iterator = tqdm(question_sets, desc="Evaluating questions") if show_progress else question_sets
 
         for question_set in iterator:
             seed = question_set["seed_question"]
