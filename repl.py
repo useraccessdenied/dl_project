@@ -14,6 +14,7 @@ from pathlib import Path
 # Import our modules
 from bfqg_generator import BFGQuestionGenerator
 from gricewise_evaluator import GriceWiseEvaluator
+from main import RecursivePipeline
 
 
 class FollowUpQuestionREPL:
@@ -30,25 +31,19 @@ class FollowUpQuestionREPL:
         """
         self.save_history = save_history
         self.history = []
-        self.generator = None
-        self.evaluator = None
+        self.pipeline = None
 
     def initialize_models(self):
         """Initialize the generator and evaluator models."""
         print("Initializing models...")
 
         try:
-            self.generator = BFGQuestionGenerator()
-            print("OK Question generator initialized")
+            # We use the pipeline which manages generator and evaluator
+            # Use large model as requested
+            self.pipeline = RecursivePipeline()
+            print("OK Models initialized")
         except Exception as e:
-            print("FAILED Failed to initialize question generator: {e}")
-            return False
-
-        try:
-            self.evaluator = GriceWiseEvaluator()
-            print("OK Evaluator initialized")
-        except Exception as e:
-            print("FAILED Failed to initialize evaluator: {e}")
+            print(f"FAILED Failed to initialize models: {e}")
             return False
 
         print("All models ready!\n")
@@ -224,64 +219,57 @@ class FollowUpQuestionREPL:
             print("No seeds entered. Returning to single mode.")
             return
 
-        print(f"\nProcessing {len(seeds)} seed questions...\n")
+        print(f"\nProcessing {len(seeds)} seed questions using Recursive Pipeline...\n")
 
-        # Generate and evaluate
-        results = self.generator.generate_multiple(seeds, show_progress=True)
-        evaluations = self.evaluator.batch_evaluate(results, show_progress=True)
+        # Use recursive pipeline
+        results = self.pipeline.run(seeds)
 
         # Show summary
         print("\n" + "=" * 60)
         print("BATCH RESULTS SUMMARY")
         print("=" * 60)
 
-        for i, result in enumerate(evaluations, 1):
+        for i, result in enumerate(results, 1):
             seed = result["seed_question"]
             evaluation = result.get("evaluation", {})
+            iteration_score = result.get("iteration_score", 0.0)
 
-            if "error" in result:
-                print(f"{i}. {seed}")
-                print(f"   ERROR Error: {result['error']}")
-                continue
-
-            # Calculate aggregate stats
-            scores = []
-            for level_data in evaluation.values():
-                if isinstance(level_data, dict) and "aggregate_score" in level_data:
-                    scores.append(level_data["aggregate_score"])
-
-            if scores:
-                avg_score = sum(scores) / len(scores)
-                min_score = min(scores)
-                max_score = max(scores)
-
-                status = "OK" if avg_score > 0.6 else "WARNING"
-                print(f"{i}. {seed}")
-                print(f"   {status} Generated {len(evaluation)} questions")
-                print(f"   Avg: {avg_score:.3f}, Min: {min_score:.3f}, Max: {max_score:.3f}")
-            else:
-                print(f"{i}. {seed}")
-                print("   ERROR No evaluation data")
+            print(f"{i}. {seed}")
+            print(f"   Score: {iteration_score:.3f}")
+            if "followups" in result:
+                print(f"   Generated {len(result['followups'])} questions")
 
         # Add to history
-        self.history.extend(evaluations)
+        self.history.extend(results)
 
         print(f"\nBatch processing complete! {len(seeds)} seeds processed.")
 
     def generate_and_evaluate(self, seed_question: str):
         """Generate follow-up questions and evaluate them."""
         print(f"\nProcessing: {seed_question}")
+        print("Using Recursive Pipeline (Single Item)...")
         print("-" * 60)
 
         try:
-            # Generate questions
-            followup_dict = self.generator.generate_followups(seed_question)
+            # Use recursive pipeline on single item
+            # This ensures even single items get the benefit of iteration (if threshold check fails)
+            # although clustering won't work, threshold fallback will
+            results = self.pipeline.run([seed_question])
+
+            if not results:
+                print("ERROR No results returned.")
+                return
+
+            result = results[0]
+            followup_dict = result.get("followups", {})
+            evaluation = result.get("evaluation", {})
+            avg_score = result.get("iteration_score", 0.0)
 
             if not followup_dict:
                 print("ERROR No questions generated. Try a different seed question.")
                 return
 
-            print(f"Generated {len(followup_dict)} follow-up questions:\n")
+            print(f"\nGenerated {len(followup_dict)} follow-up questions:\n")
 
             # Display questions by level
             for level in sorted(followup_dict.keys(), key=lambda x: int(x.split("_")[1])):
@@ -299,35 +287,18 @@ class FollowUpQuestionREPL:
                 print(f"  {question}")
 
             print("\n" + "-" * 60)
-            print("Evaluating questions...\n")
-
-            # Evaluate
-            evaluation = self.evaluator.evaluate_question_set(seed_question, followup_dict, verbose=True)
+            print("Evaluation Summary:\n")
 
             # Show summary
-            print("SUMMARY:")
-            total_score = 0
             for level in sorted(evaluation.keys(), key=lambda x: int(x.split("_")[1])):
-                score = evaluation[level]["aggregate_score"]
-                total_score += score
+                score = evaluation[level].get("aggregate_score", 0.0)
                 status = "GOOD" if score > 0.7 else "MEDIUM" if score > 0.5 else "BAD"
                 print(f"  Level {level.split('_')[1]}: {status} {score:.3f}")
 
-            avg_score = total_score / len(evaluation) if evaluation else 0.0
             overall_status = "Excellent" if avg_score > 0.75 else "Good" if avg_score > 0.5 else "Needs improvement"
             print(f"\nOverall Score: {overall_status} ({avg_score:.3f})")
 
             # Save to history
-            result = {
-                "seed_question": seed_question,
-                "followups": followup_dict,
-                "evaluation": evaluation,
-                "summary": {
-                    "average_score": avg_score,
-                    "question_count": len(followup_dict),
-                    "levels_covered": sorted(followup_dict.keys()),
-                },
-            }
             self.history.append(result)
 
         except Exception as e:
