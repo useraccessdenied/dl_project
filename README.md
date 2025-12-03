@@ -9,10 +9,9 @@ This project implements a framework for generating cognitively scaffolded follow
 The system uses Large Language Models to generate follow-up questions that progressively increase in cognitive complexity from basic recall (Level 1) to advanced creation (Level 6) according to Bloom's Revised Taxonomy. Generated questions are evaluated using the GriceWise framework based on conversational principles.
 
 ### Key Components
-- **B-FQG Generator**: Creates 5 follow-up questions per seed question across cognitive levels
-- **GriceWise Evaluator**: Assesses questions using Gricean Maxims (Quality, Quantity, Relation, Manner)
-- **Interactive REPL**: Command-line interface for experimentation
-- **Batch Processing**: Automated evaluation of multiple question sets
+- **B-FQG Generator**: Creates 5 follow-up questions per seed question across cognitive levels (Understand to Create). Uses a focused, independent generation strategy for each level to ensure high quality.
+- **GriceWise Evaluator**: Assesses questions using Gricean Maxims (Quality, Quantity, Relation, Manner).
+- **Recursive Pipeline**: Iteratively refines questions by clustering them into high/low quality groups and using the high-quality examples to prompt-tune the model for subsequent iterations.
 
 ## Installation
 
@@ -29,7 +28,20 @@ uv run python pre_run.py
 
 ## Usage
 
-### Interactive REPL (Recommended)
+### Batch Processing (Recursive Pipeline)
+```bash
+uv run python main.py
+```
+
+This runs the complete recursive generation pipeline:
+1.  **Generate**: Creates initial questions using `google/flan-t5-large`.
+2.  **Evaluate**: Scores questions using GriceWise metrics.
+3.  **Cluster**: Separates high-quality vs. low-quality results.
+4.  **Augment**: Updates the prompt with the best examples found so far.
+5.  **Regenerate**: Retries low-quality questions with the improved prompt.
+6.  **Repeat**: Runs for up to 5 iterations.
+
+### Interactive REPL
 ```bash
 uv run python repl.py
 ```
@@ -40,19 +52,12 @@ The REPL provides an interactive interface where you can:
 - Use commands like `/help`, `/examples`, `/batch`
 - Save results to JSON files
 
-### Batch Processing
-```bash
-uv run python main.py
-```
-
-This demonstrates the complete pipeline with sample seed questions and generates a results summary.
-
 ### API Usage
 ```python
 from bfqg_generator import BFGQuestionGenerator
 from gricewise_evaluator import GriceWiseEvaluator
 
-# Generate questions
+# Generate questions (uses flan-t5-large by default)
 generator = BFGQuestionGenerator()
 followups = generator.generate_followups("How do I adjust the volume?")
 
@@ -79,53 +84,18 @@ The system generates questions at 5 cognitive levels:
 
 Each question is evaluated on four dimensions:
 
-- **Logical Consistency (Quality)**: How well the question follows from conversation context (NLI-based)
-- **Informativeness (Quantity)**: Amount of new information provided (entropy-based)
-- **Relevance (Relation)**: Relatedness to the conversation topic (embedding similarity)
-- **Clarity (Manner)**: Ease of understanding (heuristic-based)
-
-## Dataset
-
-The original paper uses the `harshvivek14/Blooms-Followup-Questions` dataset from Hugging Face. This implementation includes sample seed questions but can be extended with the full dataset.
+- **Logical Consistency (Quality)**: How well the question follows from conversation context (NLI-based / RoBERTa).
+- **Informativeness (Quantity)**: Amount of new information provided (Conditional Entropy / GPT-2).
+- **Relevance (Relation)**: Relatedness to the conversation topic (Embedding Similarity / MiniLM).
+- **Clarity (Manner)**: Ease of understanding, calculated using **Average Dependency Distance (ADD)** via `spaCy` dependency parsing.
 
 ## Models Used
 
-- **Question Generation**: FLAN-T5-base (via transformers)
-- **Logical Consistency**: RoBERTa-large-MNLI (via transformers)
-- **Relevance**: MiniLM-L6-v2 sentence transformers
-- **Informativeness**: GPT-2-small (via transformers)
-
-## Examples
-
-### Basic Usage
-```
-🔍 Enter a seed question or command: How do I start the car?
-
-🔧 Processing: How do I start the car?
-Generating and evaluating questions...
-Results saved automatically.
-```
-
-### Commands
-- `/help` - Show help
-- `/examples` - List sample questions
-- `/batch` - Enter multiple questions
-- `/save` - Export last result to JSON
-
-## Dependencies
-
-- `torch` - PyTorch for model inference
-- `transformers` - Hugging Face transformers
-- `sentence-transformers` - Embedding models
-- `nltk` - Text processing
-- `datasets` - Dataset loading
-- `tqdm` - Progress bars
-
-## Limitations
-
-- Uses smaller, open-source models instead of GPT-4 for evaluation (as in original paper)
-- Clarity evaluation uses heuristics due to spaCy compatibility issues
-- Memory requirements for multiple large models
+- **Question Generation**: `google/flan-t5-large` (780M params) - Upgraded from base for better instruction following.
+- **Logical Consistency**: `textattack/roberta-base-MNLI`
+- **Relevance**: `sentence-transformers/all-MiniLM-L6-v2`
+- **Informativeness**: `gpt2`
+- **Clarity**: `en_core_web_sm` (spaCy)
 
 ## Citation
 
