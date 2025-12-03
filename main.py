@@ -18,7 +18,7 @@ import numpy as np
 from sklearn.cluster import KMeans
 from collections import defaultdict
 
-MAX_ITERATIONS = 2
+MAX_ITERATIONS = 5
 CLUSTERING_MIN_SAMPLES = 5
 QUALITY_THRESHOLD = 0.6  # Fallback threshold if clustering not possible
 
@@ -68,8 +68,8 @@ def main():
 
     # 1. Initialize Models
     print("\n[Step 1] Initializing Models...")
-    # Using small models for demo speed; use larger ones for production
-    generator = BFGQuestionGenerator(model_name="google/flan-t5-base", use_model=True)
+    # Using larger model for better instruction following
+    generator = BFGQuestionGenerator(model_name="google/flan-t5-large", use_model=True)
     evaluator = GriceWiseEvaluator()
     print("Models ready.")
 
