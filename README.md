@@ -69,6 +69,19 @@ print(followups)  # {'level_2': '...', 'level_3': '...', ...}
 print(evaluation)  # {'level_2': {'logical_consistency': 0.8, ...}, ...}
 ```
 
+### Using the Fine-Tuned Model
+
+The project includes a fine-tuned LoRA adapter for `flan-t5-large` which provides better adherence to Bloom's Taxonomy levels. The `BFGQuestionGenerator` automatically detects and loads this model if the `bfqg_finetuned/` directory is present.
+
+To reproduce the fine-tuning:
+```bash
+# Install training dependencies
+uv add peft accelerate
+
+# Run the training script
+uv run python fine_tune_bfqg.py
+```
+
 ## Bloom's Taxonomy Levels
 
 The system generates questions at 5 cognitive levels:
@@ -91,7 +104,9 @@ Each question is evaluated on four dimensions:
 
 ## Models Used
 
-- **Question Generation**: `google/flan-t5-large` (780M params) - Upgraded from base for better instruction following.
+- **Question Generation**: 
+    - Base: `google/flan-t5-large` (780M params)
+    - Fine-tuned: Custom LoRA adapter trained on BloomsFQ dataset (located in `bfqg_finetuned/`)
 - **Logical Consistency**: `textattack/roberta-base-MNLI`
 - **Relevance**: `sentence-transformers/all-MiniLM-L6-v2`
 - **Informativeness**: `gpt2`
