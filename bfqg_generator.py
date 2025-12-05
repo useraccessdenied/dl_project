@@ -53,10 +53,25 @@ class BFGQuestionGenerator:
                 if self.tokenizer.pad_token is None:
                     self.tokenizer.pad_token = self.tokenizer.eos_token
 
-                self.model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+                # Check for fine-tuned model
+                finetuned_path = "bfqg_finetuned"
+                import os
+                from peft import PeftModel
+
+                if os.path.exists(finetuned_path) and os.listdir(finetuned_path):
+                    print(f"Found fine-tuned model at {finetuned_path}. Loading...")
+                    # Load base model
+                    self.model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+                    # Load adapters
+                    self.model = PeftModel.from_pretrained(self.model, finetuned_path)
+                    print("Fine-tuned model loaded successfully!")
+                else:
+                    print(f"Loading base model {model_name}...")
+                    self.model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+                    print("Base model loaded successfully!")
+
                 self.model.to(device)
                 self.device = device
-                print("Model loaded successfully!")
             except Exception as e:
                 print(f"Failed to load model: {e}")
                 print("Falling back to template mode.")
@@ -197,7 +212,7 @@ if __name__ == "__main__":
     generator = BFGQuestionGenerator(use_model=True)
 
     # Test with a sample seed question
-    test_seed = "How do I adjust the air conditioning?"
+    test_seed = "What is a clutch in a car?"
     print(f"Seed: {test_seed}")
 
     result = generator.generate_followups(test_seed)
