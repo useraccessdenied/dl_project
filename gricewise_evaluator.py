@@ -24,6 +24,10 @@ from sentence_transformers import SentenceTransformer, util
 import spacy
 import numpy as np
 
+from openai import OpenAI
+import os
+import json
+
 
 class GriceWiseEvaluator:
     """
@@ -43,6 +47,9 @@ class GriceWiseEvaluator:
         embedding_model: str = "all-MiniLM-L6-v2",
         spacy_model: str = "en_core_web_sm",
         device: str = None,
+        use_chatgpt: bool = False,
+        chatgpt_model: str = "gpt-4.1-mini",
+        openai_api_key: str = None,
     ):
         """
         Initialize the evaluator with required models.
@@ -53,6 +60,9 @@ class GriceWiseEvaluator:
             embedding_model: Sentence transformer for embeddings
             spacy_model: SpaCy model for dependency parsing
             device: Device to run on
+            use_chatgpt: If True, also get scores from ChatGPT API
+            chatgpt_model: OpenAI model name to use for evaluation
+            openai_api_key: API key (if None, uses OPENAI_API_KEY env var)
         """
         if device is None:
             if torch.cuda.is_available():
@@ -63,6 +73,22 @@ class GriceWiseEvaluator:
                 device = "cpu"
 
         self.device = device
+        self.use_chatgpt = use_chatgpt
+        self.chatgpt_model = chatgpt_model
+        self.openai_client = None
+
+        if self.use_chatgpt:
+            if openai_api_key is None:
+                openai_api_key = os.getenv("OPENAI_API_KEY")
+
+            if not openai_api_key:
+                raise ValueError(
+                    "use_chatgpt=True but no OpenAI API key found. "
+                    "Set OPENAI_API_KEY environment variable or pass openai_api_key."
+                )
+
+            # ✅ new-style client
+            self.openai_client = OpenAI(api_key=openai_api_key)
 
         # Initialize NLI model for logical consistency
         print(f"Loading NLI model: {nli_model}")
@@ -255,6 +281,92 @@ class GriceWiseEvaluator:
         except Exception as e:
             print(f"Error in clarity calculation: {e}")
             return 0.0
+        
+
+
+    def _chatgpt_evaluate_question(
+        self,
+        seed_question: str,
+        level: str,
+        question: str,
+        context: str,
+    ) -> Dict[str, Any]:
+        """
+        Ask ChatGPT to score this follow-up question on the four Gricean metrics.
+
+        Returns a dict with numeric scores in [0, 1] and optional explanations.
+        """
+        if not self.use_chatgpt or self.openai_client is None:
+            return {}
+
+        system_prompt = (
+            "You are an automatic evaluator of follow-up questions according to "
+            "Grice's maxims. For each follow-up question, you must assign four scores "
+            "between 0 and 1:\n"
+            "1. logical_consistency: Is the follow-up logically consistent with the prior context?\n"
+            "2. informativeness: Does it add useful, non-redundant information?\n"
+            "3. relevance: Is it on-topic and relevant to the seed question and prior follow-ups?\n"
+            "4. clarity: Is it clearly phrased and easy to understand?\n\n"
+            "Return ONLY a valid JSON object with this exact schema:\n"
+            "{\n"
+            '  \"logical_consistency\": float,\n'
+            '  \"informativeness\": float,\n'
+            '  \"relevance\": float,\n'
+            '  \"clarity\": float,\n'
+            '  \"notes\": {\n'
+            '    \"logical_consistency\": string,\n'
+            '    \"informativeness\": string,\n'
+            '    \"relevance\": string,\n'
+            '    \"clarity\": string\n'
+            "  }\n"
+            "}\n"
+            "Do not include any extra text before or after the JSON."
+        )
+
+        user_prompt = (
+            f"Seed question:\n{seed_question}\n\n"
+            f"Level: {level}\n"
+            f"Current follow-up question:\n{question}\n\n"
+            f"Conversation context so far (seed + previous follow-ups):\n{context}\n"
+        )
+
+        try:
+            # ✅ new-style API call
+            response = self.openai_client.chat.completions.create(
+                model=self.chatgpt_model,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt},
+                ],
+                temperature=0.0,
+            )
+
+            content = response.choices[0].message.content
+            data = json.loads(content)
+
+            def clamp01(x):
+                try:
+                    x = float(x)
+                except Exception:
+                    x = 0.0
+                return max(0.0, min(1.0, x))
+
+            scores = {
+                "logical_consistency": clamp01(data.get("logical_consistency", 0.0)),
+                "informativeness": clamp01(data.get("informativeness", 0.0)),
+                "relevance": clamp01(data.get("relevance", 0.0)),
+                "clarity": clamp01(data.get("clarity", 0.0)),
+                "notes": data.get("notes", {}),
+            }
+            return scores
+
+        except Exception as e:
+            print(f"ChatGPT evaluation error for level {level}: {e}")
+            return {}
+
+
+
+
 
     def evaluate_question_set(
         self,
@@ -293,6 +405,17 @@ class GriceWiseEvaluator:
             relevance = self.evaluate_relevance(question, context)
             clarity = self.evaluate_clarity(question)
 
+            # Optional: ChatGPT-based evaluation
+            chatgpt_scores = {}
+            if self.use_chatgpt:
+                chatgpt_scores = self._chatgpt_evaluate_question(
+                    seed_question=seed_question,
+                    level=level,
+                    question=question,
+                    context=context,
+                )
+
+
             # Store results
             question_results = {
                 "question": question,
@@ -310,6 +433,9 @@ class GriceWiseEvaluator:
                 # For this implementation, we'll treat Logical Consistency, Relevance, and Clarity as the key quality drivers.
                 "aggregate_score": (logical_consistency + relevance + clarity) / 3.0,
             }
+
+            if chatgpt_scores:
+                question_results["chatgpt"] = chatgpt_scores
 
             results[level] = question_results
 
