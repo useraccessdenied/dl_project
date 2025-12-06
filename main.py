@@ -26,7 +26,11 @@ QUALITY_THRESHOLD = 0.6
 class RecursivePipeline:
     def __init__(self, generator=None, evaluator=None):
         self.generator = generator or BFGQuestionGenerator(model_name="google/flan-t5-large", use_model=True)
-        self.evaluator = evaluator or GriceWiseEvaluator()
+        self.evaluator = evaluator or GriceWiseEvaluator(
+            use_chatgpt=True,
+            chatgpt_model="gpt-4.1-mini",   # or any other model you have access to
+            openai_api_key="",     # optional; otherwise uses env var
+        )
 
     def calculate_aggregate_score(self, evaluation: dict) -> float:
         """Calculate overall quality score for a question set."""

@@ -1,0 +1,1132 @@
+[
+  {
+    "seed_question": "How do I make a phone call?",
+    "followups": {
+      "level_2": "What are the different ways I can make a phone call?",
+      "level_3": "How would I make a phone call in a different situation?",
+      "level_4": "What components or steps are involved in making a phone call?",
+      "level_5": "Which method of making a phone call is most effective, and why?",
+      "level_6": "How could I design a new approach to make a phone call?"
+    },
+    "evaluation": {
+      "level_2": {
+        "question": "What are the different ways I can make a phone call?",
+        "logical_consistency": 0.7409480214118958,
+        "informativeness": 0.43226104974746704,
+        "relevance": 0.8645220994949341,
+        "clarity": 0.36666666666666664,
+        "aggregate_score": 0.6573789291911655,
+        "chatgpt": {
+          "logical_consistency": 0.9,
+          "informativeness": 0.7,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks to describe different methods of making a phone call, which fits well with the 'Understand' level (level_2).",
+            "informativeness": "This question adds new information by asking about various ways to make a call, not just the basic process.",
+            "relevance": "The question is directly related to the seed question about making a phone call.",
+            "clarity": "The question is clear, grammatical, and easy to understand."
+          }
+        }
+      },
+      "level_3": {
+        "question": "How would I make a phone call in a different situation?",
+        "logical_consistency": 0.6449767351150513,
+        "informativeness": 0.37122803926467896,
+        "relevance": 0.7424560785293579,
+        "clarity": 0.36666666666666664,
+        "aggregate_score": 0.5846998267703586,
+        "chatgpt": {
+          "logical_consistency": 0.9,
+          "informativeness": 0.7,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks how to apply the concept of making a phone call in a different situation, which aligns well with the 'Apply' level (level_3).",
+            "informativeness": "It adds new cognitive work by prompting consideration of different contexts or scenarios for making a phone call.",
+            "relevance": "The question is directly related to the seed question about making phone calls.",
+            "clarity": "The question is clear, grammatical, and easy to understand."
+          }
+        }
+      },
+      "level_4": {
+        "question": "What components or steps are involved in making a phone call?",
+        "logical_consistency": 0.880212128162384,
+        "informativeness": 0.37546032667160034,
+        "relevance": 0.7509206533432007,
+        "clarity": 0.39285714285714285,
+        "aggregate_score": 0.6746633081209091,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.8,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks to analyze the process of making a phone call by breaking it into components or steps, which aligns well with the level_4 (Analyze) requirement.",
+            "informativeness": "This question adds significant new cognitive work by requesting a breakdown of the process, rather than just describing or applying it.",
+            "relevance": "The question is directly related to the seed question about making a phone call.",
+            "clarity": "The question is grammatically correct, well-formed, and easy to understand."
+          }
+        }
+      },
+      "level_5": {
+        "question": "Which method of making a phone call is most effective, and why?",
+        "logical_consistency": 0.013231821358203888,
+        "informativeness": 0.336089551448822,
+        "relevance": 0.672179102897644,
+        "clarity": 0.3076923076923077,
+        "aggregate_score": 0.3310344106493852,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.8,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks for evaluation and justification of different methods, which aligns well with Bloom's level 5 (Evaluate).",
+            "informativeness": "The question adds significant new cognitive work by requiring comparison and judgment of effectiveness, beyond just describing or analyzing methods.",
+            "relevance": "The question is directly related to the seed question about making phone calls and builds on previous follow-ups about methods and components.",
+            "clarity": "The question is grammatically correct, well-formed, and easy to understand."
+          }
+        }
+      },
+      "level_6": {
+        "question": "How could I design a new approach to make a phone call?",
+        "logical_consistency": 0.08386508375406265,
+        "informativeness": 0.38860058784484863,
+        "relevance": 0.7772011756896973,
+        "clarity": 0.3333333333333333,
+        "aggregate_score": 0.3981331975923644,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.8,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question matches the level_6 requirement by asking to design a new approach, which is a creative task.",
+            "informativeness": "The question adds significant new cognitive work by asking for a novel design rather than just understanding or evaluating existing methods.",
+            "relevance": "The question is directly related to the seed question about making a phone call.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand."
+          }
+        }
+      }
+    },
+    "iteration_score": 0.5291819344648365
+  },
+  {
+    "seed_question": "How do I navigate to an address?",
+    "followups": {
+      "level_2": "What are the different ways I can navigate to an address?",
+      "level_3": "How would I navigate to an address in a different situation?",
+      "level_4": "What components or steps are involved in navigating to an address?",
+      "level_5": "Which method of navigating to an address is most effective, and why?",
+      "level_6": "How could I design a new approach to navigate to an address?"
+    },
+    "evaluation": {
+      "level_2": {
+        "question": "What are the different ways I can navigate to an address?",
+        "logical_consistency": 0.715628445148468,
+        "informativeness": 0.45144563913345337,
+        "relevance": 0.9028912782669067,
+        "clarity": 0.39285714285714285,
+        "aggregate_score": 0.6704589554241726,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.7,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question asks to describe different methods of navigation, which fits well with the 'Understand' level.",
+            "informativeness": "It adds new information by asking for multiple ways, not just a single method, increasing cognitive demand.",
+            "relevance": "The question is directly related to the seed question about navigating to an address.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_3": {
+        "question": "How would I navigate to an address in a different situation?",
+        "logical_consistency": 0.7411019206047058,
+        "informativeness": 0.43376845121383667,
+        "relevance": 0.8675369024276733,
+        "clarity": 0.39285714285714285,
+        "aggregate_score": 0.667165321963174,
+        "chatgpt": {
+          "logical_consistency": 0.9,
+          "informativeness": 0.6,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question appropriately asks for application of the concept in a different situation, matching the level_3 (Apply) requirement.",
+            "informativeness": "The question adds new cognitive work by asking to apply navigation to a different situation, which is more specific than the seed question.",
+            "relevance": "The question is directly related to the seed question about navigating to an address.",
+            "clarity": "The question is grammatical, well-formed, and easy to understand."
+          }
+        }
+      },
+      "level_4": {
+        "question": "What components or steps are involved in navigating to an address?",
+        "logical_consistency": 0.8263204097747803,
+        "informativeness": 0.4137205481529236,
+        "relevance": 0.8274410963058472,
+        "clarity": 0.42307692307692313,
+        "aggregate_score": 0.6922794763858503,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.7,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks to break down the process into components or steps, which aligns well with the Analyze (level_4) requirement and is consistent with the seed question.",
+            "informativeness": "The question adds new cognitive work by requesting a breakdown of the process, which is more detailed than the seed question.",
+            "relevance": "The question is directly related to the seed question about navigating to an address.",
+            "clarity": "The question is grammatically correct, well-formed, and easy to understand."
+          }
+        }
+      },
+      "level_5": {
+        "question": "Which method of navigating to an address is most effective, and why?",
+        "logical_consistency": 0.008650547824800014,
+        "informativeness": 0.39676111936569214,
+        "relevance": 0.7935222387313843,
+        "clarity": 0.3243243243243243,
+        "aggregate_score": 0.37549903696016956,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.8,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks for evaluation and justification of methods, which aligns well with Bloom's level 5 (Evaluate).",
+            "informativeness": "The question adds significant new cognitive work by requiring comparison and judgment of effectiveness, beyond just describing or analyzing methods.",
+            "relevance": "The question is directly related to the seed question about navigating to an address and builds on previous follow-ups.",
+            "clarity": "The question is grammatically correct, well-formed, and easy to understand."
+          }
+        }
+      },
+      "level_6": {
+        "question": "How could I design a new approach to navigate to an address?",
+        "logical_consistency": 0.043816570192575455,
+        "informativeness": 0.41464829444885254,
+        "relevance": 0.8292965888977051,
+        "clarity": 0.35294117647058826,
+        "aggregate_score": 0.4086847785202896,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.9,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question matches the level_6 requirement by asking to design a new approach, which is consistent with the seed question about navigation.",
+            "informativeness": "The question adds significant new cognitive work by asking for a design of a new approach rather than just describing or evaluating existing methods.",
+            "relevance": "The question is directly related to the seed question about navigating to an address.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand."
+          }
+        }
+      }
+    },
+    "iteration_score": 0.5628175138507312
+  },
+  {
+    "seed_question": "How do I play music?",
+    "followups": {
+      "level_2": "What are the different ways I can play music?",
+      "level_3": "How would I play music in a different situation?",
+      "level_4": "What components or steps are involved in playing music?",
+      "level_5": "Which method of playing music is most effective, and why?",
+      "level_6": "How could I design a new approach to play music?"
+    },
+    "evaluation": {
+      "level_2": {
+        "question": "What are the different ways I can play music?",
+        "logical_consistency": 0.6735556125640869,
+        "informativeness": 0.42685866355895996,
+        "relevance": 0.8537173271179199,
+        "clarity": 0.391304347826087,
+        "aggregate_score": 0.6395257625026979,
+        "chatgpt": {
+          "logical_consistency": 0.9,
+          "informativeness": 0.7,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks to describe different methods of playing music, which aligns well with the Understand (level_2) Bloom level.",
+            "informativeness": "This question adds new information by asking for various ways to play music, expanding beyond the basic 'how to play' in the seed question.",
+            "relevance": "The question is directly related to the seed question about playing music.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_3": {
+        "question": "How would I play music in a different situation?",
+        "logical_consistency": 0.5591589212417603,
+        "informativeness": 0.37421780824661255,
+        "relevance": 0.7484356164932251,
+        "clarity": 0.37499999999999994,
+        "aggregate_score": 0.5608648459116617,
+        "chatgpt": {
+          "logical_consistency": 0.9,
+          "informativeness": 0.6,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks to apply the concept of playing music in a different situation, which aligns well with the Apply (level_3) Bloom level.",
+            "informativeness": "The question adds new cognitive work by prompting application in a new context, rather than just repeating the original question.",
+            "relevance": "The question is directly related to the seed question about playing music.",
+            "clarity": "The question is grammatical, clear, and easy to understand."
+          }
+        }
+      },
+      "level_4": {
+        "question": "What components or steps are involved in playing music?",
+        "logical_consistency": 0.7337061762809753,
+        "informativeness": 0.34636709094047546,
+        "relevance": 0.6927341818809509,
+        "clarity": 0.4285714285714286,
+        "aggregate_score": 0.6183372622444516,
+        "chatgpt": {
+          "logical_consistency": 0.9,
+          "informativeness": 0.7,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks about components or steps involved, which aligns well with the Analyze (level_4) expectation to break down the concept.",
+            "informativeness": "The question adds new cognitive work by requesting a breakdown of components or steps, which is more detailed than the seed question.",
+            "relevance": "The question is directly related to the seed question about playing music.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand."
+          }
+        }
+      },
+      "level_5": {
+        "question": "Which method of playing music is most effective, and why?",
+        "logical_consistency": 0.007643071003258228,
+        "informativeness": 0.2999033033847809,
+        "relevance": 0.5998066067695618,
+        "clarity": 0.3333333333333333,
+        "aggregate_score": 0.3135943370353844,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.8,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question asks for an evaluation and justification of methods, which aligns well with the level_5 (Evaluate) requirement and is consistent with the seed question.",
+            "informativeness": "The question adds significant new cognitive work by requiring comparison and judgment of effectiveness, going beyond the seed question.",
+            "relevance": "The question is directly related to the topic of playing music and builds on previous questions about methods and components.",
+            "clarity": "The question is grammatically correct, well-formed, and easy to understand."
+          }
+        }
+      },
+      "level_6": {
+        "question": "How could I design a new approach to play music?",
+        "logical_consistency": 0.1401880979537964,
+        "informativeness": 0.33170434832572937,
+        "relevance": 0.6634086966514587,
+        "clarity": 0.3448275862068966,
+        "aggregate_score": 0.3828081269373839,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.8,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question matches the level_6 requirement to create or design a new method related to playing music.",
+            "informativeness": "The question adds significant new cognitive work by asking to design a new approach, which is different from previous questions.",
+            "relevance": "The question is directly related to the seed question about playing music.",
+            "clarity": "The question is grammatically correct and clearly phrased."
+          }
+        }
+      }
+    },
+    "iteration_score": 0.5030260669263159
+  },
+  {
+    "seed_question": "How do I adjust the air conditioning?",
+    "followups": {
+      "level_2": "What are the different ways I can adjust the air conditioning?",
+      "level_3": "How would I adjust the air conditioning in a different situation?",
+      "level_4": "What components or steps are involved in adjusting the air conditioning?",
+      "level_5": "Which method of adjusting the air conditioning is most effective, and why?",
+      "level_6": "How could I design a new approach to adjust the air conditioning?"
+    },
+    "evaluation": {
+      "level_2": {
+        "question": "What are the different ways I can adjust the air conditioning?",
+        "logical_consistency": 0.6881719827651978,
+        "informativeness": 0.4505368769168854,
+        "relevance": 0.9010737538337708,
+        "clarity": 0.36666666666666664,
+        "aggregate_score": 0.6519708010885451,
+        "chatgpt": {
+          "logical_consistency": 0.9,
+          "informativeness": 0.5,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question asks to describe different methods of adjusting air conditioning, which fits well with the 'Understand' level (level_2).",
+            "informativeness": "The question adds new information by asking for multiple ways to adjust the air conditioning rather than just how to do it, increasing cognitive demand.",
+            "relevance": "The question is directly related to the seed question about adjusting air conditioning.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_3": {
+        "question": "How would I adjust the air conditioning in a different situation?",
+        "logical_consistency": 0.8188437819480896,
+        "informativeness": 0.4340193271636963,
+        "relevance": 0.8680386543273926,
+        "clarity": 0.3333333333333333,
+        "aggregate_score": 0.6734052565362719,
+        "chatgpt": {
+          "logical_consistency": 0.8,
+          "informativeness": 0.5,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks to apply the concept in a different situation, which aligns with level_3 (Apply), though it is somewhat vague about what 'different situation' means.",
+            "informativeness": "The question adds new cognitive work by prompting application in a new context, not just repeating the original question.",
+            "relevance": "The question is directly related to adjusting air conditioning, maintaining topic relevance.",
+            "clarity": "The question is grammatical and clear, though 'different situation' could be more specific."
+          }
+        }
+      },
+      "level_4": {
+        "question": "What components or steps are involved in adjusting the air conditioning?",
+        "logical_consistency": 0.8786489963531494,
+        "informativeness": 0.40610837936401367,
+        "relevance": 0.8122167587280273,
+        "clarity": 0.39285714285714285,
+        "aggregate_score": 0.6945742993127731,
+        "chatgpt": {
+          "logical_consistency": 0.9,
+          "informativeness": 0.7,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks about components or steps involved, which aligns well with the Analyze level (level_4) by breaking down the process.",
+            "informativeness": "The question adds new cognitive work by requesting a breakdown of components or steps, rather than just how to adjust.",
+            "relevance": "The question is directly related to adjusting the air conditioning.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand."
+          }
+        }
+      },
+      "level_5": {
+        "question": "Which method of adjusting the air conditioning is most effective, and why?",
+        "logical_consistency": 0.014407224953174591,
+        "informativeness": 0.36962592601776123,
+        "relevance": 0.7392518520355225,
+        "clarity": 0.3076923076923077,
+        "aggregate_score": 0.35378379489366824,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.9,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks for an evaluation of methods, which aligns well with Bloom's level 5 (Evaluate).",
+            "informativeness": "The question introduces a comparative judgment about effectiveness, adding significant new cognitive demand beyond the seed question.",
+            "relevance": "The question is directly related to adjusting the air conditioning and builds on previous questions.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand."
+          }
+        }
+      },
+      "level_6": {
+        "question": "How could I design a new approach to adjust the air conditioning?",
+        "logical_consistency": 0.03742613643407822,
+        "informativeness": 0.3988584280014038,
+        "relevance": 0.7977168560028076,
+        "clarity": 0.3333333333333333,
+        "aggregate_score": 0.38949210859007305,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.9,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question matches the level_6 requirement by asking to design a new approach, which is appropriate for the 'Create' level.",
+            "informativeness": "The question adds significant new cognitive work by asking for a novel design approach rather than just explanation or evaluation.",
+            "relevance": "The question is directly related to the seed question about adjusting air conditioning.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand."
+          }
+        }
+      }
+    },
+    "iteration_score": 0.5526452520842663
+  },
+  {
+    "seed_question": "What is the fuel efficiency of this car?",
+    "followups": {
+      "level_2": "How would you explain the fuel efficiency of this car to a new driver?",
+      "level_3": "How could I apply my knowledge of the fuel efficiency of this car in everyday driving?",
+      "level_4": "What factors or components affect the fuel efficiency of this car?",
+      "level_5": "Which factors have the greatest impact on the fuel efficiency of this car, and why?",
+      "level_6": "How could I design a new strategy to improve the fuel efficiency of this car?"
+    },
+    "evaluation": {
+      "level_2": {
+        "question": "How would you explain the fuel efficiency of this car to a new driver?",
+        "logical_consistency": 0.007302578072994947,
+        "informativeness": 0.40143418312072754,
+        "relevance": 0.8028683662414551,
+        "clarity": 0.3255813953488372,
+        "aggregate_score": 0.3785841132210957,
+        "chatgpt": {
+          "logical_consistency": 0.6,
+          "informativeness": 0.4,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question asks for an explanation, which aligns with level_2 (Understand), but it adds a specific audience (new driver) which slightly shifts the focus. It is mostly consistent but somewhat more applied.",
+            "informativeness": "The question adds some new cognitive work by requiring an explanation tailored to a new driver, which is more than just restating the fuel efficiency.",
+            "relevance": "The question is directly related to the seed question about fuel efficiency.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_3": {
+        "question": "How could I apply my knowledge of the fuel efficiency of this car in everyday driving?",
+        "logical_consistency": 0.22454701364040375,
+        "informativeness": 0.3960890769958496,
+        "relevance": 0.7921781539916992,
+        "clarity": 0.32653061224489793,
+        "aggregate_score": 0.44775192662566693,
+        "chatgpt": {
+          "logical_consistency": 0.9,
+          "informativeness": 0.7,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question aligns well with the Apply level by asking how to use the knowledge in a practical context.",
+            "informativeness": "The question adds new cognitive work by focusing on application in everyday driving, beyond just understanding or explaining fuel efficiency.",
+            "relevance": "The question is directly related to the seed question about fuel efficiency.",
+            "clarity": "The question is grammatically correct and clearly phrased."
+          }
+        }
+      },
+      "level_4": {
+        "question": "What factors or components affect the fuel efficiency of this car?",
+        "logical_consistency": 0.34403035044670105,
+        "informativeness": 0.38653624057769775,
+        "relevance": 0.7730724811553955,
+        "clarity": 0.39285714285714285,
+        "aggregate_score": 0.5033199914864132,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.8,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question appropriately matches the level_4 (Analyze) by asking to break down the concept into factors or components affecting fuel efficiency.",
+            "informativeness": "This question adds significant new cognitive work by prompting analysis of underlying factors, not just description or application.",
+            "relevance": "The question is directly related to the seed question about fuel efficiency of the car.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand."
+          }
+        }
+      },
+      "level_5": {
+        "question": "Which factors have the greatest impact on the fuel efficiency of this car, and why?",
+        "logical_consistency": 0.03613705933094025,
+        "informativeness": 0.38174325227737427,
+        "relevance": 0.7634865045547485,
+        "clarity": 0.2542372881355932,
+        "aggregate_score": 0.35128695067376065,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.8,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks for evaluation and justification of factors impacting fuel efficiency, which aligns well with Bloom's level 5 (Evaluate).",
+            "informativeness": "The question adds significant new cognitive work by requiring analysis and judgment about the impact and reasons behind factors affecting fuel efficiency.",
+            "relevance": "The question is directly related to the seed question about fuel efficiency and builds on previous discussion about factors affecting it.",
+            "clarity": "The question is grammatically correct, well-formed, and easy to understand."
+          }
+        }
+      },
+      "level_6": {
+        "question": "How could I design a new strategy to improve the fuel efficiency of this car?",
+        "logical_consistency": 0.0067279101349413395,
+        "informativeness": 0.3314467966556549,
+        "relevance": 0.6628935933113098,
+        "clarity": 0.37499999999999994,
+        "aggregate_score": 0.34820716781541705,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.9,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question matches the level_6 requirement by asking to design a new strategy, which is a creative task building on the seed question.",
+            "informativeness": "The question adds significant new cognitive work by requiring the design of a strategy to improve fuel efficiency, beyond just understanding or analyzing it.",
+            "relevance": "The question is directly related to the seed question about fuel efficiency and extends the discussion logically.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand, though slightly formal."
+          }
+        }
+      }
+    },
+    "iteration_score": 0.40583002996447065
+  },
+  {
+    "seed_question": "How do I activate the parking sensors?",
+    "followups": {
+      "level_2": "What are the different ways I can activate the parking sensors?",
+      "level_3": "How would I activate the parking sensors in a different situation?",
+      "level_4": "What components or steps are involved in activating the parking sensors?",
+      "level_5": "Which method of activating the parking sensors is most effective, and why?",
+      "level_6": "How could I design a new approach to activate the parking sensors?"
+    },
+    "evaluation": {
+      "level_2": {
+        "question": "What are the different ways I can activate the parking sensors?",
+        "logical_consistency": 0.7207056879997253,
+        "informativeness": 0.4636887311935425,
+        "relevance": 0.927377462387085,
+        "clarity": 0.36666666666666664,
+        "aggregate_score": 0.671583272351159,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.7,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question logically extends the seed question by asking for different methods of activation, which fits well with the 'Understand' level.",
+            "informativeness": "The question adds new information by requesting multiple ways to activate the sensors, not just a single method.",
+            "relevance": "The question is directly related to the seed question about activating parking sensors.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_3": {
+        "question": "How would I activate the parking sensors in a different situation?",
+        "logical_consistency": 0.8527939319610596,
+        "informativeness": 0.4596867561340332,
+        "relevance": 0.9193735122680664,
+        "clarity": 0.3333333333333333,
+        "aggregate_score": 0.7018335925208198,
+        "chatgpt": {
+          "logical_consistency": 0.6,
+          "informativeness": 0.4,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question attempts to apply the concept to a different situation, which aligns with level_3 (Apply), but it is somewhat vague about what 'different situation' means, reducing clarity on the application context.",
+            "informativeness": "The question adds some new cognitive work by asking about activation in a different situation, but it is closely related to the seed question and previous follow-ups, so informativeness is moderate.",
+            "relevance": "The question is clearly related to the seed question about activating parking sensors.",
+            "clarity": "The question is grammatical and mostly clear, though 'in a different situation' could be more specific."
+          }
+        }
+      },
+      "level_4": {
+        "question": "What components or steps are involved in activating the parking sensors?",
+        "logical_consistency": 0.8778036832809448,
+        "informativeness": 0.4202839136123657,
+        "relevance": 0.8405678272247314,
+        "clarity": 0.39285714285714285,
+        "aggregate_score": 0.703742884454273,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.7,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks to analyze the components or steps involved, which aligns well with the level_4 (Analyze) requirement and is consistent with the seed question.",
+            "informativeness": "The question adds new cognitive work by requesting a breakdown of components or steps, which is more detailed than the seed question.",
+            "relevance": "The question is directly related to the seed question about activating parking sensors.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand."
+          }
+        }
+      },
+      "level_5": {
+        "question": "Which method of activating the parking sensors is most effective, and why?",
+        "logical_consistency": 0.016678735613822937,
+        "informativeness": 0.3950732350349426,
+        "relevance": 0.7901464700698853,
+        "clarity": 0.3076923076923077,
+        "aggregate_score": 0.3715058377920053,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.8,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question appropriately matches the level_5 (Evaluate) by asking to compare methods and justify which is most effective.",
+            "informativeness": "The question adds significant new cognitive work by requiring evaluation and justification, beyond just describing or applying activation methods.",
+            "relevance": "The question is directly related to activating parking sensors and builds on previous questions about methods and components.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand."
+          }
+        }
+      },
+      "level_6": {
+        "question": "How could I design a new approach to activate the parking sensors?",
+        "logical_consistency": 0.047588128596544266,
+        "informativeness": 0.4183472990989685,
+        "relevance": 0.836694598197937,
+        "clarity": 0.36363636363636365,
+        "aggregate_score": 0.41597303014361503,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.8,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question matches the level_6 requirement by asking to design a new approach, which is appropriate for the 'Create' level.",
+            "informativeness": "The question adds significant new cognitive work by asking for a design of a new method, not just explanation or evaluation.",
+            "relevance": "The question is directly related to the seed question about activating parking sensors.",
+            "clarity": "The question is grammatically correct, well-formed, and easy to understand."
+          }
+        }
+      }
+    },
+    "iteration_score": 0.5729277234523744
+  },
+  {
+    "seed_question": "When should I check the tire pressure?",
+    "followups": {
+      "level_2": "What are the different ways I can check the tire pressure?",
+      "level_3": "How would I check the tire pressure in a different situation?",
+      "level_4": "What components or steps are involved in checking the tire pressure?",
+      "level_5": "Which method of checking the tire pressure is most effective, and why?",
+      "level_6": "How could I design a new approach to check the tire pressure?"
+    },
+    "evaluation": {
+      "level_2": {
+        "question": "What are the different ways I can check the tire pressure?",
+        "logical_consistency": 0.5615466833114624,
+        "informativeness": 0.4192392826080322,
+        "relevance": 0.8384785652160645,
+        "clarity": 0.36666666666666664,
+        "aggregate_score": 0.5888973050647311,
+        "chatgpt": {
+          "logical_consistency": 0.6,
+          "informativeness": 0.7,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question asks about methods to check tire pressure, which is more of an 'Apply' or 'Analyze' level question rather than 'Understand' as requested, so the score is moderate.",
+            "informativeness": "The question adds new information by asking about different methods, which is informative beyond the seed question.",
+            "relevance": "The question is directly related to tire pressure and thus relevant.",
+            "clarity": "The question is clear, grammatical, and easy to understand."
+          }
+        }
+      },
+      "level_3": {
+        "question": "How would I check the tire pressure in a different situation?",
+        "logical_consistency": 0.899427056312561,
+        "informativeness": 0.44800305366516113,
+        "relevance": 0.8960061073303223,
+        "clarity": 0.3333333333333333,
+        "aggregate_score": 0.7095888323254056,
+        "chatgpt": {
+          "logical_consistency": 0.6,
+          "informativeness": 0.4,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question attempts to ask for application (level_3) by considering different situations, but it is somewhat vague about what 'different situation' means, which weakens the logical consistency with the seed question's intent.",
+            "informativeness": "The question adds some new cognitive work by asking to apply the concept in different situations, but it is not very specific, so informativeness is moderate.",
+            "relevance": "The question is clearly related to the seed question about checking tire pressure.",
+            "clarity": "The question is grammatically correct and easy to understand, though slightly vague."
+          }
+        }
+      },
+      "level_4": {
+        "question": "What components or steps are involved in checking the tire pressure?",
+        "logical_consistency": 0.9060985445976257,
+        "informativeness": 0.3869670033454895,
+        "relevance": 0.773934006690979,
+        "clarity": 0.39285714285714285,
+        "aggregate_score": 0.6909632313819158,
+        "chatgpt": {
+          "logical_consistency": 0.9,
+          "informativeness": 0.7,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question aligns well with level_4 (Analyze) by asking about components or steps, which involves breaking down the process.",
+            "informativeness": "The question adds new cognitive work by focusing on the parts or steps involved, rather than just timing or methods.",
+            "relevance": "The question is directly related to the seed question about checking tire pressure.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_5": {
+        "question": "Which method of checking the tire pressure is most effective, and why?",
+        "logical_consistency": 0.014214679598808289,
+        "informativeness": 0.3959646224975586,
+        "relevance": 0.7919292449951172,
+        "clarity": 0.3076923076923077,
+        "aggregate_score": 0.37127874409541106,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.8,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks for an evaluation of methods, which fits well with the level_5 (Evaluate) requirement and is consistent with the seed question about tire pressure.",
+            "informativeness": "The question introduces a new dimension by asking to compare methods and justify the choice, adding significant new cognitive work beyond the seed question.",
+            "relevance": "The question is directly related to the topic of checking tire pressure and builds on previous questions about methods and steps.",
+            "clarity": "The question is grammatically correct, well-formed, and easy to understand."
+          }
+        }
+      },
+      "level_6": {
+        "question": "How could I design a new approach to check the tire pressure?",
+        "logical_consistency": 0.07117101550102234,
+        "informativeness": 0.4090549647808075,
+        "relevance": 0.818109929561615,
+        "clarity": 0.3333333333333333,
+        "aggregate_score": 0.4075380927986569,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.9,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question matches the level_6 requirement by asking to design a new approach, which is appropriate for the 'Create' level.",
+            "informativeness": "The question adds significant new cognitive work by asking for a novel design approach rather than just understanding or evaluating existing methods.",
+            "relevance": "The question is directly related to the seed question about checking tire pressure.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand, though slightly formal."
+          }
+        }
+      }
+    },
+    "iteration_score": 0.5536532411332241
+  },
+  {
+    "seed_question": "How do I answer an incoming call?",
+    "followups": {
+      "level_2": "What are the different ways I can answer an incoming call?",
+      "level_3": "How would I answer an incoming call in a different situation?",
+      "level_4": "What components or steps are involved in answering an incoming call?",
+      "level_5": "Which method of answering an incoming call is most effective, and why?",
+      "level_6": "How could I design a new approach to answer an incoming call?"
+    },
+    "evaluation": {
+      "level_2": {
+        "question": "What are the different ways I can answer an incoming call?",
+        "logical_consistency": 0.7427928447723389,
+        "informativeness": 0.45897427201271057,
+        "relevance": 0.9179485440254211,
+        "clarity": 0.36666666666666664,
+        "aggregate_score": 0.6758026851548089,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.7,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question asks to describe different methods, which fits well with the 'Understand' level (level_2).",
+            "informativeness": "It adds new information by requesting a variety of ways to answer a call, not just the basic method.",
+            "relevance": "The question is directly related to the seed question about answering incoming calls.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_3": {
+        "question": "How would I answer an incoming call in a different situation?",
+        "logical_consistency": 0.8034233450889587,
+        "informativeness": 0.4116440415382385,
+        "relevance": 0.823288083076477,
+        "clarity": 0.36666666666666664,
+        "aggregate_score": 0.6644593649440341,
+        "chatgpt": {
+          "logical_consistency": 0.9,
+          "informativeness": 0.7,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question asks to apply the concept in a different situation, which aligns well with the 'Apply' level (level_3).",
+            "informativeness": "The question adds new cognitive work by prompting consideration of different situations, rather than just general methods.",
+            "relevance": "The question is directly related to the seed question about answering incoming calls.",
+            "clarity": "The question is grammatical, well-formed, and easy to understand."
+          }
+        }
+      },
+      "level_4": {
+        "question": "What components or steps are involved in answering an incoming call?",
+        "logical_consistency": 0.8698404431343079,
+        "informativeness": 0.41498124599456787,
+        "relevance": 0.8299624919891357,
+        "clarity": 0.39285714285714285,
+        "aggregate_score": 0.6975533593268621,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.7,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks to break down the process into components or steps, which aligns well with the Analyze (level_4) requirement and is consistent with the seed question.",
+            "informativeness": "This question adds new cognitive work by requesting a breakdown of the process, which is more detailed than the seed question and previous follow-ups.",
+            "relevance": "The question is directly related to the seed question about answering an incoming call.",
+            "clarity": "The question is grammatically correct, well-formed, and easy to understand."
+          }
+        }
+      },
+      "level_5": {
+        "question": "Which method of answering an incoming call is most effective, and why?",
+        "logical_consistency": 0.011463833972811699,
+        "informativeness": 0.37897342443466187,
+        "relevance": 0.7579468488693237,
+        "clarity": 0.3076923076923077,
+        "aggregate_score": 0.35903433017814773,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.8,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question appropriately matches the level_5 (Evaluate) by asking to judge the effectiveness of different methods.",
+            "informativeness": "The question adds significant new cognitive work by requiring evaluation and justification, beyond just describing or applying.",
+            "relevance": "The question is directly related to the seed question about answering incoming calls.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand."
+          }
+        }
+      },
+      "level_6": {
+        "question": "How could I design a new approach to answer an incoming call?",
+        "logical_consistency": 0.08703214675188065,
+        "informativeness": 0.41857582330703735,
+        "relevance": 0.8371516466140747,
+        "clarity": 0.3333333333333333,
+        "aggregate_score": 0.41917237556642956,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.8,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question matches the Bloom level 6 (Create) by asking to design a new approach, which is appropriate.",
+            "informativeness": "The question adds significant new cognitive work by asking for a novel design rather than just explanation or evaluation.",
+            "relevance": "The question is directly related to the seed question about answering incoming calls.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand."
+          }
+        }
+      }
+    },
+    "iteration_score": 0.5632044230340565
+  },
+  {
+    "seed_question": "Where is the emergency brake?",
+    "followups": {
+      "level_2": "How would you explain the emergency brake to a new driver?",
+      "level_3": "How could I apply my knowledge of the emergency brake in everyday driving?",
+      "level_4": "What factors or components affect the emergency brake?",
+      "level_5": "Which factors have the greatest impact on the emergency brake, and why?",
+      "level_6": "How could I design a new strategy to improve the emergency brake?"
+    },
+    "evaluation": {
+      "level_2": {
+        "question": "How would you explain the emergency brake to a new driver?",
+        "logical_consistency": 0.008360524661839008,
+        "informativeness": 0.35202181339263916,
+        "relevance": 0.7040436267852783,
+        "clarity": 0.3333333333333333,
+        "aggregate_score": 0.3485791615934835,
+        "chatgpt": {
+          "logical_consistency": 0.4,
+          "informativeness": 0.3,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question is at an Apply (level_3) level, asking for explanation, which is Understand (level_2). Therefore, it does not match the requested Bloom level.",
+            "informativeness": "The question adds some new cognitive work by asking for an explanation, but it is closely related and somewhat redundant to the seed question about the emergency brake.",
+            "relevance": "The question is directly related to the seed question about the emergency brake.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_3": {
+        "question": "How could I apply my knowledge of the emergency brake in everyday driving?",
+        "logical_consistency": 0.17030088603496552,
+        "informativeness": 0.36817723512649536,
+        "relevance": 0.7363544702529907,
+        "clarity": 0.3333333333333333,
+        "aggregate_score": 0.4133295632070965,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.7,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question appropriately asks for application of knowledge about the emergency brake, matching the level_3 (Apply) requirement.",
+            "informativeness": "The question adds new cognitive work by asking how to use the emergency brake in everyday driving, which is different from just locating or explaining it.",
+            "relevance": "The question is directly related to the seed question about the emergency brake.",
+            "clarity": "The question is grammatically correct and clearly phrased."
+          }
+        }
+      },
+      "level_4": {
+        "question": "What factors or components affect the emergency brake?",
+        "logical_consistency": 0.23238439857959747,
+        "informativeness": 0.3472347855567932,
+        "relevance": 0.6944695711135864,
+        "clarity": 0.38095238095238093,
+        "aggregate_score": 0.43593545021518826,
+        "chatgpt": {
+          "logical_consistency": 0.9,
+          "informativeness": 0.8,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks to analyze components or factors affecting the emergency brake, which aligns well with the level_4 (Analyze) requirement.",
+            "informativeness": "This question adds new cognitive work by prompting examination of factors or components, going beyond just location or usage.",
+            "relevance": "The question is directly related to the emergency brake, maintaining topic relevance.",
+            "clarity": "The question is grammatically correct and clearly phrased."
+          }
+        }
+      },
+      "level_5": {
+        "question": "Which factors have the greatest impact on the emergency brake, and why?",
+        "logical_consistency": 0.03613797947764397,
+        "informativeness": 0.3691028356552124,
+        "relevance": 0.7382056713104248,
+        "clarity": 0.2608695652173913,
+        "aggregate_score": 0.34507107200182,
+        "chatgpt": {
+          "logical_consistency": 0.9,
+          "informativeness": 0.8,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks for evaluation of factors impacting the emergency brake, which fits well with level_5 (Evaluate). It builds on previous questions about components and application.",
+            "informativeness": "This question adds significant new cognitive work by requiring judgment about impact and reasoning why, beyond just identifying or describing components.",
+            "relevance": "The question is directly related to the emergency brake and its functioning.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand."
+          }
+        }
+      },
+      "level_6": {
+        "question": "How could I design a new strategy to improve the emergency brake?",
+        "logical_consistency": 0.00451341737061739,
+        "informativeness": 0.3248261511325836,
+        "relevance": 0.6496523022651672,
+        "clarity": 0.36363636363636365,
+        "aggregate_score": 0.33926736109071615,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.9,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question matches the Bloom level 6 (Create) by asking to design a new strategy, which is appropriate.",
+            "informativeness": "The question adds significant new cognitive work by asking for a design of a new strategy to improve the emergency brake, going beyond previous questions.",
+            "relevance": "The question is directly related to the emergency brake and builds on the previous discussion.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand."
+          }
+        }
+      }
+    },
+    "iteration_score": 0.37643652162166086
+  },
+  {
+    "seed_question": "Can I use voice commands while driving?",
+    "followups": {
+      "level_2": "What are the different ways I can use voice commands while driving?",
+      "level_3": "How would I use voice commands while driving in a different situation?",
+      "level_4": "What components or steps are involved in using voice commands while driving?",
+      "level_5": "Which method of using voice commands while driving is most effective, and why?",
+      "level_6": "How could I design a new approach to use voice commands while driving?"
+    },
+    "evaluation": {
+      "level_2": {
+        "question": "What are the different ways I can use voice commands while driving?",
+        "logical_consistency": 0.3729911148548126,
+        "informativeness": 0.43431684374809265,
+        "relevance": 0.8686336874961853,
+        "clarity": 0.36363636363636365,
+        "aggregate_score": 0.5350870553291206,
+        "chatgpt": {
+          "logical_consistency": 0.6,
+          "informativeness": 0.4,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question asks about different ways to use voice commands, which is related but leans more towards application (level_3) rather than understanding (level_2).",
+            "informativeness": "The question adds some new information by asking for different methods or modes of using voice commands, which is more specific than the seed question.",
+            "relevance": "The question is directly related to the seed question about using voice commands while driving.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_3": {
+        "question": "How would I use voice commands while driving in a different situation?",
+        "logical_consistency": 0.5984851121902466,
+        "informativeness": 0.4556517004966736,
+        "relevance": 0.9113034009933472,
+        "clarity": 0.36363636363636365,
+        "aggregate_score": 0.6244749589399858,
+        "chatgpt": {
+          "logical_consistency": 0.6,
+          "informativeness": 0.4,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question attempts to ask for application in a different situation, which aligns somewhat with level_3, but it is vague about what 'different situation' means, reducing clarity on the application context.",
+            "informativeness": "The question adds some new cognitive work by asking to apply voice commands in a different situation, but it is somewhat repetitive given the previous follow-up already asked about different ways to use voice commands.",
+            "relevance": "The question is clearly related to the seed question about using voice commands while driving.",
+            "clarity": "The question is grammatical and mostly clear, though 'in a different situation' is somewhat vague."
+          }
+        }
+      },
+      "level_4": {
+        "question": "What components or steps are involved in using voice commands while driving?",
+        "logical_consistency": 0.7530131340026855,
+        "informativeness": 0.421774685382843,
+        "relevance": 0.843549370765686,
+        "clarity": 0.36363636363636365,
+        "aggregate_score": 0.6533996228015785,
+        "chatgpt": {
+          "logical_consistency": 0.9,
+          "informativeness": 0.7,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks about components or steps involved, which aligns well with the Analyze (level_4) Bloom level and is consistent with the seed question about using voice commands while driving.",
+            "informativeness": "This question adds new cognitive work by requesting a breakdown of components or steps, which is more detailed than the seed question and previous follow-ups.",
+            "relevance": "The question is directly related to the seed question about using voice commands while driving.",
+            "clarity": "The question is grammatically correct, well-formed, and easy to understand."
+          }
+        }
+      },
+      "level_5": {
+        "question": "Which method of using voice commands while driving is most effective, and why?",
+        "logical_consistency": 0.0165970791131258,
+        "informativeness": 0.41540223360061646,
+        "relevance": 0.8308044672012329,
+        "clarity": 0.28888888888888886,
+        "aggregate_score": 0.3787634784010825,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.8,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question appropriately asks for evaluation and justification, matching the level_5 requirement.",
+            "informativeness": "The question adds significant new cognitive work by asking to compare methods and justify which is most effective.",
+            "relevance": "The question is directly related to the seed question about using voice commands while driving.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand."
+          }
+        }
+      },
+      "level_6": {
+        "question": "How could I design a new approach to use voice commands while driving?",
+        "logical_consistency": 0.04599590227007866,
+        "informativeness": 0.42806899547576904,
+        "relevance": 0.8561379909515381,
+        "clarity": 0.3170731707317073,
+        "aggregate_score": 0.406402354651108,
+        "chatgpt": {
+          "logical_consistency": 1.0,
+          "informativeness": 0.8,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question matches the level_6 requirement by asking to design a new approach, which is appropriate for the 'Create' level.",
+            "informativeness": "The question adds significant new cognitive work by asking for a design of a new approach, rather than just evaluating or analyzing existing methods.",
+            "relevance": "The question is directly related to the seed question about using voice commands while driving.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand."
+          }
+        }
+      }
+    },
+    "iteration_score": 0.5196254940245751
+  }
+]

@@ -24,6 +24,10 @@ from sentence_transformers import SentenceTransformer, util
 import spacy
 import numpy as np
 
+from openai import OpenAI
+import os
+import json
+
 
 class GriceWiseEvaluator:
     """
@@ -43,6 +47,9 @@ class GriceWiseEvaluator:
         embedding_model: str = "all-MiniLM-L6-v2",
         spacy_model: str = "en_core_web_sm",
         device: str = None,
+        use_chatgpt: bool = False,
+        chatgpt_model: str = "gpt-4.1-mini",
+        openai_api_key: str = None,
     ):
         """
         Initialize the evaluator with required models.
@@ -53,6 +60,9 @@ class GriceWiseEvaluator:
             embedding_model: Sentence transformer for embeddings
             spacy_model: SpaCy model for dependency parsing
             device: Device to run on
+            use_chatgpt: If True, also get scores from ChatGPT API
+            chatgpt_model: OpenAI model name to use for evaluation
+            openai_api_key: API key (if None, uses OPENAI_API_KEY env var)
         """
         if device is None:
             if torch.cuda.is_available():
@@ -63,6 +73,22 @@ class GriceWiseEvaluator:
                 device = "cpu"
 
         self.device = device
+        self.use_chatgpt = use_chatgpt
+        self.chatgpt_model = chatgpt_model
+        self.openai_client = None
+
+        if self.use_chatgpt:
+            if openai_api_key is None:
+                openai_api_key = os.getenv("OPENAI_API_KEY")
+
+            if not openai_api_key:
+                raise ValueError(
+                    "use_chatgpt=True but no OpenAI API key found. "
+                    "Set OPENAI_API_KEY environment variable or pass openai_api_key."
+                )
+
+            # ✅ new-style client
+            self.openai_client = OpenAI(api_key=openai_api_key)
 
         # Initialize NLI model for logical consistency
         print(f"Loading NLI model: {nli_model}")
@@ -136,48 +162,48 @@ class GriceWiseEvaluator:
 
     def evaluate_informativeness(self, question: str, context: str) -> float:
         """
-        Evaluate informativeness using conditional entropy.
+        Informativeness = relevance * novelty
 
-        Args:
-            question: The follow-up question to evaluate
-            context: Previous conversation context
+        - relevance: similarity(question, context)
+        - novelty:  1 - similarity(question, seed_question)
 
-        Returns:
-            Informativeness score (0+), lower = more informative (less redundant)
+        We read the seed_question from self._current_seed_question, which is set
+        in evaluate_question_set().
         """
         if not question.strip():
             return 0.0
 
         try:
-            # Tokenize the question
-            tokens = self.lm_tokenizer(question, return_tensors="pt")
-            input_ids = tokens["input_ids"].to(self.device)
+            # Embedding for the current question
+            q_emb = self.embedder.encode(question, convert_to_tensor=True)
 
-            # Get logits for conditional entropy calculation
-            with torch.no_grad():
-                outputs = self.lm_model(input_ids=input_ids)
-                logits = outputs.logits[0]  # Shape: [seq_len, vocab_size]
+            # Relevance: question vs context (seed + prev followups)
+            ctx_emb = self.embedder.encode(context, convert_to_tensor=True)
+            rel = util.cos_sim(q_emb, ctx_emb)[0][0].item()
 
-            # Calculate conditional entropy H(question|context)
-            # For simplicity, we compute entropy of the question alone
-            # since computing P(word|context) requires more complex setup
-            probs = torch.softmax(logits, dim=-1)
-            entropy = 0.0
+            # Novelty: question vs seed question
+            seed = getattr(self, "_current_seed_question", None)
+            if seed is not None:
+                seed_emb = self.embedder.encode(seed, convert_to_tensor=True)
+                sim_seed = util.cos_sim(q_emb, seed_emb)[0][0].item()
+                novelty = 1.0 - sim_seed
+            else:
+                # Fallback if not set (e.g. direct call), assume medium novelty
+                novelty = 0.5
 
-            for i, token_id in enumerate(input_ids[0][1:], 1):  # Skip BOS token
-                token_prob = probs[i - 1][token_id].item()
-                if token_prob > 1e-10:  # Avoid log(0)
-                    entropy -= token_prob * math.log(token_prob)
+            # Clamp
+            rel = max(0.0, min(1.0, rel))
+            novelty = max(0.0, min(1.0, novelty))
 
-            # Normalize by sequence length
-            seq_len = len(input_ids[0]) - 1  # Exclude BOS
-            normalized_entropy = entropy / seq_len if seq_len > 0 else 0.0
+            # Informativeness: must be both relevant and novel
+            informativeness = rel * novelty
 
-            return normalized_entropy
+            return informativeness
 
         except Exception as e:
-            print(f"Error in informativeness calculation: {e}")
+            print(f"Informativeness error: {e}")
             return 0.0
+
 
     def evaluate_relevance(self, question: str, context: str) -> float:
         """
@@ -255,6 +281,119 @@ class GriceWiseEvaluator:
         except Exception as e:
             print(f"Error in clarity calculation: {e}")
             return 0.0
+        
+
+
+    def _chatgpt_evaluate_question(
+        self,
+        seed_question: str,
+        level: str,
+        question: str,
+        context: str,
+    ) -> Dict[str, Any]:
+        """
+        Ask ChatGPT to score this follow-up question on the four Gricean metrics.
+
+        Returns a dict with numeric scores in [0, 1] and optional explanations.
+        """
+        if not self.use_chatgpt or self.openai_client is None:
+            return {}
+
+        system_prompt = (
+            "You are an automatic evaluator of follow-up questions for an educational system "
+            "based on Bloom's taxonomy and Grice's maxims.\n\n"
+            "You must assign four scores between 0 and 1 for each follow-up question:\n"
+            "1. logical_consistency: The question should be logically consistent with the seed question "
+            "   and the specified Bloom level. If it does not actually operate at the requested Bloom level "
+            "   (e.g., it just repeats the seed question), this score must be reduced.\n"
+            "2. informativeness: How much new, non-redundant information or cognitive work does this question add "
+            "   beyond the seed question? If it is just a superficial rephrasing or asks essentially the same thing, "
+            "   informativeness must be <= 0.3.\n"
+            "3. relevance: Is it on-topic and related to the seed question? A question can still be relevant even if it "
+            "   is redundant.\n"
+            "4. clarity: Is it grammatical, well-formed, and easy to understand?\n\n"
+            "Bloom level expectations (for the 'level' field):\n"
+            "- level_2 (Understand): Ask to explain, describe, summarize, compare, or interpret the concept. "
+            "  'Why', 'explain', 'describe', 'summarize', 'compare', etc.\n"
+            "- level_3 (Apply): Ask to use the concept in a specific situation, scenario, or example. "
+            "  'How would you use/apply this in ...', 'What steps would you follow in ...'.\n"
+            "- level_4 (Analyze): Ask to break the concept into parts, examine structure, components, or relationships. "
+            "  'What components...', 'How is it structured...', 'What are the causes/effects...'.\n"
+            "- level_5 (Evaluate): Ask to compare alternatives, make judgments, or justify choices. "
+            "  'Which is better and why...', 'Evaluate...', 'What are the pros and cons...'.\n"
+            "- level_6 (Create): Ask to design, invent, or propose a new method, plan, or approach. "
+            "  'How would you design...', 'Propose a new way to...'.\n\n"
+            "CRITICAL RULES:\n"
+            "- If the follow-up question is essentially asking the same thing as the seed question, just rephrased, "
+            "  then informativeness MUST be <= 0.3, even if the language is good.\n"
+            "- If the follow-up does not match the requested Bloom level (for example, an 'Apply' level (level_3) "
+            "  question that simply asks for a definition), then logical_consistency MUST be <= 0.5.\n"
+            "- Clarity rubric:\n"
+            "  * If the question is ungrammatical, incomplete, or missing key words, clarity MUST be <= 0.3.\n"
+            "  * If understandable but awkward, 0.4–0.7.\n"
+            "  * Only fully grammatical and natural questions get clarity >= 0.8.\n\n"
+            "Return ONLY a valid JSON object with this schema:\n"
+            "{\n"
+            '  \"logical_consistency\": float,\n'
+            '  \"informativeness\": float,\n'
+            '  \"relevance\": float,\n'
+            '  \"clarity\": float,\n'
+            '  \"notes\": {\n'
+            '    \"logical_consistency\": string,\n'
+            '    \"informativeness\": string,\n'
+            '    \"relevance\": string,\n'
+            '    \"clarity\": string\n'
+            "  }\n"
+            "}\n"
+            "Do not include any extra text before or after the JSON."
+        )
+
+
+
+        user_prompt = (
+            f"Seed question:\n{seed_question}\n\n"
+            f"Level: {level}\n"
+            f"Current follow-up question:\n{question}\n\n"
+            f"Conversation context so far (seed + previous follow-ups):\n{context}\n"
+        )
+
+        try:
+            # ✅ new-style API call
+            response = self.openai_client.chat.completions.create(
+                model=self.chatgpt_model,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt},
+                ],
+                temperature=0.0,
+            )
+
+            content = response.choices[0].message.content
+            data = json.loads(content)
+
+            def clamp01(x):
+                try:
+                    x = float(x)
+                except Exception:
+                    x = 0.0
+                return max(0.0, min(1.0, x))
+
+            scores = {
+                "logical_consistency": clamp01(data.get("logical_consistency", 0.0)),
+                "informativeness": clamp01(data.get("informativeness", 0.0)),
+                "relevance": clamp01(data.get("relevance", 0.0)),
+                "clarity": clamp01(data.get("clarity", 0.0)),
+                "notes": data.get("notes", {}),
+            }
+            return scores
+
+        except Exception as e:
+            print(f"ChatGPT evaluation error for level {level}: {e}")
+            return {}
+
+
+
+
 
     def evaluate_question_set(
         self,
@@ -293,6 +432,17 @@ class GriceWiseEvaluator:
             relevance = self.evaluate_relevance(question, context)
             clarity = self.evaluate_clarity(question)
 
+            # Optional: ChatGPT-based evaluation
+            chatgpt_scores = {}
+            if self.use_chatgpt:
+                chatgpt_scores = self._chatgpt_evaluate_question(
+                    seed_question=seed_question,
+                    level=level,
+                    question=question,
+                    context=context,
+                )
+
+
             # Store results
             question_results = {
                 "question": question,
@@ -310,6 +460,9 @@ class GriceWiseEvaluator:
                 # For this implementation, we'll treat Logical Consistency, Relevance, and Clarity as the key quality drivers.
                 "aggregate_score": (logical_consistency + relevance + clarity) / 3.0,
             }
+
+            if chatgpt_scores:
+                question_results["chatgpt"] = chatgpt_scores
 
             results[level] = question_results
 
