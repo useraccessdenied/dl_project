@@ -87,7 +87,6 @@ class GriceWiseEvaluator:
                     "Set OPENAI_API_KEY environment variable or pass openai_api_key."
                 )
 
-            # ✅ new-style client
             self.openai_client = OpenAI(api_key=openai_api_key)
 
         # Initialize NLI model for logical consistency
@@ -458,7 +457,7 @@ class GriceWiseEvaluator:
                 # Actually, in text generation, very low entropy = repetition. High entropy = randomness.
                 # Paper says "optimization targets a balance".
                 # For this implementation, we'll treat Logical Consistency, Relevance, and Clarity as the key quality drivers.
-                "aggregate_score": (logical_consistency + relevance + clarity) / 3.0,
+                "aggregate_score": (logical_consistency + informativeness + relevance + clarity) / 4.0,
             }
 
             if chatgpt_scores:
