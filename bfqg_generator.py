@@ -26,6 +26,7 @@ class BFGQuestionGenerator:
         model_name: str = "google/flan-t5-large",
         device: Optional[str] = None,
         use_model: bool = True,
+        use_finetuned: bool = False,
     ):
         """
         Initialize the generator with optional model loading.
@@ -34,8 +35,10 @@ class BFGQuestionGenerator:
             model_name: Hugging Face model name for generation
             device: Device to run on ('cpu', 'cuda', etc.), auto-detected if None
             use_model: Whether to load the model (False = use templates only)
+            use_finetuned: Whether to load the fine-tuned model if available
         """
         self.use_model = use_model
+        self.use_finetuned = use_finetuned
         if device is None:
             if torch.cuda.is_available():
                 device = "cuda"
@@ -58,7 +61,7 @@ class BFGQuestionGenerator:
                 import os
                 from peft import PeftModel
 
-                if os.path.exists(finetuned_path) and os.listdir(finetuned_path):
+                if self.use_finetuned and os.path.exists(finetuned_path) and os.listdir(finetuned_path):
                     print(f"Found fine-tuned model at {finetuned_path}. Loading...")
                     # Load base model
                     self.model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
@@ -98,13 +101,13 @@ class BFGQuestionGenerator:
         if self.few_shot_examples:
             examples_section = f"Here are some examples of how to generate questions (follow the style, but stick to the NEW seed topic):\n{self.few_shot_examples}\n"
 
-        return f"""Task: Generate a single follow-up question for an in-car assistant based on the seed question.
+        return f"""Task: Generate a single follow-up question based on the seed question.
 
 {examples_section}
 Now, generate a question for the following new task:
 Seed: "{seed_question}"
 Target Level: {level_desc}
-Constraint: The question must strictly adhere to the target level and the specific seed topic. Output ONLY the question text.
+Constraint: The question must strictly adhere to the target level and the specific seed topic. Do not switch topics or hallucinate features not related to the seed. Output ONLY the question text.
 Question:"""
 
     def generate_followups(self, seed_question: str, max_length: int = 128) -> Dict[str, str]:
