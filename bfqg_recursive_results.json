@@ -2,1131 +2,1131 @@
   {
     "seed_question": "How do I make a phone call?",
     "followups": {
-      "level_2": "How do you make a phone call?",
-      "level_3": "What are some ways to make a phone call?",
-      "level_4": "How do you make a phone call?",
-      "level_5": "What are some examples of how to make a phone call?",
+      "level_2": "What would you do if you were unable to make a phone call?",
+      "level_3": "How do I make a phone call to a person who lives in the US?",
+      "level_4": "What does a phone call consist of?",
+      "level_5": "What is the best way to make a call on a cell phone?",
       "level_6": "How do you make a phone call?"
     },
     "evaluation": {
       "level_2": {
-        "question": "How do you make a phone call?",
-        "logical_consistency": 0.7212519645690918,
-        "informativeness": 0.4864152669906616,
-        "relevance": 0.9728305339813232,
-        "clarity": 0.3684210526315789,
-        "aggregate_score": 0.6372297045431639,
+        "question": "What would you do if you were unable to make a phone call?",
+        "logical_consistency": 0.040414709597826004,
+        "informativeness": 0.31670045852661133,
+        "relevance": 0.6334009170532227,
+        "clarity": 0.3714285714285714,
+        "aggregate_score": 0.34048616415155786,
         "chatgpt": {
-          "logical_consistency": 0.5,
-          "informativeness": 0.2,
-          "relevance": 1.0,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question is essentially the same as the seed question but rephrased, so it does not add new understanding or explanation as expected at level_2 (Understand).",
-            "informativeness": "The question is a rephrasing of the seed question and does not add new information or cognitive demand.",
-            "relevance": "The question is directly related to the seed question about making a phone call.",
-            "clarity": "The question is grammatically correct and clear."
-          }
-        }
-      },
-      "level_3": {
-        "question": "What are some ways to make a phone call?",
-        "logical_consistency": 0.9151378870010376,
-        "informativeness": 0.44184625148773193,
-        "relevance": 0.8836925029754639,
-        "clarity": 0.40909090909090906,
-        "aggregate_score": 0.6624418876387856,
-        "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.3,
-          "relevance": 1.0,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question asks for multiple ways to make a phone call, which is related but does not fully align with the 'Apply' level expectation of using the concept in a specific situation or example.",
-            "informativeness": "The question adds some new information by asking for different methods, but it is still closely related to the original question and somewhat redundant.",
-            "relevance": "The question is on-topic and directly related to the seed question about making a phone call.",
-            "clarity": "The question is grammatically correct and easy to understand."
-          }
-        }
-      },
-      "level_4": {
-        "question": "How do you make a phone call?",
-        "logical_consistency": 0.9439498782157898,
-        "informativeness": 0.4228574335575104,
-        "relevance": 0.8457148671150208,
-        "clarity": 0.3684210526315789,
-        "aggregate_score": 0.6452358078799749,
-        "chatgpt": {
-          "logical_consistency": 0.3,
-          "informativeness": 0.2,
-          "relevance": 1.0,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question is essentially the same as the seed question and does not meet the level_4 (Analyze) requirement, so the score is low.",
-            "informativeness": "The question adds very little new information or cognitive work beyond the seed question.",
-            "relevance": "The question is on-topic and related to the seed question.",
-            "clarity": "The question is grammatical and easy to understand."
-          }
-        }
-      },
-      "level_5": {
-        "question": "What are some examples of how to make a phone call?",
-        "logical_consistency": 0.9749307036399841,
-        "informativeness": 0.3095782995223999,
-        "relevance": 0.6191565990447998,
-        "clarity": 0.39285714285714285,
-        "aggregate_score": 0.5741306862660817,
-        "chatgpt": {
-          "logical_consistency": 0.3,
-          "informativeness": 0.2,
-          "relevance": 1.0,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question asks for examples, which is more of a 'Understand' or 'Apply' level task, not 'Evaluate' as requested.",
-            "informativeness": "The question is very similar to the seed and previous questions, adding little new information or cognitive challenge.",
-            "relevance": "The question is on-topic and directly related to making a phone call.",
-            "clarity": "The question is well-formed, grammatical, and easy to understand."
-          }
-        }
-      },
-      "level_6": {
-        "question": "How do you make a phone call?",
-        "logical_consistency": 0.9828835129737854,
-        "informativeness": 0.23818878829479218,
-        "relevance": 0.47637757658958435,
-        "clarity": 0.3684210526315789,
-        "aggregate_score": 0.5164677326224352,
-        "chatgpt": {
-          "logical_consistency": 0.3,
-          "informativeness": 0.2,
-          "relevance": 1.0,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question is a simple rephrasing of the seed question and does not meet the level_6 (Create) requirement to design or propose a new method.",
-            "informativeness": "The question adds very little new information or cognitive demand beyond the seed question, essentially repeating the same inquiry.",
-            "relevance": "The question is directly related to the seed question about making a phone call.",
-            "clarity": "The question is grammatically correct and easy to understand."
-          }
-        }
-      }
-    },
-    "iteration_score": 0.6071011637900883
-  },
-  {
-    "seed_question": "How do I navigate to an address?",
-    "followups": {
-      "level_2": "What is the first step in navigating to an address?",
-      "level_3": "What are some ways to navigate to an address?",
-      "level_4": "What are some examples of how you can navigate to an address?",
-      "level_5": "How do I navigate to a location?",
-      "level_6": "What are some ways to navigate to an address?"
-    },
-    "evaluation": {
-      "level_2": {
-        "question": "What is the first step in navigating to an address?",
-        "logical_consistency": 0.3128070831298828,
-        "informativeness": 0.4303646683692932,
-        "relevance": 0.8607293367385864,
-        "clarity": 0.4347826086956522,
-        "aggregate_score": 0.5096709242333537,
-        "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.2,
-          "relevance": 1.0,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question asks for the first step, which is more of a procedural or apply-level question rather than an understand-level question, so it does not fully match the requested Bloom level 2.",
-            "informativeness": "The question is quite narrow and does not add much new information beyond the seed question; it focuses on just the first step rather than explaining the concept.",
-            "relevance": "The question is directly related to the seed question about navigating to an address.",
-            "clarity": "The question is grammatically correct and easy to understand."
-          }
-        }
-      },
-      "level_3": {
-        "question": "What are some ways to navigate to an address?",
-        "logical_consistency": 0.9457725286483765,
-        "informativeness": 0.46222174167633057,
-        "relevance": 0.9244434833526611,
-        "clarity": 0.44999999999999996,
-        "aggregate_score": 0.6956094384193421,
-        "chatgpt": {
-          "logical_consistency": 0.5,
-          "informativeness": 0.3,
-          "relevance": 1.0,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question asks for multiple ways to navigate, which is related but does not specifically ask for application in a scenario as expected at level_3 (Apply).",
-            "informativeness": "The question adds some new information by asking for multiple methods, but it is still closely related to the original question and somewhat redundant.",
-            "relevance": "The question is on-topic and directly related to navigating to an address.",
-            "clarity": "The question is grammatically correct and easy to understand."
-          }
-        }
-      },
-      "level_4": {
-        "question": "What are some examples of how you can navigate to an address?",
-        "logical_consistency": 0.9729706048965454,
-        "informativeness": 0.4389191269874573,
-        "relevance": 0.8778382539749146,
-        "clarity": 0.38709677419354843,
-        "aggregate_score": 0.6692061900131164,
-        "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.3,
-          "relevance": 1.0,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The question asks for examples, which is more of an 'Apply' or 'Understand' level task rather than 'Analyze' (level 4). It does not break down or examine components or structure, so logical consistency with level 4 is low.",
-            "informativeness": "The question adds some new information by requesting examples, but it is closely related to previous questions about ways to navigate, so informativeness is limited.",
-            "relevance": "The question is directly related to the seed question about navigating to an address.",
-            "clarity": "The question is well-formed, grammatical, and easy to understand."
-          }
-        }
-      },
-      "level_5": {
-        "question": "How do I navigate to a location?",
-        "logical_consistency": 0.9811262488365173,
-        "informativeness": 0.38734501600265503,
-        "relevance": 0.7746900320053101,
-        "clarity": 0.4117647058823529,
-        "aggregate_score": 0.6387315006817088,
-        "chatgpt": {
-          "logical_consistency": 0.3,
-          "informativeness": 0.2,
-          "relevance": 1.0,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question is similar in intent to the seed question but less specific (location vs. address) and does not meet the level_5 requirement of evaluation or judgment.",
-            "informativeness": "The question is largely redundant with the seed question and previous follow-ups, adding little new cognitive demand.",
-            "relevance": "The question is on-topic and related to the seed question about navigation.",
-            "clarity": "The question is clear, grammatical, and easy to understand."
-          }
-        }
-      },
-      "level_6": {
-        "question": "What are some ways to navigate to an address?",
-        "logical_consistency": 0.8737499117851257,
-        "informativeness": 0.46005529165267944,
-        "relevance": 0.9201105833053589,
-        "clarity": 0.44999999999999996,
-        "aggregate_score": 0.6759789466857911,
-        "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.3,
-          "relevance": 1.0,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The question asks for ways to navigate, which is more about listing methods rather than creating a new method or plan, so it does not fully meet the 'Create' (level_6) requirement.",
-            "informativeness": "The question is somewhat redundant with previous questions asking about ways or examples of navigation, so it adds limited new information.",
-            "relevance": "The question is directly related to the seed question about navigating to an address.",
-            "clarity": "The question is grammatically correct and easy to understand."
-          }
-        }
-      }
-    },
-    "iteration_score": 0.6378394000066624
-  },
-  {
-    "seed_question": "How do I play music?",
-    "followups": {
-      "level_2": "What is the best way to play music?",
-      "level_3": "How do you play music?",
-      "level_4": "What is the best way to play music?",
-      "level_5": "How do you play music?",
-      "level_6": "What is the most common way to play music?"
-    },
-    "evaluation": {
-      "level_2": {
-        "question": "What is the best way to play music?",
-        "logical_consistency": 0.23824739456176758,
-        "informativeness": 0.42725151777267456,
-        "relevance": 0.8545030355453491,
-        "clarity": 0.42105263157894735,
-        "aggregate_score": 0.48526364486468465,
-        "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.2,
+          "logical_consistency": 0.6,
+          "informativeness": 0.7,
           "relevance": 0.9,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The follow-up question asks for the 'best way' to play music, which is more evaluative and does not align well with the 'Understand' level that expects explanation or description.",
-            "informativeness": "The question is somewhat redundant as it still revolves around playing music without adding much new cognitive demand beyond the seed question.",
-            "relevance": "The question is on-topic and related to the seed question about playing music.",
+            "logical_consistency": "The follow-up question asks about a hypothetical situation rather than explaining or describing how to make a phone call, which is expected at level_2 (Understand). Thus, it partially aligns but does not fully meet the level_2 criteria.",
+            "informativeness": "The question introduces a new scenario about being unable to make a call, which adds new cognitive content beyond the seed question.",
+            "relevance": "The question is related to the topic of making phone calls, specifically addressing potential difficulties.",
             "clarity": "The question is grammatically correct and easy to understand."
           }
         }
       },
       "level_3": {
-        "question": "How do you play music?",
-        "logical_consistency": 0.9897171258926392,
-        "informativeness": 0.4549354910850525,
-        "relevance": 0.909870982170105,
-        "clarity": 0.4166666666666667,
-        "aggregate_score": 0.6927975664536158,
+        "question": "How do I make a phone call to a person who lives in the US?",
+        "logical_consistency": 0.0006049957009963691,
+        "informativeness": 0.3152601718902588,
+        "relevance": 0.6305203437805176,
+        "clarity": 0.39473684210526316,
+        "aggregate_score": 0.335280588369259,
         "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.2,
-          "relevance": 1.0,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question is very similar to the seed question but changes the pronoun from 'I' to 'you', which does not align well with the requested Apply level (level_3) that expects application in a specific situation.",
-            "informativeness": "The question adds very little new information or cognitive work beyond the seed question; it is essentially a rephrasing.",
-            "relevance": "The question is on-topic and directly related to the seed question about playing music.",
-            "clarity": "The question is grammatically correct and easy to understand."
-          }
-        }
-      },
-      "level_4": {
-        "question": "What is the best way to play music?",
-        "logical_consistency": 0.9837502837181091,
-        "informativeness": 0.4076595902442932,
-        "relevance": 0.8153191804885864,
-        "clarity": 0.42105263157894735,
-        "aggregate_score": 0.656945421507484,
-        "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.2,
-          "relevance": 0.9,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question asks for the 'best way' to play music, which is more evaluative (level 5) rather than analytical (level 4) as requested, so logical consistency is low.",
-            "informativeness": "The question is somewhat redundant with the seed question and previous follow-ups, adding little new cognitive work.",
-            "relevance": "The question is on-topic and related to the seed question about playing music.",
-            "clarity": "The question is grammatically correct and easy to understand."
-          }
-        }
-      },
-      "level_5": {
-        "question": "How do you play music?",
-        "logical_consistency": 0.9889878630638123,
-        "informativeness": 0.3344724178314209,
-        "relevance": 0.6689448356628418,
-        "clarity": 0.4166666666666667,
-        "aggregate_score": 0.6022679458061854,
-        "chatgpt": {
-          "logical_consistency": 0.3,
-          "informativeness": 0.2,
-          "relevance": 1.0,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question is a simple rephrasing of the seed question and does not meet the level_5 (Evaluate) requirement to compare alternatives or make judgments.",
-            "informativeness": "The question adds very little new information or cognitive work beyond the seed question; it is essentially a restatement.",
-            "relevance": "The question is on-topic and directly related to the seed question about playing music.",
-            "clarity": "The question is grammatically correct and easy to understand."
-          }
-        }
-      },
-      "level_6": {
-        "question": "What is the most common way to play music?",
-        "logical_consistency": 0.020071081817150116,
-        "informativeness": 0.22566550970077515,
-        "relevance": 0.4513310194015503,
-        "clarity": 0.391304347826087,
-        "aggregate_score": 0.2720929896863906,
-        "chatgpt": {
-          "logical_consistency": 0.3,
-          "informativeness": 0.2,
-          "relevance": 0.9,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question asks about the most common way to play music, which is more about frequency or popularity rather than creating or designing a new method, so it does not align well with the level_6 (Create) expectation.",
-            "informativeness": "The question is somewhat redundant with the seed question and previous follow-ups, as it still focuses on ways to play music without adding a new creative or design aspect.",
-            "relevance": "The question is on-topic and related to the seed question about playing music.",
-            "clarity": "The question is grammatically correct and easy to understand."
-          }
-        }
-      }
-    },
-    "iteration_score": 0.5418735136636721
-  },
-  {
-    "seed_question": "How do I adjust the air conditioning?",
-    "followups": {
-      "level_2": "How do I adjust the air conditioning in my home?",
-      "level_3": "How do I adjust the air conditioner on my house?",
-      "level_4": "What is the best way to adjust the air conditioning?",
-      "level_5": "What is the process for adjusting the air conditioning?",
-      "level_6": "How do I adjust the air conditioner?"
-    },
-    "evaluation": {
-      "level_2": {
-        "question": "How do I adjust the air conditioning in my home?",
-        "logical_consistency": 0.006046975497156382,
-        "informativeness": 0.4701792597770691,
-        "relevance": 0.9403585195541382,
-        "clarity": 0.3448275862068966,
-        "aggregate_score": 0.44035308525881506,
-        "chatgpt": {
-          "logical_consistency": 0.5,
-          "informativeness": 0.3,
-          "relevance": 1.0,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question is consistent with the seed question but does not elevate to the 'Understand' level as it simply specifies the location without asking for explanation or description.",
-            "informativeness": "The question adds minimal new information, only specifying 'in my home', which is a minor detail and does not deepen understanding.",
-            "relevance": "The question is directly related to the seed question about adjusting air conditioning.",
-            "clarity": "The question is grammatically correct and clear."
-          }
-        }
-      },
-      "level_3": {
-        "question": "How do I adjust the air conditioner on my house?",
-        "logical_consistency": 0.9928911924362183,
-        "informativeness": 0.44964468479156494,
-        "relevance": 0.8992893695831299,
-        "clarity": 0.3846153846153846,
-        "aggregate_score": 0.6816101578565744,
-        "chatgpt": {
-          "logical_consistency": 0.5,
-          "informativeness": 0.3,
-          "relevance": 1.0,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The question is at an Apply level but mostly repeats the seed question with a slight specification (house). It does not add a new application scenario or steps.",
-            "informativeness": "The question adds minimal new information beyond the seed question, mostly rephrasing with a location specification.",
-            "relevance": "The question is directly related to the seed question about adjusting air conditioning.",
-            "clarity": "The question is grammatically correct and clear."
-          }
-        }
-      },
-      "level_4": {
-        "question": "What is the best way to adjust the air conditioning?",
-        "logical_consistency": 0.5900973677635193,
-        "informativeness": 0.41837355494499207,
-        "relevance": 0.8367471098899841,
-        "clarity": 0.3846153846153846,
-        "aggregate_score": 0.55745835430347,
-        "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.2,
-          "relevance": 1.0,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question asks for the 'best way' to adjust the air conditioning, which is more evaluative (level 5) rather than analytical (level 4) as requested.",
-            "informativeness": "The question is somewhat redundant with the seed question, only adding a slight evaluative aspect, so informativeness is low.",
-            "relevance": "The question is clearly related to the seed question about adjusting air conditioning.",
-            "clarity": "The question is grammatically correct and easy to understand."
-          }
-        }
-      },
-      "level_5": {
-        "question": "What is the process for adjusting the air conditioning?",
-        "logical_consistency": 0.9598610997200012,
-        "informativeness": 0.3804079294204712,
-        "relevance": 0.7608158588409424,
-        "clarity": 0.4285714285714286,
-        "aggregate_score": 0.6324140791382109,
-        "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.2,
-          "relevance": 1.0,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question asks for the process, which is more of an 'Understand' or 'Apply' level question, not 'Evaluate' as requested.",
-            "informativeness": "The question is very similar to the seed question and previous follow-ups, adding little new information or cognitive demand.",
-            "relevance": "The question is directly related to adjusting the air conditioning.",
-            "clarity": "The question is clear, grammatical, and easy to understand."
-          }
-        }
-      },
-      "level_6": {
-        "question": "How do I adjust the air conditioner?",
-        "logical_consistency": 0.9488216638565063,
-        "informativeness": 0.36185890436172485,
-        "relevance": 0.7237178087234497,
-        "clarity": 0.3684210526315789,
-        "aggregate_score": 0.6007048573933149,
-        "chatgpt": {
-          "logical_consistency": 0.3,
-          "informativeness": 0.2,
-          "relevance": 1.0,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The question is essentially a rephrasing of the seed question and does not meet the level_6 requirement to create or design a new method or approach.",
-            "informativeness": "The question adds very little new information or cognitive work beyond the seed question; it is mostly redundant.",
-            "relevance": "The question is directly related to the seed question about adjusting air conditioning.",
-            "clarity": "The question is grammatical, well-formed, and easy to understand."
-          }
-        }
-      }
-    },
-    "iteration_score": 0.582508106790077
-  },
-  {
-    "seed_question": "What is the fuel efficiency of this car?",
-    "followups": {
-      "level_2": "What are some other reasons that this car is considered fuel efficient?",
-      "level_3": "What are some benefits of this car?",
-      "level_4": "What are the other features of this car?",
-      "level_5": "What is the fuel efficiency of this car?",
-      "level_6": "What is the fuel efficiency of the car that is most fuel efficient?"
-    },
-    "evaluation": {
-      "level_2": {
-        "question": "What are some other reasons that this car is considered fuel efficient?",
-        "logical_consistency": 0.020351510494947433,
-        "informativeness": 0.3877919614315033,
-        "relevance": 0.7755839228630066,
-        "clarity": 0.3428571428571428,
-        "aggregate_score": 0.38164613441165,
-        "chatgpt": {
-          "logical_consistency": 0.9,
+          "logical_consistency": 1.0,
           "informativeness": 0.7,
           "relevance": 1.0,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The question asks for reasons explaining the car's fuel efficiency, which aligns well with the 'Understand' level (level_2).",
-            "informativeness": "The question adds new cognitive work by asking for explanations beyond just stating the fuel efficiency value.",
-            "relevance": "The question is directly related to the seed question about the car's fuel efficiency.",
-            "clarity": "The question is grammatically correct and easy to understand."
-          }
-        }
-      },
-      "level_3": {
-        "question": "What are some benefits of this car?",
-        "logical_consistency": 0.6343902349472046,
-        "informativeness": 0.3094056248664856,
-        "relevance": 0.6188112497329712,
-        "clarity": 0.4666666666666667,
-        "aggregate_score": 0.507318444053332,
-        "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.5,
-          "relevance": 0.8,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question asks about benefits, which is more evaluative or descriptive rather than applying the concept of fuel efficiency in a specific situation, so it does not fully match the level_3 (Apply) requirement.",
-            "informativeness": "The question adds new information by asking about benefits beyond just fuel efficiency, so it is moderately informative.",
-            "relevance": "The question is related to the seed question as it concerns the car and its attributes, but it shifts focus from fuel efficiency to general benefits.",
-            "clarity": "The question is grammatically correct and easy to understand."
+            "logical_consistency": "The follow-up question appropriately builds on the seed question by applying the concept to a specific scenario (calling someone in the US), which matches the Apply level (level_3).",
+            "informativeness": "The question adds new information by specifying an international context, which requires additional steps or considerations beyond the general process of making a phone call.",
+            "relevance": "The question is directly related to the seed question about making a phone call.",
+            "clarity": "The question is grammatically correct, well-formed, and easy to understand."
           }
         }
       },
       "level_4": {
-        "question": "What are the other features of this car?",
-        "logical_consistency": 0.7955015301704407,
-        "informativeness": 0.316247820854187,
-        "relevance": 0.632495641708374,
-        "clarity": 0.42105263157894735,
-        "aggregate_score": 0.5413244060779873,
+        "question": "What does a phone call consist of?",
+        "logical_consistency": 0.13235096633434296,
+        "informativeness": 0.24318896234035492,
+        "relevance": 0.48637792468070984,
+        "clarity": 0.3181818181818182,
+        "aggregate_score": 0.29502491788430646,
         "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.5,
-          "relevance": 0.7,
+          "logical_consistency": 0.7,
+          "informativeness": 0.6,
+          "relevance": 0.9,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The follow-up question asks about other features, which is related but does not analyze the fuel efficiency or its components as expected at level_4.",
-            "informativeness": "The question introduces new information about other features, adding some cognitive work beyond the seed question.",
-            "relevance": "The question is related to the car but less focused on fuel efficiency specifically.",
+            "logical_consistency": "The question asks to analyze the components of a phone call, which aligns with level_4 (Analyze), though it is somewhat broad and could be more specific.",
+            "informativeness": "The question adds new cognitive work by prompting an analysis of the structure or components of a phone call, beyond just how to make one.",
+            "relevance": "The question is directly related to the seed question about making a phone call.",
             "clarity": "The question is grammatically correct and easy to understand."
           }
         }
       },
       "level_5": {
-        "question": "What is the fuel efficiency of this car?",
-        "logical_consistency": 0.99167400598526,
-        "informativeness": 0.3955507278442383,
-        "relevance": 0.7911014556884766,
-        "clarity": 0.42105263157894735,
-        "aggregate_score": 0.6498447052742305,
+        "question": "What is the best way to make a call on a cell phone?",
+        "logical_consistency": 0.07672910392284393,
+        "informativeness": 0.2789044976234436,
+        "relevance": 0.5578089952468872,
+        "clarity": 0.393939393939394,
+        "aggregate_score": 0.3268454976831422,
+        "chatgpt": {
+          "logical_consistency": 0.6,
+          "informativeness": 0.4,
+          "relevance": 0.9,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks for the best way to make a call, which aligns somewhat with evaluation (level 5), but it is narrowly focused on cell phones rather than phone calls in general, which slightly reduces consistency.",
+            "informativeness": "The question adds some new cognitive work by asking for a judgment about the best method, which is more evaluative than the seed question.",
+            "relevance": "The question is clearly related to making phone calls, specifically on cell phones, so it is relevant.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand."
+          }
+        }
+      },
+      "level_6": {
+        "question": "How do you make a phone call?",
+        "logical_consistency": 0.8452789783477783,
+        "informativeness": 0.29725220799446106,
+        "relevance": 0.5945044159889221,
+        "clarity": 0.3684210526315789,
+        "aggregate_score": 0.5263641637406851,
         "chatgpt": {
           "logical_consistency": 0.3,
           "informativeness": 0.2,
           "relevance": 1.0,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The follow-up question repeats the seed question exactly and does not meet the level_5 requirement to evaluate or compare.",
-            "informativeness": "The question adds no new information or cognitive work beyond the seed question; it is a repetition.",
+            "logical_consistency": "The question is essentially a rephrasing of the seed question and does not meet the level_6 (Create) requirement to design or propose a new method.",
+            "informativeness": "The question adds very little new information or cognitive work beyond the seed question; it is mostly redundant.",
+            "relevance": "The question is on-topic and directly related to the seed question about making a phone call.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      }
+    },
+    "iteration_score": 0.3648002663657901
+  },
+  {
+    "seed_question": "How do I navigate to an address?",
+    "followups": {
+      "level_2": "How does the user navigate to an address?",
+      "level_3": "What would be a better way to navigate to an address?",
+      "level_4": "How would you navigate to an address?",
+      "level_5": "What is the easiest way to navigate to an address?",
+      "level_6": "What would be the best way to navigate to an address?"
+    },
+    "evaluation": {
+      "level_2": {
+        "question": "How does the user navigate to an address?",
+        "logical_consistency": 0.9853640198707581,
+        "informativeness": 0.4329884648323059,
+        "relevance": 0.8659769296646118,
+        "clarity": 0.38095238095238093,
+        "aggregate_score": 0.6663204488300142,
+        "chatgpt": {
+          "logical_consistency": 0.5,
+          "informativeness": 0.2,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question is at a similar understanding level but essentially asks the same thing as the seed question, so it does not fully meet the level_2 expectation for a distinct explanation or description.",
+            "informativeness": "The question is largely redundant with the seed question, adding little new cognitive demand or information.",
+            "relevance": "The question is directly related to the seed question about navigating to an address.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_3": {
+        "question": "What would be a better way to navigate to an address?",
+        "logical_consistency": 0.11832921206951141,
+        "informativeness": 0.4358053207397461,
+        "relevance": 0.8716106414794922,
+        "clarity": 0.4074074074074074,
+        "aggregate_score": 0.4582881454240393,
+        "chatgpt": {
+          "logical_consistency": 0.4,
+          "informativeness": 0.3,
+          "relevance": 0.9,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question asks for a better way to navigate, which implies evaluation rather than application, so it does not fully match the level_3 (Apply) expectation.",
+            "informativeness": "The question adds some new cognitive work by asking for improvement, but it is closely related to the original question and somewhat overlaps in content.",
+            "relevance": "The question is on-topic and related to navigating to an address.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_4": {
+        "question": "How would you navigate to an address?",
+        "logical_consistency": 0.9794961810112,
+        "informativeness": 0.464561402797699,
+        "relevance": 0.929122805595398,
+        "clarity": 0.4117647058823529,
+        "aggregate_score": 0.6962362738216624,
+        "chatgpt": {
+          "logical_consistency": 0.3,
+          "informativeness": 0.2,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question is phrased as an 'Apply' level (level_3) question, but the requested level is 'Analyze' (level_4). It does not ask to break down or analyze the process, so logical consistency is low.",
+            "informativeness": "The question is essentially a rephrasing of the seed question, so it adds little new information or cognitive work.",
+            "relevance": "The question is directly related to the seed question about navigating to an address.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_5": {
+        "question": "What is the easiest way to navigate to an address?",
+        "logical_consistency": 0.14230413734912872,
+        "informativeness": 0.4484674632549286,
+        "relevance": 0.8969349265098572,
+        "clarity": 0.4166666666666667,
+        "aggregate_score": 0.4760932984451453,
+        "chatgpt": {
+          "logical_consistency": 0.6,
+          "informativeness": 0.3,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks for the easiest way, which implies evaluation, fitting level_5, but it is somewhat close to the original question, so the score is moderate.",
+            "informativeness": "The question adds some new cognitive work by asking for an evaluation of ease, but it is still closely related to the original question and somewhat redundant.",
+            "relevance": "The question is directly related to navigating to an address.",
+            "clarity": "The question is grammatically correct and clear."
+          }
+        }
+      },
+      "level_6": {
+        "question": "What would be the best way to navigate to an address?",
+        "logical_consistency": 0.7246909737586975,
+        "informativeness": 0.43895137310028076,
+        "relevance": 0.8779027462005615,
+        "clarity": 0.4074074074074074,
+        "aggregate_score": 0.6122381251167368,
+        "chatgpt": {
+          "logical_consistency": 0.4,
+          "informativeness": 0.2,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks for the 'best way' which implies evaluation (level 5), but the requested level is level 6 (Create), which expects designing or proposing a new method. Thus, it does not fully meet the level 6 requirement.",
+            "informativeness": "The question is very similar to previous ones asking for better or easiest ways to navigate, so it adds little new information or cognitive work.",
+            "relevance": "The question is directly related to the seed question about navigating to an address.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      }
+    },
+    "iteration_score": 0.5818352583275196
+  },
+  {
+    "seed_question": "How do I play music?",
+    "followups": {
+      "level_2": "What are some ways you can play music?",
+      "level_3": "What is the best way to know when you have a bad cold?",
+      "level_4": "How can you answer an incoming call without being a nuisance?",
+      "level_5": "How does the OP feel about answering an incoming call?",
+      "level_6": "How would you respond to an incoming call?"
+    },
+    "evaluation": {
+      "level_2": {
+        "question": "What are some ways you can play music?",
+        "logical_consistency": 0.9348694682121277,
+        "informativeness": 0.42948293685913086,
+        "relevance": 0.8589658737182617,
+        "clarity": 0.42105263157894735,
+        "aggregate_score": 0.6610927275921169,
+        "chatgpt": {
+          "logical_consistency": 0.6,
+          "informativeness": 0.3,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question is somewhat consistent with level_2 (Understand) as it asks for ways to play music, which could involve explanation, but it borders on a simple rephrasing of the seed question rather than a deeper understanding.",
+            "informativeness": "The question adds limited new information beyond the seed question, mostly rephrasing it to ask for methods rather than the general 'how'.",
+            "relevance": "The question is directly related to the seed question about playing music.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_3": {
+        "question": "What is the best way to know when you have a bad cold?",
+        "logical_consistency": 0.00046889379154890776,
+        "informativeness": 0.07073018699884415,
+        "relevance": 0.1414603739976883,
+        "clarity": 0.3714285714285714,
+        "aggregate_score": 0.1460220065541632,
+        "chatgpt": {
+          "logical_consistency": 0.0,
+          "informativeness": 0.0,
+          "relevance": 0.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question about knowing when you have a bad cold is unrelated to the seed question about playing music and does not match the requested Apply (level_3) Bloom level.",
+            "informativeness": "The question introduces a completely different topic, so it does not add relevant cognitive work related to the seed question.",
+            "relevance": "The question is off-topic and unrelated to playing music.",
+            "clarity": "The question is grammatically correct and clear."
+          }
+        }
+      },
+      "level_4": {
+        "question": "How can you answer an incoming call without being a nuisance?",
+        "logical_consistency": 0.0012213228037580848,
+        "informativeness": 0.037711478769779205,
+        "relevance": 0.07542295753955841,
+        "clarity": 0.3548387096774193,
+        "aggregate_score": 0.11729861719762875,
+        "chatgpt": {
+          "logical_consistency": 0.2,
+          "informativeness": 0.3,
+          "relevance": 0.2,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question does not align with the seed question about playing music, nor does it operate at the Analyze (level_4) Bloom level as requested.",
+            "informativeness": "The question introduces a new topic (answering calls) unrelated to playing music, so it adds some new information but is off-topic.",
+            "relevance": "The question is not relevant to the seed question about playing music.",
+            "clarity": "The question is grammatically correct and clear."
+          }
+        }
+      },
+      "level_5": {
+        "question": "How does the OP feel about answering an incoming call?",
+        "logical_consistency": 0.2551158368587494,
+        "informativeness": 0.12760546803474426,
+        "relevance": 0.2552109360694885,
+        "clarity": 0.37037037037037035,
+        "aggregate_score": 0.2520756528333381,
+        "chatgpt": {
+          "logical_consistency": 0.1,
+          "informativeness": 0.1,
+          "relevance": 0.1,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question does not align with the seed question about playing music, nor does it match the level_5 expectation of evaluating or comparing alternatives related to playing music.",
+            "informativeness": "The question introduces a new topic (answering calls) unrelated to playing music, adding little relevant cognitive work to the original topic.",
+            "relevance": "The question is off-topic as it does not relate to playing music or evaluating methods related to it.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_6": {
+        "question": "How would you respond to an incoming call?",
+        "logical_consistency": 0.9602731466293335,
+        "informativeness": 0.24376292526721954,
+        "relevance": 0.4875258505344391,
+        "clarity": 0.38095238095238093,
+        "aggregate_score": 0.5181285758458433,
+        "chatgpt": {
+          "logical_consistency": 0.2,
+          "informativeness": 0.1,
+          "relevance": 0.2,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question does not align with the seed question about playing music, nor does it meet the level_6 (Create) requirement as it asks about responding to a call, which is unrelated and lower-level.",
+            "informativeness": "The question introduces a new topic unrelated to playing music, but it does not add meaningful cognitive work related to the seed question.",
+            "relevance": "The question is off-topic as it does not relate to playing music.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      }
+    },
+    "iteration_score": 0.33892351600461806
+  },
+  {
+    "seed_question": "How do I adjust the air conditioning?",
+    "followups": {
+      "level_2": "How would you adjust the air conditioning?",
+      "level_3": "What are the steps to adjust the air conditioning?",
+      "level_4": "How do I adjust the air conditioner?",
+      "level_5": "How would you adjust the air conditioning?",
+      "level_6": "What is the best way to adjust the air conditioning?"
+    },
+    "evaluation": {
+      "level_2": {
+        "question": "How would you adjust the air conditioning?",
+        "logical_consistency": 0.8639951944351196,
+        "informativeness": 0.47043702006340027,
+        "relevance": 0.9408740401268005,
+        "clarity": 0.3684210526315789,
+        "aggregate_score": 0.6609318268142248,
+        "chatgpt": {
+          "logical_consistency": 0.4,
+          "informativeness": 0.2,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question is phrased as an 'Apply' level (level_3) question, but the seed question is 'Understand' level (level_2). The follow-up does not truly elevate the cognitive demand as it essentially asks the same thing.",
+            "informativeness": "The follow-up question is essentially a rephrasing of the seed question, so it adds very little new information or cognitive work.",
+            "relevance": "The question is directly related to the seed question about adjusting the air conditioning.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_3": {
+        "question": "What are the steps to adjust the air conditioning?",
+        "logical_consistency": 0.7994230389595032,
+        "informativeness": 0.44121649861335754,
+        "relevance": 0.8824329972267151,
+        "clarity": 0.40909090909090906,
+        "aggregate_score": 0.6330408609726212,
+        "chatgpt": {
+          "logical_consistency": 0.5,
+          "informativeness": 0.3,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question is at the Apply level (level_3) as requested, but it closely repeats the seed question's intent, so the score is moderate.",
+            "informativeness": "The question adds little new information or cognitive work beyond the seed question, so informativeness is low.",
+            "relevance": "The question is fully relevant to the seed question about adjusting air conditioning.",
+            "clarity": "The question is clear, grammatical, and easy to understand."
+          }
+        }
+      },
+      "level_4": {
+        "question": "How do I adjust the air conditioner?",
+        "logical_consistency": 0.970035970211029,
+        "informativeness": 0.4060210585594177,
+        "relevance": 0.8120421171188354,
+        "clarity": 0.3684210526315789,
+        "aggregate_score": 0.6391300496302152,
+        "chatgpt": {
+          "logical_consistency": 0.3,
+          "informativeness": 0.2,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question is essentially the same as the seed question and does not meet the level_4 (Analyze) requirement to break down or examine components or structure.",
+            "informativeness": "The question adds very little new information or cognitive work beyond the seed question; it is a near repetition.",
+            "relevance": "The question is directly related to the seed question about adjusting air conditioning.",
+            "clarity": "The question is grammatical, well-formed, and easy to understand."
+          }
+        }
+      },
+      "level_5": {
+        "question": "How would you adjust the air conditioning?",
+        "logical_consistency": 0.9798640012741089,
+        "informativeness": 0.4304913878440857,
+        "relevance": 0.8609827756881714,
+        "clarity": 0.3684210526315789,
+        "aggregate_score": 0.6599398043594862,
+        "chatgpt": {
+          "logical_consistency": 0.3,
+          "informativeness": 0.2,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question is at a lower Bloom level (Apply) than requested (Evaluate), so it does not meet the level_5 requirement.",
+            "informativeness": "The question is essentially a rephrasing of the seed question and adds little new information or cognitive demand.",
+            "relevance": "The question is directly related to the seed question about adjusting the air conditioning.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_6": {
+        "question": "What is the best way to adjust the air conditioning?",
+        "logical_consistency": 0.2863771319389343,
+        "informativeness": 0.3838733434677124,
+        "relevance": 0.7677466869354248,
+        "clarity": 0.3846153846153846,
+        "aggregate_score": 0.45565313673936403,
+        "chatgpt": {
+          "logical_consistency": 0.4,
+          "informativeness": 0.2,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks for the 'best way' to adjust the air conditioning, which implies evaluation (level 5), but the requested level is level 6 (Create), so it does not fully meet the level 6 requirement.",
+            "informativeness": "The question is very similar to the seed and previous follow-ups, just adding 'best way', so it adds little new information or cognitive work.",
+            "relevance": "The question is directly related to adjusting the air conditioning.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      }
+    },
+    "iteration_score": 0.6097391357031823
+  },
+  {
+    "seed_question": "What is the fuel efficiency of this car?",
+    "followups": {
+      "level_2": "What is the fuel efficiency of the car?",
+      "level_3": "How would the OP feel after he got the job?",
+      "level_4": "What is the best way to answer an incoming call?",
+      "level_5": "How does the OP feel about their answer?",
+      "level_6": "How might you respond to an incoming call?"
+    },
+    "evaluation": {
+      "level_2": {
+        "question": "What is the fuel efficiency of the car?",
+        "logical_consistency": 0.9941270351409912,
+        "informativeness": 0.47661399841308594,
+        "relevance": 0.9532279968261719,
+        "clarity": 0.42105263157894735,
+        "aggregate_score": 0.7112554154897991,
+        "chatgpt": {
+          "logical_consistency": 0.5,
+          "informativeness": 0.2,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question is logically consistent but does not elevate the cognitive demand to level 2 (Understand); it merely repeats the seed question.",
+            "informativeness": "The question adds no new information or cognitive work beyond the seed question; it is essentially a repetition.",
             "relevance": "The question is directly related to the seed question and on-topic.",
             "clarity": "The question is fully grammatical and clear."
           }
         }
       },
-      "level_6": {
-        "question": "What is the fuel efficiency of the car that is most fuel efficient?",
-        "logical_consistency": 0.09036121517419815,
-        "informativeness": 0.33894550800323486,
-        "relevance": 0.6778910160064697,
-        "clarity": 0.40625,
-        "aggregate_score": 0.3783619347959757,
+      "level_3": {
+        "question": "How would the OP feel after he got the job?",
+        "logical_consistency": 0.002253570593893528,
+        "informativeness": 0.01608191430568695,
+        "relevance": 0.0321638286113739,
+        "clarity": 0.35714285714285715,
+        "aggregate_score": 0.10191054266345288,
         "chatgpt": {
-          "logical_consistency": 0.3,
-          "informativeness": 0.2,
-          "relevance": 0.8,
+          "logical_consistency": 0.0,
+          "informativeness": 0.0,
+          "relevance": 0.0,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The question does not align with the level_6 (Create) expectation, which requires designing or proposing a new method or approach. Instead, it asks for a comparison or identification, which is more evaluative or knowledge-based.",
-            "informativeness": "The question is largely redundant with the seed question, just shifting focus to a different car, so it adds little new cognitive work.",
-            "relevance": "The question is related to fuel efficiency and cars, so it is relevant to the seed question.",
+            "logical_consistency": "The follow-up question is unrelated to the seed question about fuel efficiency and does not match the Apply level.",
+            "informativeness": "The question introduces an unrelated topic and adds no relevant information about the car or fuel efficiency.",
+            "relevance": "The question is off-topic and unrelated to the seed question about the car's fuel efficiency.",
+            "clarity": "The question is grammatically correct and clear, but irrelevant."
+          }
+        }
+      },
+      "level_4": {
+        "question": "What is the best way to answer an incoming call?",
+        "logical_consistency": 0.0007971833692863584,
+        "informativeness": 0.03275437280535698,
+        "relevance": 0.06550874561071396,
+        "clarity": 0.3846153846153846,
+        "aggregate_score": 0.12091892160018547,
+        "chatgpt": {
+          "logical_consistency": 0.0,
+          "informativeness": 0.0,
+          "relevance": 0.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question about answering an incoming call is unrelated to the seed question about fuel efficiency and does not match the requested Analyze (level_4) Bloom level.",
+            "informativeness": "The question introduces a completely different topic, so it does not add any relevant information related to the seed question.",
+            "relevance": "The question is off-topic and unrelated to the seed question about the car's fuel efficiency.",
+            "clarity": "The question is grammatically correct and clear."
+          }
+        }
+      },
+      "level_5": {
+        "question": "How does the OP feel about their answer?",
+        "logical_consistency": 0.19398780167102814,
+        "informativeness": 0.20621956884860992,
+        "relevance": 0.41243913769721985,
+        "clarity": 0.38095238095238093,
+        "aggregate_score": 0.2983997222923097,
+        "chatgpt": {
+          "logical_consistency": 0.2,
+          "informativeness": 0.1,
+          "relevance": 0.1,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question does not align with the requested Bloom level 5 (Evaluate) as it asks about feelings rather than making a judgment or evaluation related to fuel efficiency.",
+            "informativeness": "The question adds very little new information or cognitive work related to the original topic of fuel efficiency.",
+            "relevance": "The question is mostly off-topic as it focuses on the OP's feelings rather than the car's fuel efficiency.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_6": {
+        "question": "How might you respond to an incoming call?",
+        "logical_consistency": 0.9012958407402039,
+        "informativeness": 0.18513882160186768,
+        "relevance": 0.37027764320373535,
+        "clarity": 0.38095238095238093,
+        "aggregate_score": 0.45941617162454695,
+        "chatgpt": {
+          "logical_consistency": 0.1,
+          "informativeness": 0.1,
+          "relevance": 0.1,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question does not align with the seed question about fuel efficiency, nor does it match the level_6 Bloom taxonomy requirement to create or design something related to the seed question.",
+            "informativeness": "The question introduces a new topic unrelated to the seed question, but it does not add meaningful cognitive work related to the original topic.",
+            "relevance": "The question is off-topic as it does not relate to the fuel efficiency of the car.",
             "clarity": "The question is grammatically correct and easy to understand."
           }
         }
       }
     },
-    "iteration_score": 0.4916991249226351
+    "iteration_score": 0.3383801547340588
   },
   {
     "seed_question": "How do I activate the parking sensors?",
     "followups": {
-      "level_2": "What are the differences between the parking sensors?",
-      "level_3": "How do I activate the parking sensors on a car?",
-      "level_4": "How do I activate the parking sensors?",
-      "level_5": "How do I activate the parking sensors?",
-      "level_6": "What should I do if I accidentally activate the parking sensors?"
+      "level_2": "How do I activate the parking sensors on my car?",
+      "level_3": "How do I activate the parking sensors on my car?",
+      "level_4": "What is the most important thing to know about the parking sensors?",
+      "level_5": "How can you activate the parking sensors on a car?",
+      "level_6": "How do I activate the parking sensors on my car?"
     },
     "evaluation": {
       "level_2": {
-        "question": "What are the differences between the parking sensors?",
-        "logical_consistency": 0.09103263914585114,
-        "informativeness": 0.3077959716320038,
-        "relevance": 0.6155919432640076,
-        "clarity": 0.42105263157894735,
-        "aggregate_score": 0.35886829640520246,
-        "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.6,
-          "relevance": 0.8,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question asks for differences between parking sensors, which is more of an analysis or comparison (level 4) rather than an understanding (level 2) question about activation, so it partially matches but not fully consistent with the requested Bloom level.",
-            "informativeness": "The question introduces new information by asking about differences between sensors, which is not covered in the seed question.",
-            "relevance": "The question is related to parking sensors, so it is relevant to the seed question topic.",
-            "clarity": "The question is grammatically correct and easy to understand."
-          }
-        }
-      },
-      "level_3": {
-        "question": "How do I activate the parking sensors on a car?",
-        "logical_consistency": 0.10419726371765137,
-        "informativeness": 0.4394839406013489,
-        "relevance": 0.8789678812026978,
+        "question": "How do I activate the parking sensors on my car?",
+        "logical_consistency": 0.019406219944357872,
+        "informativeness": 0.4796890914440155,
+        "relevance": 0.959378182888031,
         "clarity": 0.3448275862068966,
-        "aggregate_score": 0.44186916793214864,
+        "aggregate_score": 0.45082527012082524,
         "chatgpt": {
           "logical_consistency": 0.4,
           "informativeness": 0.2,
           "relevance": 1.0,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The follow-up question is at the same Bloom level (Apply) but essentially repeats the seed question with a minor specification ('on a car'), so it does not add new cognitive demand.",
-            "informativeness": "The question is largely redundant with the seed question, adding minimal new information or cognitive work.",
+            "logical_consistency": "The follow-up question is essentially the same as the seed question, just adding 'on my car' which does not elevate it to a level_2 (Understand) question that asks for explanation or description.",
+            "informativeness": "The question adds very little new information or cognitive demand beyond the seed question; it is mostly a rephrasing.",
+            "relevance": "The question is fully relevant as it directly relates to activating parking sensors.",
+            "clarity": "The question is grammatically correct and clear."
+          }
+        }
+      },
+      "level_3": {
+        "question": "How do I activate the parking sensors on my car?",
+        "logical_consistency": 0.9952180981636047,
+        "informativeness": 0.49320176243782043,
+        "relevance": 0.9864035248756409,
+        "clarity": 0.3448275862068966,
+        "aggregate_score": 0.7049127429209907,
+        "chatgpt": {
+          "logical_consistency": 0.4,
+          "informativeness": 0.2,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question is at the same Bloom level (Apply) but essentially repeats the seed question with a minor specification, so it does not add new cognitive demand.",
+            "informativeness": "The question is mostly a rephrasing of the seed question with a slight specification, so it adds little new information.",
             "relevance": "The question is directly related to the seed question about activating parking sensors.",
             "clarity": "The question is grammatically correct and clear."
           }
         }
       },
       "level_4": {
-        "question": "How do I activate the parking sensors?",
-        "logical_consistency": 0.986329972743988,
-        "informativeness": 0.4520251154899597,
-        "relevance": 0.9040502309799194,
-        "clarity": 0.3684210526315789,
-        "aggregate_score": 0.6777065929613615,
+        "question": "What is the most important thing to know about the parking sensors?",
+        "logical_consistency": 0.004362998064607382,
+        "informativeness": 0.3166816532611847,
+        "relevance": 0.6333633065223694,
+        "clarity": 0.37499999999999994,
+        "aggregate_score": 0.33235198946204036,
         "chatgpt": {
-          "logical_consistency": 0.3,
-          "informativeness": 0.2,
-          "relevance": 1.0,
+          "logical_consistency": 0.4,
+          "informativeness": 0.3,
+          "relevance": 0.8,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The follow-up question is identical to the seed question and does not meet the level_4 (Analyze) requirement to break down or examine components or structure.",
-            "informativeness": "The question adds no new information or cognitive work beyond the seed question; it is a repetition.",
-            "relevance": "The question is directly related to the seed question about activating parking sensors.",
-            "clarity": "The question is grammatically correct and clear."
+            "logical_consistency": "The follow-up question does not align well with the level_4 (Analyze) expectation, which requires breaking down or examining components or structure. Asking for the most important thing to know is more evaluative or summarizing, so logical consistency is low.",
+            "informativeness": "The question adds limited new cognitive work beyond the seed question, as it is somewhat general and does not prompt analysis of parts or structure.",
+            "relevance": "The question is related to parking sensors and thus relevant to the seed question.",
+            "clarity": "The question is grammatically correct and easy to understand."
           }
         }
       },
       "level_5": {
-        "question": "How do I activate the parking sensors?",
-        "logical_consistency": 0.9913699626922607,
-        "informativeness": 0.44740384817123413,
-        "relevance": 0.8948076963424683,
-        "clarity": 0.3684210526315789,
-        "aggregate_score": 0.6755006399593855,
+        "question": "How can you activate the parking sensors on a car?",
+        "logical_consistency": 0.41766712069511414,
+        "informativeness": 0.4410177767276764,
+        "relevance": 0.8820355534553528,
+        "clarity": 0.3448275862068966,
+        "aggregate_score": 0.52138700927126,
+        "chatgpt": {
+          "logical_consistency": 0.4,
+          "informativeness": 0.2,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question is essentially a rephrasing of the seed question and does not meet the level_5 expectation of evaluating or comparing alternatives.",
+            "informativeness": "The question adds very little new information or cognitive work beyond the seed question; it is mostly redundant.",
+            "relevance": "The question is directly related to the seed question about activating parking sensors.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_6": {
+        "question": "How do I activate the parking sensors on my car?",
+        "logical_consistency": 0.856318473815918,
+        "informativeness": 0.42588120698928833,
+        "relevance": 0.8517624139785767,
+        "clarity": 0.3448275862068966,
+        "aggregate_score": 0.6196974202476699,
         "chatgpt": {
           "logical_consistency": 0.3,
           "informativeness": 0.2,
           "relevance": 1.0,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The follow-up question is identical to the seed question and does not meet the level_5 requirement to evaluate or compare alternatives.",
-            "informativeness": "The question adds no new information or cognitive demand beyond the seed question.",
+            "logical_consistency": "The question is a simple rephrasing of the seed question and does not meet the 'Create' level (level_6) requirement to design or propose a new method.",
+            "informativeness": "The question adds very little new information or cognitive work beyond the seed question; it is essentially a repetition.",
             "relevance": "The question is directly related to the seed question about activating parking sensors.",
-            "clarity": "The question is grammatically correct and clear."
-          }
-        }
-      },
-      "level_6": {
-        "question": "What should I do if I accidentally activate the parking sensors?",
-        "logical_consistency": 0.0358501560986042,
-        "informativeness": 0.33735761046409607,
-        "relevance": 0.6747152209281921,
-        "clarity": 0.3333333333333333,
-        "aggregate_score": 0.3453140802060564,
-        "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.3,
-          "relevance": 0.9,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question does not align well with the requested Bloom level 6 (Create), as it asks for a reactive solution rather than designing or proposing a new method.",
-            "informativeness": "The question adds some new information by addressing accidental activation, but it is still closely related to the original activation topic and does not involve creating or designing.",
-            "relevance": "The question is relevant to the seed question as it deals with the parking sensors and their activation.",
-            "clarity": "The question is grammatically correct, well-formed, and easy to understand."
+            "clarity": "The question is grammatically correct and easy to understand."
           }
         }
       }
     },
-    "iteration_score": 0.4998517554928309
+    "iteration_score": 0.5258348864045572
   },
   {
     "seed_question": "When should I check the tire pressure?",
     "followups": {
-      "level_2": "When should you check the tire pressure?",
-      "level_3": "What is the best time to check tire pressure?",
-      "level_4": "What are some ways you can check the tire pressure?",
-      "level_5": "What should you do if you're in an emergency situation?",
-      "level_6": "What are the main reasons for checking the tire pressure?"
+      "level_2": "What is the first step in checking the tire pressure?",
+      "level_3": "When is the best time to check the tire pressure?",
+      "level_4": "What is the first rule of tire pressure?",
+      "level_5": "How often should you check the tire pressure?",
+      "level_6": "What should you check the tire pressure after the tire has been on the road for a while?"
     },
     "evaluation": {
       "level_2": {
-        "question": "When should you check the tire pressure?",
-        "logical_consistency": 0.5734598636627197,
-        "informativeness": 0.49480828642845154,
-        "relevance": 0.9896165728569031,
-        "clarity": 0.3684210526315789,
-        "aggregate_score": 0.6065764438949133,
+        "question": "What is the first step in checking the tire pressure?",
+        "logical_consistency": 0.4929637312889099,
+        "informativeness": 0.4194768965244293,
+        "relevance": 0.8389537930488586,
+        "clarity": 0.4,
+        "aggregate_score": 0.5378486052155494,
         "chatgpt": {
-          "logical_consistency": 1.0,
-          "informativeness": 0.3,
+          "logical_consistency": 0.4,
+          "informativeness": 0.2,
           "relevance": 1.0,
-          "clarity": 1.0,
+          "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The follow-up question is logically consistent with the seed question and the requested Understand level.",
-            "informativeness": "The follow-up question is essentially a rephrasing of the seed question, so it adds little new information.",
-            "relevance": "The follow-up question is directly related to the seed question about tire pressure.",
-            "clarity": "The question is fully grammatical and clear."
+            "logical_consistency": "The follow-up question asks about the first step in checking tire pressure, which is more of an 'Apply' (level_3) or 'Understand' (level_2) procedural question, but the seed question is about timing (when to check). It does not directly address the 'when' aspect, so it partially matches level_2 but is somewhat off-topic in focus.",
+            "informativeness": "The question adds little new information beyond the seed question; it shifts focus from timing to procedure but does not deepen understanding of 'when'.",
+            "relevance": "The question is relevant to the general topic of tire pressure checking.",
+            "clarity": "The question is clear, grammatical, and easy to understand."
           }
         }
       },
       "level_3": {
-        "question": "What is the best time to check tire pressure?",
-        "logical_consistency": 0.7093475461006165,
-        "informativeness": 0.45296311378479004,
-        "relevance": 0.9059262275695801,
-        "clarity": 0.40909090909090906,
-        "aggregate_score": 0.6193319491364739,
+        "question": "When is the best time to check the tire pressure?",
+        "logical_consistency": 0.8204535245895386,
+        "informativeness": 0.439269483089447,
+        "relevance": 0.878538966178894,
+        "clarity": 0.3846153846153846,
+        "aggregate_score": 0.630719339618316,
         "chatgpt": {
           "logical_consistency": 0.4,
-          "informativeness": 0.3,
+          "informativeness": 0.2,
           "relevance": 1.0,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The follow-up question is close to the seed question but asks for the 'best time,' which is a slight shift. However, it does not fully meet the 'Apply' level expectation of using the concept in a specific situation or scenario.",
-            "informativeness": "The question is largely redundant with the seed question, only slightly rephrased to ask for the 'best' time, so informativeness is low.",
+            "logical_consistency": "The follow-up question is at a similar understanding level rather than an application level, so it does not fully meet the level_3 requirement.",
+            "informativeness": "The question is essentially a rephrasing of the seed question, adding little new information or cognitive demand.",
             "relevance": "The question is directly related to the seed question about checking tire pressure.",
             "clarity": "The question is grammatically correct and easy to understand."
           }
         }
       },
       "level_4": {
-        "question": "What are some ways you can check the tire pressure?",
-        "logical_consistency": 0.866009533405304,
-        "informativeness": 0.402874231338501,
-        "relevance": 0.805748462677002,
-        "clarity": 0.3846153846153846,
-        "aggregate_score": 0.6148119030090479,
+        "question": "What is the first rule of tire pressure?",
+        "logical_consistency": 0.9335548877716064,
+        "informativeness": 0.3741534948348999,
+        "relevance": 0.7483069896697998,
+        "clarity": 0.42105263157894735,
+        "aggregate_score": 0.6192670009638134,
         "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.3,
-          "relevance": 1.0,
+          "logical_consistency": 0.3,
+          "informativeness": 0.2,
+          "relevance": 0.8,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The follow-up question asks about methods to check tire pressure, which is more of an 'Apply' or 'Understand' level question rather than 'Analyze' (level_4). It does not break down or examine components related to when to check tire pressure.",
-            "informativeness": "The question introduces a new aspect (methods of checking tire pressure) but is somewhat related and not deeply analytical, so informativeness is moderate but capped due to similarity in topic.",
-            "relevance": "The question is directly related to tire pressure and checking it, so it is highly relevant.",
-            "clarity": "The question is grammatically correct, well-formed, and easy to understand."
+            "logical_consistency": "The question does not align well with the level_4 (Analyze) expectation, as it asks for a 'first rule' rather than analyzing components or structure related to tire pressure checking.",
+            "informativeness": "The question is somewhat redundant with previous questions about steps and timing, adding little new cognitive work.",
+            "relevance": "The question is on-topic and related to tire pressure.",
+            "clarity": "The question is grammatically correct and easy to understand."
           }
         }
       },
       "level_5": {
-        "question": "What should you do if you're in an emergency situation?",
-        "logical_consistency": 0.007955078035593033,
-        "informativeness": 0.06723277270793915,
-        "relevance": 0.1344655454158783,
-        "clarity": 0.36666666666666664,
-        "aggregate_score": 0.1440800157065193,
+        "question": "How often should you check the tire pressure?",
+        "logical_consistency": 0.6049932241439819,
+        "informativeness": 0.40058058500289917,
+        "relevance": 0.8011611700057983,
+        "clarity": 0.38095238095238093,
+        "aggregate_score": 0.5469218400262651,
         "chatgpt": {
           "logical_consistency": 0.4,
-          "informativeness": 0.6,
-          "relevance": 0.7,
+          "informativeness": 0.2,
+          "relevance": 1.0,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The follow-up question shifts focus from evaluating when to check tire pressure to actions in an emergency, which is related but does not align well with the evaluation level (level_5) of the original question.",
-            "informativeness": "The question introduces a new scenario (emergency situation) that adds new cognitive work beyond the seed question.",
-            "relevance": "The question is somewhat related as it involves tire pressure and safety, but it diverges from the original focus on timing and evaluation of checking tire pressure.",
+            "logical_consistency": "The follow-up question asks about frequency, which is more of a factual or understanding level question (level 2), not an evaluation (level 5) as requested.",
+            "informativeness": "The question is closely related to the seed question and previous follow-ups, so it adds little new information or cognitive challenge.",
+            "relevance": "The question is directly related to tire pressure checking, so it is relevant.",
             "clarity": "The question is grammatically correct and easy to understand."
           }
         }
       },
       "level_6": {
-        "question": "What are the main reasons for checking the tire pressure?",
-        "logical_consistency": 0.4378341734409332,
-        "informativeness": 0.3287382125854492,
-        "relevance": 0.6574764251708984,
-        "clarity": 0.4,
-        "aggregate_score": 0.4560122027993202,
+        "question": "What should you check the tire pressure after the tire has been on the road for a while?",
+        "logical_consistency": 0.0030789803713560104,
+        "informativeness": 0.34269505739212036,
+        "relevance": 0.6853901147842407,
+        "clarity": 0.31578947368421056,
+        "aggregate_score": 0.33673840655798193,
         "chatgpt": {
-          "logical_consistency": 0.3,
-          "informativeness": 0.2,
+          "logical_consistency": 0.4,
+          "informativeness": 0.3,
           "relevance": 0.9,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The follow-up question asks for reasons, which aligns more with understanding (level_2) rather than creating (level_6), so logical consistency is low.",
-            "informativeness": "The question is somewhat redundant with the seed question and previous follow-ups, adding little new cognitive demand.",
-            "relevance": "The question is clearly related to tire pressure and checking it, so it is relevant.",
-            "clarity": "The question is well-formed, grammatical, and easy to understand."
+            "logical_consistency": "The follow-up question is more of a level_2 (Understand) or level_3 (Apply) question rather than level_6 (Create), so it does not fully match the requested Bloom level.",
+            "informativeness": "The question adds some specificity about timing after the tire has been on the road, but it is closely related to the seed question and previous follow-ups, so informativeness is limited.",
+            "relevance": "The question is clearly related to the topic of tire pressure checking.",
+            "clarity": "The question is grammatically correct and easy to understand."
           }
         }
       }
     },
-    "iteration_score": 0.48816250290925495
+    "iteration_score": 0.5342990384763852
   },
   {
     "seed_question": "How do I answer an incoming call?",
     "followups": {
-      "level_2": "How do you know you're answering an incoming call?",
-      "level_3": "How do you answer an incoming call?",
-      "level_4": "What is the best way to answer an incoming call?",
-      "level_5": "How would you respond to incoming calls?",
-      "level_6": "How would you answer an incoming call?"
+      "level_2": "What are some ways you might answer an incoming call?",
+      "level_3": "How can I answer an incoming call without being a nuisance?",
+      "level_4": "What are some steps that you can take to answer an incoming call?",
+      "level_5": "How do you know if someone is a incoming call?",
+      "level_6": "How do you respond to an incoming call?"
     },
     "evaluation": {
       "level_2": {
-        "question": "How do you know you're answering an incoming call?",
-        "logical_consistency": 0.733061671257019,
-        "informativeness": 0.40386977791786194,
-        "relevance": 0.8077395558357239,
-        "clarity": 0.35714285714285715,
-        "aggregate_score": 0.5754534655383655,
+        "question": "What are some ways you might answer an incoming call?",
+        "logical_consistency": 0.8787077069282532,
+        "informativeness": 0.4413530230522156,
+        "relevance": 0.8827060461044312,
+        "clarity": 0.3846153846153846,
+        "aggregate_score": 0.6468455401750711,
         "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.2,
+          "logical_consistency": 0.9,
+          "informativeness": 0.3,
           "relevance": 1.0,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The follow-up question does not align well with the level_2 (Understand) expectation, as it asks about recognizing an incoming call rather than explaining or describing how to answer it.",
-            "informativeness": "The question adds little new information or cognitive work beyond the seed question; it is somewhat redundant.",
-            "relevance": "The question is on-topic and related to the seed question about incoming calls.",
+            "logical_consistency": "The follow-up question is consistent with the seed question and fits the Understand level by asking for ways to answer a call, which involves explanation.",
+            "informativeness": "The question is somewhat redundant as it asks for ways to do what the seed question asks, so it adds limited new information.",
+            "relevance": "The question is directly related to the seed question about answering incoming calls.",
             "clarity": "The question is grammatically correct and easy to understand."
           }
         }
       },
       "level_3": {
-        "question": "How do you answer an incoming call?",
-        "logical_consistency": 0.9746277928352356,
-        "informativeness": 0.4658917784690857,
-        "relevance": 0.9317835569381714,
-        "clarity": 0.3684210526315789,
-        "aggregate_score": 0.6851810452185179,
+        "question": "How can I answer an incoming call without being a nuisance?",
+        "logical_consistency": 0.019928405061364174,
+        "informativeness": 0.4098793864250183,
+        "relevance": 0.8197587728500366,
+        "clarity": 0.3548387096774193,
+        "aggregate_score": 0.4011013185034596,
+        "chatgpt": {
+          "logical_consistency": 0.6,
+          "informativeness": 0.5,
+          "relevance": 0.9,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks about answering a call without being a nuisance, which is related to the original question but adds a social consideration. It fits somewhat with level_3 (Apply) as it implies applying the concept in a social context, but it is more evaluative or behavioral than strictly applying a procedure.",
+            "informativeness": "The question adds new information by focusing on social etiquette or minimizing nuisance, which is not covered in the seed question.",
+            "relevance": "The question is clearly related to answering incoming calls and thus relevant.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand."
+          }
+        }
+      },
+      "level_4": {
+        "question": "What are some steps that you can take to answer an incoming call?",
+        "logical_consistency": 0.9524580836296082,
+        "informativeness": 0.44802629947662354,
+        "relevance": 0.8960525989532471,
+        "clarity": 0.3611111111111111,
+        "aggregate_score": 0.6644120232926475,
         "chatgpt": {
           "logical_consistency": 0.4,
           "informativeness": 0.2,
           "relevance": 1.0,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The follow-up question is very similar to the seed question and does not introduce a new application scenario or deeper cognitive demand expected at level_3 (Apply).",
-            "informativeness": "The question essentially repeats the seed question with a slight pronoun change, adding little new information or cognitive work.",
+            "logical_consistency": "The follow-up question asks for steps, which is more of an 'Apply' (level_3) question rather than 'Analyze' (level_4). Therefore, the logical consistency with the requested Bloom level is low.",
+            "informativeness": "The question is somewhat redundant with the seed question and previous follow-ups, as it essentially asks how to answer a call, just focusing on steps. It adds little new cognitive work.",
             "relevance": "The question is directly related to the seed question about answering an incoming call.",
             "clarity": "The question is grammatically correct and easy to understand."
           }
         }
       },
-      "level_4": {
-        "question": "What is the best way to answer an incoming call?",
-        "logical_consistency": 0.43654665350914,
-        "informativeness": 0.42975133657455444,
-        "relevance": 0.8595026731491089,
-        "clarity": 0.3846153846153846,
-        "aggregate_score": 0.527604011962047,
-        "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.2,
-          "relevance": 1.0,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question asks for the 'best way' to answer a call, which is more evaluative (level 5) rather than analytical (level 4) as requested, so the score is reduced.",
-            "informativeness": "The question is somewhat redundant with the seed question, only adding a slight evaluative aspect, so informativeness is low.",
-            "relevance": "The question is directly related to the seed question about answering incoming calls.",
-            "clarity": "The question is grammatically correct and clear."
-          }
-        }
-      },
       "level_5": {
-        "question": "How would you respond to incoming calls?",
-        "logical_consistency": 0.9789678454399109,
-        "informativeness": 0.3627304434776306,
-        "relevance": 0.7254608869552612,
-        "clarity": 0.4117647058823529,
-        "aggregate_score": 0.6197309704387889,
+        "question": "How do you know if someone is a incoming call?",
+        "logical_consistency": 0.25585609674453735,
+        "informativeness": 0.35278868675231934,
+        "relevance": 0.7055773735046387,
+        "clarity": 0.35714285714285715,
+        "aggregate_score": 0.41784125353608814,
         "chatgpt": {
-          "logical_consistency": 0.4,
+          "logical_consistency": 0.3,
           "informativeness": 0.2,
-          "relevance": 0.9,
-          "clarity": 0.9,
+          "relevance": 0.4,
+          "clarity": 0.8,
           "notes": {
-            "logical_consistency": "The follow-up question asks how to respond to incoming calls, which is similar but not quite at the Evaluate level (level_5) that requires comparing or justifying choices. It is more of a rephrasing of the seed question.",
-            "informativeness": "The question adds little new information or cognitive work beyond the seed question; it is essentially a rephrasing.",
-            "relevance": "The question is on-topic and related to the seed question about answering incoming calls.",
-            "clarity": "The question is grammatical, well-formed, and easy to understand."
+            "logical_consistency": "The follow-up question does not align with the level_5 (Evaluate) expectation, as it asks for identification rather than evaluation or judgment.",
+            "informativeness": "The question adds little new information or cognitive work beyond the seed question; it is somewhat redundant and does not prompt evaluation.",
+            "relevance": "The question is somewhat related to the topic of incoming calls but shifts focus to identifying a caller rather than answering the call.",
+            "clarity": "The question is grammatically correct and understandable, though the phrase 'a incoming call' should be 'an incoming call'."
           }
         }
       },
       "level_6": {
-        "question": "How would you answer an incoming call?",
-        "logical_consistency": 0.9451385140419006,
-        "informativeness": 0.4160240590572357,
-        "relevance": 0.8320481181144714,
-        "clarity": 0.3684210526315789,
-        "aggregate_score": 0.6404079359612966,
+        "question": "How do you respond to an incoming call?",
+        "logical_consistency": 0.9882757663726807,
+        "informativeness": 0.40447118878364563,
+        "relevance": 0.8089423775672913,
+        "clarity": 0.38095238095238093,
+        "aggregate_score": 0.6456604284189996,
         "chatgpt": {
           "logical_consistency": 0.3,
           "informativeness": 0.2,
-          "relevance": 1.0,
+          "relevance": 0.9,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The follow-up question is a simple rephrasing of the seed question and does not meet the 'Create' level (level_6) expectation of designing or proposing a new method.",
-            "informativeness": "The question adds very little new information or cognitive demand beyond the seed question, essentially repeating the same inquiry.",
-            "relevance": "The question is directly related to the seed question about answering incoming calls.",
+            "logical_consistency": "The question is at a lower cognitive level (Understand) rather than the requested Create level, so logical consistency is low.",
+            "informativeness": "The question is very similar to the seed question and previous follow-ups, adding little new information or cognitive challenge.",
+            "relevance": "The question is on-topic and related to the seed question about answering incoming calls.",
             "clarity": "The question is grammatically correct and easy to understand."
           }
         }
       }
     },
-    "iteration_score": 0.6096754858238032
+    "iteration_score": 0.5551721127852531
   },
   {
     "seed_question": "Where is the emergency brake?",
     "followups": {
-      "level_2": "What do you need to know to use an emergency brake?",
-      "level_3": "What should you do if you have an emergency brake?",
-      "level_4": "How would you describe the emergency brake?",
-      "level_5": "What is the emergency brake used for?",
-      "level_6": "How do you know when to use the emergency brake?"
+      "level_2": "Where is the emergency brake on a car?",
+      "level_3": "How would you describe the emergency brake?",
+      "level_4": "What is the first thing you would do if you found an emergency brake?",
+      "level_5": "What are some of the places where the emergency brake might be?",
+      "level_6": "What is the most common place to find an emergency brake?"
     },
     "evaluation": {
       "level_2": {
-        "question": "What do you need to know to use an emergency brake?",
-        "logical_consistency": 0.5795718431472778,
-        "informativeness": 0.35897397994995117,
-        "relevance": 0.7179479598999023,
-        "clarity": 0.3548387096774193,
-        "aggregate_score": 0.5028331231686377,
+        "question": "Where is the emergency brake on a car?",
+        "logical_consistency": 0.1413411945104599,
+        "informativeness": 0.46284008026123047,
+        "relevance": 0.9256801605224609,
+        "clarity": 0.42105263157894735,
+        "aggregate_score": 0.48772851671827466,
         "chatgpt": {
           "logical_consistency": 0.9,
-          "informativeness": 0.7,
+          "informativeness": 0.3,
           "relevance": 1.0,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The question asks for understanding related to the use of the emergency brake, which fits well with level_2 (Understand).",
-            "informativeness": "The question adds new cognitive work by asking what knowledge is required to use the emergency brake, beyond just its location.",
+            "logical_consistency": "The follow-up question is consistent with the seed question and the level_2 requirement to understand, but it is a more specific version rather than a deeper explanation.",
+            "informativeness": "The question adds little new information beyond specifying 'on a car', so informativeness is limited.",
             "relevance": "The question is directly related to the seed question about the emergency brake.",
-            "clarity": "The question is grammatically correct and clear."
-          }
-        }
-      },
-      "level_3": {
-        "question": "What should you do if you have an emergency brake?",
-        "logical_consistency": 0.949958860874176,
-        "informativeness": 0.3892126977443695,
-        "relevance": 0.778425395488739,
-        "clarity": 0.35714285714285715,
-        "aggregate_score": 0.6186849528125354,
-        "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.3,
-          "relevance": 0.9,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question asks what to do if you have an emergency brake, which is more about actions or procedures rather than applying the concept in a specific scenario, so it only partially matches the Apply (level_3) expectation.",
-            "informativeness": "The question adds some new cognitive work by asking about actions to take, but it is somewhat close to the previous question about what you need to know to use the emergency brake, so informativeness is limited.",
-            "relevance": "The question is clearly related to the seed question about the emergency brake.",
-            "clarity": "The question is grammatical and easy to understand."
-          }
-        }
-      },
-      "level_4": {
-        "question": "How would you describe the emergency brake?",
-        "logical_consistency": 0.7166183590888977,
-        "informativeness": 0.35663068294525146,
-        "relevance": 0.7132613658905029,
-        "clarity": 0.3684210526315789,
-        "aggregate_score": 0.5387328651390577,
-        "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.2,
-          "relevance": 0.9,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question asks for a description, which aligns more with an 'Understand' level (level_2) rather than the requested 'Analyze' level (level_4).",
-            "informativeness": "The question is somewhat redundant as it overlaps with understanding what the emergency brake is, adding little new cognitive demand beyond the seed question.",
-            "relevance": "The question is on-topic and related to the seed question about the emergency brake.",
-            "clarity": "The question is grammatically correct and easy to understand."
-          }
-        }
-      },
-      "level_5": {
-        "question": "What is the emergency brake used for?",
-        "logical_consistency": 0.39334583282470703,
-        "informativeness": 0.31864428520202637,
-        "relevance": 0.6372885704040527,
-        "clarity": 0.4375,
-        "aggregate_score": 0.44669467210769653,
-        "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.3,
-          "relevance": 1.0,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question asks about the use of the emergency brake, which is more of a 'Understand' (level_2) question rather than an 'Evaluate' (level_5) question as requested.",
-            "informativeness": "The question adds some new information about the function of the emergency brake but is somewhat basic and overlaps with previous questions about usage.",
-            "relevance": "The question is directly related to the emergency brake topic.",
-            "clarity": "The question is grammatically correct and easy to understand."
-          }
-        }
-      },
-      "level_6": {
-        "question": "How do you know when to use the emergency brake?",
-        "logical_consistency": 0.7880502939224243,
-        "informativeness": 0.2813068628311157,
-        "relevance": 0.5626137256622314,
-        "clarity": 0.35714285714285715,
-        "aggregate_score": 0.4972784348896572,
-        "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.3,
-          "relevance": 0.9,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question asks about the conditions for using the emergency brake, which is more of an understanding or application level question, not a creation level question as requested.",
-            "informativeness": "The question adds some new information about usage conditions but is somewhat close to previous questions about what the emergency brake is used for.",
-            "relevance": "The question is clearly related to the emergency brake topic.",
-            "clarity": "The question is grammatically correct and easy to understand."
-          }
-        }
-      }
-    },
-    "iteration_score": 0.5208448096235169
-  },
-  {
-    "seed_question": "Can I use voice commands while driving?",
-    "followups": {
-      "level_2": "What is a car voice command?",
-      "level_3": "Can voice commands be used to make a phone call?",
-      "level_4": "What is the best way to use voice commands while driving?",
-      "level_5": "How do I use voice commands while driving?",
-      "level_6": "Can you use voice commands while driving?"
-    },
-    "evaluation": {
-      "level_2": {
-        "question": "What is a car voice command?",
-        "logical_consistency": 0.19574014842510223,
-        "informativeness": 0.3342583179473877,
-        "relevance": 0.6685166358947754,
-        "clarity": 0.37499999999999994,
-        "aggregate_score": 0.39337877556681633,
-        "chatgpt": {
-          "logical_consistency": 0.4,
-          "informativeness": 0.2,
-          "relevance": 0.8,
-          "clarity": 0.9,
-          "notes": {
-            "logical_consistency": "The follow-up question asks for a definition, which is more of a 'Remember' level rather than the requested 'Understand' level, so the score is low.",
-            "informativeness": "The question is somewhat redundant as it asks for a definition related to the seed question, adding little new cognitive work.",
-            "relevance": "The question is related to the seed question as it concerns voice commands in cars.",
             "clarity": "The question is clear, grammatical, and easy to understand."
           }
         }
       },
       "level_3": {
-        "question": "Can voice commands be used to make a phone call?",
-        "logical_consistency": 0.014730752445757389,
-        "informativeness": 0.34997183084487915,
-        "relevance": 0.6999436616897583,
-        "clarity": 0.37037037037037035,
-        "aggregate_score": 0.35875415383769127,
+        "question": "How would you describe the emergency brake?",
+        "logical_consistency": 0.6884572505950928,
+        "informativeness": 0.38540393114089966,
+        "relevance": 0.7708078622817993,
+        "clarity": 0.3684210526315789,
+        "aggregate_score": 0.5532725241623426,
+        "chatgpt": {
+          "logical_consistency": 0.4,
+          "informativeness": 0.2,
+          "relevance": 1.0,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question asks for a description, which aligns more with an 'Understand' level (level_2) rather than the requested 'Apply' level (level_3).",
+            "informativeness": "The question is somewhat redundant as it focuses on describing the emergency brake rather than applying the concept, so it adds limited new cognitive work.",
+            "relevance": "The question is directly related to the seed question about the emergency brake.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_4": {
+        "question": "What is the first thing you would do if you found an emergency brake?",
+        "logical_consistency": 0.08671166747808456,
+        "informativeness": 0.32249099016189575,
+        "relevance": 0.6449819803237915,
+        "clarity": 0.3111111111111111,
+        "aggregate_score": 0.34132393726872073,
+        "chatgpt": {
+          "logical_consistency": 0.4,
+          "informativeness": 0.5,
+          "relevance": 0.9,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question asks about an action to take upon finding an emergency brake, which is more of an 'Apply' (level_3) question rather than 'Analyze' (level_4). Therefore, it does not fully match the requested Bloom level.",
+            "informativeness": "The question introduces a new scenario and asks for a response, adding some new cognitive work beyond the seed question.",
+            "relevance": "The question is on-topic and related to the emergency brake.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
+      "level_5": {
+        "question": "What are some of the places where the emergency brake might be?",
+        "logical_consistency": 0.846254289150238,
+        "informativeness": 0.35032904148101807,
+        "relevance": 0.7006580829620361,
+        "clarity": 0.3428571428571428,
+        "aggregate_score": 0.5600246391126088,
+        "chatgpt": {
+          "logical_consistency": 0.4,
+          "informativeness": 0.3,
+          "relevance": 0.9,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question asks for possible locations of the emergency brake, which is more of a 'Understand' or 'Analyze' level question rather than 'Evaluate' (level_5). It does not ask for a judgment or comparison, so logical consistency with level_5 is low.",
+            "informativeness": "The question adds some new information by asking about multiple possible locations, but it is closely related to the original question about where the emergency brake is, so informativeness is limited.",
+            "relevance": "The question is clearly related to the seed question about the emergency brake's location.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand."
+          }
+        }
+      },
+      "level_6": {
+        "question": "What is the most common place to find an emergency brake?",
+        "logical_consistency": 0.012973790057003498,
+        "informativeness": 0.312984824180603,
+        "relevance": 0.625969648361206,
+        "clarity": 0.36666666666666664,
+        "aggregate_score": 0.3296487323163698,
+        "chatgpt": {
+          "logical_consistency": 0.4,
+          "informativeness": 0.3,
+          "relevance": 0.9,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The question asks about the most common location, which is more of a recall or understand level question, not a 'Create' level question as requested.",
+            "informativeness": "The question adds some new information about common locations but is somewhat redundant given previous questions about places of the emergency brake.",
+            "relevance": "The question is on-topic and related to the seed question about the emergency brake.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      }
+    },
+    "iteration_score": 0.4543996699156633
+  },
+  {
+    "seed_question": "Can I use voice commands while driving?",
+    "followups": {
+      "level_2": "What are the benefits of using voice commands while driving?",
+      "level_3": "How do you feel about using voice commands while driving?",
+      "level_4": "How do you know if you can use voice commands while driving?",
+      "level_5": "Can I use voice commands while driving in a car?",
+      "level_6": "What are some issues that you would encounter with voice commands while driving?"
+    },
+    "evaluation": {
+      "level_2": {
+        "question": "What are the benefits of using voice commands while driving?",
+        "logical_consistency": 0.026824558153748512,
+        "informativeness": 0.3845069110393524,
+        "relevance": 0.7690138220787048,
+        "clarity": 0.35714285714285715,
+        "aggregate_score": 0.38437203710366574,
         "chatgpt": {
           "logical_consistency": 0.9,
           "informativeness": 0.7,
           "relevance": 1.0,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The follow-up question is consistent with the seed question and fits the Apply level by asking about a specific use case of voice commands.",
-            "informativeness": "The question adds new information by focusing on a particular application of voice commands (making a phone call), which is a practical scenario.",
+            "logical_consistency": "The follow-up question asks for an explanation of benefits, which aligns well with the 'Understand' level (level_2).",
+            "informativeness": "The question adds new information by asking about benefits, which is a different aspect than just usage.",
             "relevance": "The question is directly related to the seed question about using voice commands while driving.",
             "clarity": "The question is clear, grammatical, and easy to understand."
           }
         }
       },
+      "level_3": {
+        "question": "How do you feel about using voice commands while driving?",
+        "logical_consistency": 0.859683632850647,
+        "informativeness": 0.4480053782463074,
+        "relevance": 0.8960107564926147,
+        "clarity": 0.35714285714285715,
+        "aggregate_score": 0.6402106561831066,
+        "chatgpt": {
+          "logical_consistency": 0.3,
+          "informativeness": 0.2,
+          "relevance": 0.7,
+          "clarity": 0.9,
+          "notes": {
+            "logical_consistency": "The follow-up question asks for a personal feeling, which does not align with the Apply level (level_3) expectation of using the concept in a specific situation.",
+            "informativeness": "The question adds little new cognitive work beyond the seed question and previous follow-up; it is more subjective and does not advance understanding or application.",
+            "relevance": "The question is related to the topic of using voice commands while driving, though it shifts to a subjective perspective.",
+            "clarity": "The question is grammatically correct and easy to understand."
+          }
+        }
+      },
       "level_4": {
-        "question": "What is the best way to use voice commands while driving?",
-        "logical_consistency": 0.19475381076335907,
-        "informativeness": 0.3986080288887024,
-        "relevance": 0.7972160577774048,
-        "clarity": 0.3793103448275862,
-        "aggregate_score": 0.44247206056426314,
+        "question": "How do you know if you can use voice commands while driving?",
+        "logical_consistency": 0.9680103063583374,
+        "informativeness": 0.4027343988418579,
+        "relevance": 0.8054687976837158,
+        "clarity": 0.3333333333333333,
+        "aggregate_score": 0.6273867090543112,
         "chatgpt": {
           "logical_consistency": 0.4,
           "informativeness": 0.3,
           "relevance": 0.9,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The follow-up question asks for the best way to use voice commands, which is more of an evaluative or applied question rather than an analysis (level_4) of the concept. Therefore, it does not fully meet the level_4 requirement.",
-            "informativeness": "The question adds some new information by asking for the best method, but it is somewhat close to the seed question's intent about usage, so informativeness is limited.",
+            "logical_consistency": "The follow-up question asks for criteria or methods to determine if voice commands can be used while driving, which is more about verification or identification rather than analyzing components or structure, so it does not fully meet the level_4 (Analyze) expectation.",
+            "informativeness": "The question adds some new perspective about how to know or verify usage, but it is somewhat close to the original question's intent, so informativeness is limited.",
             "relevance": "The question is clearly related to the seed question about using voice commands while driving.",
-            "clarity": "The question is well-formed, grammatical, and easy to understand."
+            "clarity": "The question is grammatically correct and easy to understand."
           }
         }
       },
       "level_5": {
-        "question": "How do I use voice commands while driving?",
-        "logical_consistency": 0.9474307894706726,
-        "informativeness": 0.4437403976917267,
-        "relevance": 0.8874807953834534,
-        "clarity": 0.36363636363636365,
-        "aggregate_score": 0.6605720865455541,
+        "question": "Can I use voice commands while driving in a car?",
+        "logical_consistency": 0.8845589756965637,
+        "informativeness": 0.3406558632850647,
+        "relevance": 0.6813117265701294,
+        "clarity": 0.4,
+        "aggregate_score": 0.5766316413879394,
         "chatgpt": {
           "logical_consistency": 0.4,
           "informativeness": 0.2,
-          "relevance": 0.9,
+          "relevance": 1.0,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The follow-up question asks for instructions on how to use voice commands, which is more of an 'Apply' (level_3) question rather than an 'Evaluate' (level_5) question as requested.",
-            "informativeness": "The question is somewhat redundant with previous questions about the best way to use voice commands, so it adds little new information.",
-            "relevance": "The question is relevant to the seed question about using voice commands while driving.",
-            "clarity": "The question is clear, grammatical, and easy to understand."
+            "logical_consistency": "The follow-up question is a simple specification of the original question rather than an evaluative question as expected at level 5.",
+            "informativeness": "The question adds little new information or cognitive demand beyond the seed question; it is mostly a rephrasing with a minor context addition.",
+            "relevance": "The question is directly related to the seed question about using voice commands while driving.",
+            "clarity": "The question is grammatically correct and easy to understand."
           }
         }
       },
       "level_6": {
-        "question": "Can you use voice commands while driving?",
-        "logical_consistency": 0.9762544631958008,
-        "informativeness": 0.4346585273742676,
-        "relevance": 0.8693170547485352,
-        "clarity": 0.38888888888888895,
-        "aggregate_score": 0.6672797335518731,
+        "question": "What are some issues that you would encounter with voice commands while driving?",
+        "logical_consistency": 0.5264081954956055,
+        "informativeness": 0.3538933992385864,
+        "relevance": 0.7077867984771729,
+        "clarity": 0.3513513513513513,
+        "aggregate_score": 0.484859936140679,
         "chatgpt": {
-          "logical_consistency": 0.3,
-          "informativeness": 0.2,
+          "logical_consistency": 0.4,
+          "informativeness": 0.4,
           "relevance": 0.9,
           "clarity": 0.9,
           "notes": {
-            "logical_consistency": "The follow-up question is a simple rephrasing of the seed question and does not meet the level_6 (Create) requirement to design or propose a new method or approach.",
-            "informativeness": "The question adds very little new information or cognitive work beyond the seed question, essentially repeating the same inquiry.",
-            "relevance": "The question is on-topic and directly related to the seed question about using voice commands while driving.",
-            "clarity": "The question is grammatically correct, well-formed, and easy to understand."
+            "logical_consistency": "The follow-up question asks about issues encountered with voice commands while driving, which is more of an Analyze (level_4) question rather than a Create (level_6) question, so it does not fully match the requested Bloom level.",
+            "informativeness": "The question adds some new information by focusing on potential problems, but it is somewhat related to previous questions about benefits and usage, so informativeness is moderate.",
+            "relevance": "The question is clearly related to the seed question about using voice commands while driving.",
+            "clarity": "The question is well-formed, grammatical, and easy to understand."
           }
         }
       }
     },
-    "iteration_score": 0.5044913620132396
+    "iteration_score": 0.5426921959739404
   }
 ]

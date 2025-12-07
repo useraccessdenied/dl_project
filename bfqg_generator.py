@@ -97,17 +97,39 @@ class BFGQuestionGenerator:
 
     def _build_single_level_prompt(self, seed_question: str, level_desc: str) -> str:
         """Build a prompt for a single Bloom's level."""
+        
+        # Determine level for detailed instruction
+        instruction = "Ask a relevant follow-up question."
+        if "Understand" in level_desc:
+            instruction = "Ask a question that requires explaining, summarizing, or describing the core concept of the seed."
+        elif "Apply" in level_desc:
+            instruction = "Ask a question about using the concept in a specific scenario, context, or to solve a practical problem."
+        elif "Analyze" in level_desc:
+            instruction = "Ask a question that breaks down the concept into parts, compares/contrasts elements, or examines causes and effects."
+        elif "Evaluate" in level_desc:
+            instruction = "Ask a question that requires judging value, critiquing methods, or evaluating the effectiveness/pros/cons."
+        elif "Create" in level_desc:
+            instruction = "Ask a question about designing a new approach, proposing a novel solution, or creating a plan related to the concept."
+
         examples_section = ""
         if self.few_shot_examples:
             examples_section = f"Here are some examples of how to generate questions (follow the style, but stick to the NEW seed topic):\n{self.few_shot_examples}\n"
 
-        return f"""Task: Generate a single follow-up question based on the seed question.
+        return f"""Task: Generate a distinct and insightful follow-up question based on the seed question.
+
+Constraints:
+- The question must strictly adhere to the Target Level.
+- Do NOT simply rephrase the seed question.
+- Avoid generic phrasing like "How does the OP feel".
+- Ensure the question provides a new angle or specific scenario related to the seed.
+- Output ONLY the question text.
+
+Target Level: {level_desc}
+Instruction: {instruction}
 
 {examples_section}
-Now, generate a question for the following new task:
+New Task:
 Seed: "{seed_question}"
-Target Level: {level_desc}
-Constraint: The question must strictly adhere to the target level and the specific seed topic. Do not switch topics or hallucinate features not related to the seed. Output ONLY the question text.
 Question:"""
 
     def generate_followups(self, seed_question: str, max_length: int = 128) -> Dict[str, str]:
@@ -215,7 +237,7 @@ if __name__ == "__main__":
     generator = BFGQuestionGenerator(use_model=True)
 
     # Test with a sample seed question
-    test_seed = "What is a clutch in a car?"
+    test_seed = "How do I make a phone call?"
     print(f"Seed: {test_seed}")
 
     result = generator.generate_followups(test_seed)
