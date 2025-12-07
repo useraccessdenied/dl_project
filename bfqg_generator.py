@@ -153,89 +153,23 @@ Question:"""
 
         return questions
 
-    import re
-
-    def _make_gerund(self, verb_phrase: str) -> str:
-        """
-        Very simple heuristic to turn 'navigate to an address'
-        into 'navigating to an address', 'make a phone call' -> 'making a phone call'.
-        """
-        words = verb_phrase.split()
-        if not words:
-            return verb_phrase
-
-        first = words[0]
-        # basic -ing rule (good enough for your domain)
-        if first.endswith("e") and not first.endswith("ee"):
-            first_ger = first[:-1] + "ing"   # make -> making, navigate -> navigating
-        else:
-            first_ger = first + "ing"        # play -> playing
-
-        return " ".join([first_ger] + words[1:])
-
-    def _parse_seed(self, seed_question: str):
-        """
-        Parse the seed into:
-          - kind: 'action' or 'topic'
-          - base: core phrase without 'How do I', etc.
-        """
-        text = seed_question.strip().rstrip("?")
-        # Common patterns in your dataset
-        patterns = [
-            (r"^How do I (.+)$", "action"),
-            (r"^How can I (.+)$", "action"),
-            (r"^How would I (.+)$", "action"),
-            (r"^How does (.+)$", "action"),
-            (r"^Can I (.+)$", "action"),
-            (r"^What is (.+)$", "topic"),
-            (r"^When should I (.+)$", "action"),
-            (r"^Where is (.+)$", "topic"),
-        ]
-
-        for pat, kind in patterns:
-            m = re.match(pat, text, flags=re.IGNORECASE)
-            if m:
-                base = m.group(1).strip()
-                return kind, base
-
-        # Fallback: treat the whole thing as a topic
-        return "topic", text
-
     def _generate_template_questions(self, seed_question: str) -> Dict[str, str]:
         """Generate template-based questions for each Bloom's level."""
-        kind, base = self._parse_seed(seed_question)
+        # Extract the core action/activity from the seed question
+        activity = seed_question.replace("How do I", "").replace("How does", "").replace("What is", "").replace("?", "").strip()
 
-        # Normalize casing
-        base_lc = base[0].lower() + base[1:] if base and base[0].isupper() else base
-        gerund = self._make_gerund(base_lc)
+        if activity and not activity[0].isupper():
+            activity = activity[0].upper() + activity[1:]
 
-        questions = {}
-
-        if kind == "action":
-            # Seed like: "How do I navigate to an address?"
-            # base_lc: "navigate to an address"
-            # gerund:  "navigating to an address"
-            questions = {
-                "level_2": f"What are the different ways I can {base_lc}?",
-                "level_3": f"How would I {base_lc} in a different situation?",
-                "level_4": f"What components or steps are involved in {gerund}?",
-                "level_5": f"Which method of {gerund} is most effective, and why?",
-                "level_6": f"How could I design a new approach to {base_lc}?",
-            }
-        else:
-            # Seed like: "What is the fuel efficiency of this car?"
-            # base_lc: "the fuel efficiency of this car"
-            topic = base_lc
-            questions = {
-                "level_2": f"How would you explain {topic} to a new driver?",
-                "level_3": f"How could I apply my knowledge of {topic} in everyday driving?",
-                "level_4": f"What factors or components affect {topic}?",
-                "level_5": f"Which factors have the greatest impact on {topic}, and why?",
-                "level_6": f"How could I design a new strategy to improve {topic}?",
-            }
+        questions = {
+            "level_2": f"What are the different ways I can {activity.lower()}?",
+            "level_3": f"How would I {activity.lower()} in a different situation?",
+            "level_4": f"What components are involved in {activity.lower()}?",
+            "level_5": f"Which method of {activity.lower()} is most effective?",
+            "level_6": f"How could I design a new approach to {activity.lower()}?",
+        }
 
         return questions
-
 
     def generate_multiple(self, seed_questions: List[str], show_progress: bool = True) -> List[Dict[str, Any]]:
         """
