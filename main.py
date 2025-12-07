@@ -28,8 +28,7 @@ class RecursivePipeline:
         self.generator = generator or BFGQuestionGenerator(model_name="google/flan-t5-large", use_model=True)
         self.evaluator = evaluator or GriceWiseEvaluator(
             use_chatgpt=True,
-            chatgpt_model="gpt-4.1-mini",   # or any other model you have access to
-            openai_api_key="",     # optional; otherwise uses env var
+            chatgpt_model="gpt-4.1-mini"
         )
 
     def calculate_aggregate_score(self, evaluation: dict) -> float:
